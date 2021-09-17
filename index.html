@@ -1,12 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Task_2_HTML</title>
+
 </head>
+
 <body>
-    
+    <div>
+        <h1>Online Event Registration Form</h1>
+        <br>
+        <p>If you would like to take part in our event, please fill in your details in the
+            Event Registration Form below and you will be automatically registered.
+            Event registration must be completed at least six (6) days prior to the event
+        </p>
+
+        <table>
+            <tr>
+                <td><span>Name</span>
+                    <br>
+                    <textarea cols="50" rows="1" resize="none">First</textarea>
+                </td>
+                <td><span> </span>
+                    <br><textarea cols="50" rows="1" resize="none">Last</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><span>Email*</span><br><textarea cols="50" rows="1" resize="none"></textarea></td>
+                <td><span>Phone*</span><br><textarea cols="50" rows="1" resize="none">### ### ####</textarea></td>
+            </tr>
+            <tr>
+                <td><span>How many friends will bring along?*</span>
+                    <br>
+                    <select name="user_profile_color_1" cols="50">
+                        <option value="1">none</option>
+                        <option value="2">1</option>
+                        <option value="3">2</option>
+                        <option value="4">3</option>
+                        <option value="5">4</option>
+                        <option value="6">----------------------------------------------------
+                            ---------------------------</option>
+                    </select>
+                </td>
+                <td><span>When will you arrive?*</span><br>
+                    <input type="date" id="dt" value="HH:MM AM">
+                </td>
+            </tr>
+        </table>
+        <br>
+        <div>
+            <p>How did you hear about the event*</p>
+            <div>
+                <p><input type="radio" name="feedback"> Friends or colleage</p>
+                <p><input type="radio" name="feedback"> Advertisement</p>
+                <p><input type="radio" name="feedback"> TV</p>
+                <p><input type="radio" name="feedback"> Search Engine</p>
+            </div>
+
+            <div> Below, you can find a map of the event venue. Please contact us for
+                any further details or use the coordinates on your GPS. See you there! </div>
+                <img src="Map.jpg" alt="Map">
+<div>
+    <span>Coordinates</span>
+    <br> 
+    <textarea cols="100" rows="1" resize="none"></textarea>
+    <br>
+<button>REGISTER</button>
+
+    </div>
+
+
+
+        </div>
+
 </body>
+
 </html>
