@@ -1,5 +1,5 @@
 # Aliaksei Yudziankou
----
+
 <img align="right"  src="main.jpg">
 
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;... work with IT, it's more perspective and modern sphere for professional and personal growth.
@@ -17,9 +17,20 @@
 console.log("Hello world!")
 </script>
 ```
-____
+
+ It's simple function ` function square(number) { 
+  return number * number; }` for understand. 
+
+### My future plans 
+1. Learning English.
+2. Improving knowledge *HTML, CSS, JS*. 
+3. ~~Why don't go to fishing~~ 
+____ 
 ### Contacts 
 
-email: aliakseiyudziankou@gmail.com  
-github: [Github account](https://github.com/webjsworker "webjsworker")
+ contacts | links
+------------- | -------------
+ [<img align="left"  src="email.png">](<https://mail.google.com> "email") | <aliakseiyudziankou@gmail.com>
+[<img align="left"  src="github.png">](https://github.com/webjsworker "webjsworker") | [Github account](https://github.com/webjsworker "webjsworker")
+
 
