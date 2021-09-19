@@ -1,6 +1,6 @@
 # Aliaksei Yudziankou
 
-<img align="right"  src="main.jpg">
+<img align="right"  src="images/main.jpg">
 
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;... work with IT, it's more perspective and modern sphere for professional and personal growth.
 
@@ -30,7 +30,7 @@ ____
 
  contacts | links
 ------------- | -------------
- [<img align="left"  src="email.png">](<https://mail.google.com> "email") | <aliakseiyudziankou@gmail.com>
-[<img align="left"  src="github.png">](https://github.com/webjsworker "webjsworker") | [Github account](https://github.com/webjsworker "webjsworker")
+ [<img align="left"  src="images/email.png">](<https://mail.google.com> "email") | <aliakseiyudziankou@gmail.com>
+[<img align="left"  src="images/github.png">](https://github.com/webjsworker "webjsworker") | [Github account](https://github.com/webjsworker "webjsworker")
 
 
