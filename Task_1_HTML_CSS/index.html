@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Task_2_HTML</title>
+
+</head>
+
+<body>
+
+    <div class="contener">
+        <legend class="legend">
+            <h1 class="legend">Online Event Registration Form</h1>
+        </legend>
+        <br>
+        <p>If you would like to take part in our event, please fill in your details in the
+            Event Registration Form below and you will be automatically registered.
+            Event registration must be completed at least six (6) days prior to the event
+        </p>
+
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        <label for="input-name">Name</label><br>
+                        <input type="text" id="input-name" placeholder="First" />
+                    </td>
+                    <td>
+                        <label for="input-mail">Last</label><br>
+                        <input type="text" id="input-mail" placeholder="Last" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="input-email">Email*</label><br>
+                        <input type="email" id="input-email" />
+                    </td>
+                    <td>
+                        <label for="input-phone">Phone*</label><br>
+                        <input type="tel" id="input-phone" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="input-friends">How many friends will bring along?*</label><br>
+                        <input type="number" id="input-friends" min="0" />
+                    </td>
+                    <td>
+                        <label for="input-date">When will you arrive?*</label><br>
+                        <input type="datetime-local" id="input-date">
+                    </td>
+                </tr>
+            </table>
+            <br>
+
+            <p>How did you hear about the event*</p>
+            <div>
+                <p><input type="radio" name="feedback" id="friend"> <label for="friend">Friends or colleage</label></p>
+                <p><input type="radio" name="feedback" id="Advertisement"> <label
+                        for="Advertisement">Advertisement</label></p>
+                <p><input type="radio" name="feedback" id="TV"> <label for="TV">TV</label></p>
+                <p><input type="radio" name="feedback" id="Search"> <label for="Search">Search Engine</label></p>
+            </div>
+
+            <div> Below, you can find a map of the event venue. Please contact us for
+                any further details or use the coordinates on your GPS. See you there!
+            </div>
+            <img src="Map.jpg" alt="Map">
+            <div>
+                <span>Coordinates</span>
+                <br>
+                <textarea cols="100" rows="1"></textarea>
+                <br>
+                <input type="submit" value="REGISTER" id="register" /> <label for="register"></label>
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>
