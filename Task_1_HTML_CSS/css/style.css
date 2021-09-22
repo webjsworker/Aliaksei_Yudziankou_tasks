@@ -1,13 +1,81 @@
 
-.contener{
-    background: gray;
+.wrapper{
     margin: 1rem;
-    padding: 2rem;
-    width: 40rem;
-}
+    padding: 1rem;
+    background: gray;
+    font-family: Open sans-serif;
+    
+   }
 
 .legend {
     font-weight: lighter;
-    font-family: Trebuchet MS, sans-serif;
-    /* font-family: Arial, Helvetica, sans-serif; */
+    }
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.first_last{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#text{
+    width: 10rem;
+    height: 25%;
+    outline: none;
+}
+#register{
+    width: 10rem;
+    height: 25%;
+    outline: none;
+}
+.Phone_Email{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;  
+}
+
+label.required:after {
+    color: red;
+    content: " *"
+}
+p.required:after {
+    color: red;
+    content: " *"
+}
+
+.Friend_Date{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+
+.box_coordinates{
+    display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+.input_coordinates{
+   
+    justify-content: center;
+}
+
+.box_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      
+}
+.box_img{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
