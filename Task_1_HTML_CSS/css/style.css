@@ -1,7 +1,7 @@
 
 .wrapper{
     margin: 1rem;
-    padding: 1rem;
+    padding: 0rem;
     background: gray;
     font-family: Open sans-serif;
     
@@ -15,19 +15,38 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-content: space-around;
 }
 
 .first_last{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
+    
 }
 
 #text{
-    width: 10rem;
+    /* max-width: 30rem; */
+    width: 18rem;
     height: 25%;
     outline: none;
+    
+    
+}
+/* .second_element{
+  margin: 0 20px;  
+} */
+.input{
+    margin: 0 20px;   
+}
+#input-friends{
+    width: 18rem;
+    height: 25%;
+}
+#input-date{
+    width: 18rem;
+    height: 30%;
 }
 #register{
     width: 10rem;
@@ -36,7 +55,7 @@
 }
 .Phone_Email{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;  
 }
@@ -52,7 +71,7 @@ p.required:after {
 
 .Friend_Date{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap; 
 }
@@ -78,4 +97,7 @@ p.required:after {
     display: flex;
     align-items: center;
     justify-content: center; 
+}
+.IMG{
+    width: 100%;
 }
