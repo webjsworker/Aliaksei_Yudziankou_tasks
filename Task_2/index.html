@@ -11,7 +11,7 @@
 
 <body>
     <div class="wrapper">
-        <h1 class="legend">Online Event Registration Form</h1>
+        <h2 class="legend">Online Event Registration Form</h2>
         <br>
         <p>If you would like to take part in our event, please fill in your details in the
             Event Registration Form below and you will be automatically registered.
@@ -49,25 +49,24 @@
                 </div>
             </div>
             <div>
-                <p class="required">How did you hear about the event</p>
+                <span class="required">How did you hear about the event</span>
                 <div>
-                    <p><input type="radio" name="feedback" id="friend"> <label for="friend">Friends or colleage</label>
-                    </p>
-                    <p><input type="radio" name="feedback" id="Advertisement"> <label
-                            for="Advertisement">Advertisement</label></p>
-                    <p><input type="radio" name="feedback" id="TV"> <label for="TV">TV</label></p>
-                    <p><input type="radio" name="feedback" id="Search"> <label for="Search">Search Engine</label></p>
+                    <input type="radio" name="feedback" id="friend"> <label for="friend">Friends or colleage</label>
+                    <br>
+                    <input type="radio" name="feedback" id="Advertisement"> <label
+                        for="Advertisement">Advertisement</label>
+                    <br>
+                    <input type="radio" name="feedback" id="TV"> <label for="TV">TV</label><br>
+                    <input type="radio" name="feedback" id="Search"> <label for="Search">Search Engine</label>
                 </div>
             </div>
-            <div> Below, you can find a map of the event venue. Please contact us for
+            <p> Below, you can find a map of the event venue. Please contact us for
                 any further details or use the coordinates on your GPS. See you there!
-            </div>
+            </p>
             <br>
-
             <div class="box_img">
-                <img src="Map.jpg" class="IMG" alt="Map">
+                <iframe src="Map.jpg" class="IMG" alt="Map"></iframe>
             </div>
-
             <div>
                 <br>
                 <span>Coordinates</span>
@@ -77,20 +76,12 @@
                     <input type="text" id="Coordinates" />
                 </div>
                 <br>
-
                 <div class="box_button">
                     <input class="register" type="submit" value="REGISTER" id="register" /> <label
                         for="register"></label>
                 </div>
-
-
             </div>
-
-
         </form>
-
-
-
     </div>
 </body>
 
