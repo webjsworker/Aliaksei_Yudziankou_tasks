@@ -13,18 +13,18 @@
     <div class="wrapper">
         <h2 class="legend">Online Event Registration Form</h2>
         <br>
-        <p>If you would like to take part in our event, please fill in your details in the
+        <p class="intro">If you would like to take part in our event, please fill in your details in the
             Event Registration Form below and you will be automatically registered.
             Event registration must be completed at least six (6) days prior to the event
         </p>
         <form class="form">
             <div class="first_last">
                 <div class="input">
-                    <label for="input_name">Name</label><br>
+                    <label for="input_name" class="required">Name</label><br>
                     <input type="text" id="input_name" placeholder="First" />
                 </div>
                 <div class="input">
-                    <label for="input_last">Last</label><br>
+                    <label for="input_last"></label><br>
                     <input type="text" id="input_last" placeholder="Last" />
                 </div>
             </div>
@@ -49,8 +49,8 @@
                 </div>
             </div>
             <div>
-                <span class="required">How did you hear about the event</span>
-                <div>
+                <div class="radio">
+                    <p>How did you hear about the event</p>
                     <input type="radio" name="feedback" id="friend"> <label for="friend">Friends or colleage</label>
                     <br>
                     <input type="radio" name="feedback" id="Advertisement"> <label
@@ -60,19 +60,16 @@
                     <input type="radio" name="feedback" id="Search"> <label for="Search">Search Engine</label>
                 </div>
             </div>
-            <p> Below, you can find a map of the event venue. Please contact us for
+            <p class="map-description"> Below, you can find a map of the event venue. Please contact us for
                 any further details or use the coordinates on your GPS. See you there!
             </p>
             <br>
             <div class="box_img">
-                <iframe src="Map.jpg" class="IMG" alt="Map"></iframe>
+                <iframe src="Map.jpg" class="map" alt="Map"></iframe>
             </div>
             <div>
-                <br>
-                <span>Coordinates</span>
-                <br>
                 <div class="box_coordinates">
-                    <label class="input_coordinates" for="Coordinates"></label><br>
+                    <label class="input_coordinates" for="Coordinates">Coordinates</label><br>
                     <input type="text" id="Coordinates" />
                 </div>
                 <br>
@@ -82,6 +79,7 @@
                 </div>
             </div>
         </form>
+
     </div>
 </body>
 

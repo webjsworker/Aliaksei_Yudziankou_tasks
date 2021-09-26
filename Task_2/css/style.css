@@ -1,14 +1,19 @@
-body {
-    max-width: 1024px;  
-   }
+
 .wrapper{
+    max-width: 980px;
     margin: 1rem;
     padding: 0rem;
     background: gray;
     font-family: Open sans-serif;
       }
 .legend {
-    font-weight: lighter;
+    font-weight: 300;
+    font-size: 2.5rem;
+    margin: 3.5rem 0rem 0rem 2.8rem;
+    }
+    .intro{
+    font-size: 1.4rem;
+    margin: 3.2rem 0rem 0rem 2.8rem;
     }
 .form{
     display: flex;
@@ -21,31 +26,67 @@ body {
     justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
+    font-size: 1.5rem;
+     }
+ .first_last{
+    margin-top: 4rem; 
  }
-#input_name, #input_last, 
-#input_email, #input_phone,
-#input-friends, #input-date {
-     width: 18rem;
-    height: 25%;
+ .Phone_Email{
+    margin-top: 2.5rem; 
+ }
+ .Friend_Date{
+    margin-top: 2.3rem;
+ }
+#input_name, #input_email, 
+ #input-date {
+     width: 26.5rem;
+    height: 2.7rem;
     outline: none;
- }
+  }
+ 
+ #input_last, #input_phone {
+    width: 24rem;
+    height: 2.7rem;
+    outline: none;
+     }
 .input{
-    margin: 0 20px;   
+    margin-left: 2.8rem;   
 }
 #input-friends{
-    width: 18rem;
-    height: 25%;
+    width: 26.5rem;
+    height: 2.7rem;
 }
 #input-date{
-    width: 18rem;
-    height: 30%;
+    width: 24rem;
+    height: 2.7rem;
 }
+
+span.required{
+    font-size: 1.5rem;
+    margin-top: 50rem;
+}
+.radio{
+    font-size: 1.5rem;
+    margin: 3.5rem 0rem 0rem 1.6rem;
+}
+#friend, #Advertisement,
+#TV, #Search {
+    margin-top: 0.4rem;;
+    zoom: 2;
+}
+
+.map-description{
+    font-size: 1.4rem;
+    margin-top: 3.3rem;
+    margin-left: 2.5rem;
+    margin-bottom: 0rem;
+    }
 #register{
     width: 10rem;
     height: 25%;
     outline: none;
 }
-label.required:after {
+label.required:after  {
     color: red;
     content: " *"
 }
@@ -57,23 +98,37 @@ p.required:after {
     display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-size: 1.5rem;
+  margin-top: 1.2rem;
+  margin-left: 2rem;
+  margin-bottom: 0rem;
   
 }
 .input_coordinates{
-   
-    justify-content: center;
+   justify-content: center;
+}
+#Coordinates {
+    margin-top: 0.1rem;
+    height: 2.7rem;
 }
 
 .box_button{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 2rem;
  }
 .box_img{
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-}
-.IMG{
+    }
+.map{
     width: 100%;
+    height: 20rem;
 }
+#register{
+    background-color: grey;
+    width: 12rem;
+    height: 3.5rem;
+          
+}
+
+ 
