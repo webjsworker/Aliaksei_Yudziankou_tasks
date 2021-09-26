@@ -6,12 +6,12 @@
     background: gray;
     font-family: Open sans-serif;
       }
-.legend {
+.title {
     font-weight: 300;
     font-size: 2.5rem;
     margin: 3.5rem 0rem 0rem 2.8rem;
     }
-    .intro{
+.title__intro{
     font-size: 1.4rem;
     margin: 3.2rem 0rem 0rem 2.8rem;
     }
@@ -21,30 +21,31 @@
     justify-content: space-around;
     align-content: space-around;
 }
-.first_last, .Phone_Email, .Friend_Date{
+.form__first-last,
+.form__Phone-Email,
+.form__Friend-Date{
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
     font-size: 1.5rem;
      }
- .first_last{
+ .form__first-last{
     margin-top: 4rem; 
  }
- .Phone_Email{
+ .form__Phone-Email{
     margin-top: 2.5rem; 
  }
- .Friend_Date{
+ .form__Friend-Date{
     margin-top: 2.3rem;
  }
-#input_name, #input_email, 
+#input__name, #input__email, 
  #input-date {
      width: 26.5rem;
     height: 2.7rem;
     outline: none;
   }
- 
- #input_last, #input_phone {
+#input__last, #input__phone {
     width: 24rem;
     height: 2.7rem;
     outline: none;
@@ -52,15 +53,14 @@
 .input{
     margin-left: 2.8rem;   
 }
-#input-friends{
+#input__friends{
     width: 26.5rem;
     height: 2.7rem;
 }
-#input-date{
+#input__date{
     width: 24rem;
     height: 2.7rem;
 }
-
 span.required{
     font-size: 1.5rem;
     margin-top: 50rem;
@@ -74,7 +74,6 @@ span.required{
     margin-top: 0.4rem;;
     zoom: 2;
 }
-
 .map-description{
     font-size: 1.4rem;
     margin-top: 3.3rem;
@@ -94,7 +93,7 @@ p.required:after {
     color: red;
     content: " *"
 }
-.box_coordinates{
+.coordinates{
     display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -102,9 +101,8 @@ p.required:after {
   margin-top: 1.2rem;
   margin-left: 2rem;
   margin-bottom: 0rem;
-  
-}
-.input_coordinates{
+  }
+.coordinates__input{
    justify-content: center;
 }
 #Coordinates {
@@ -112,14 +110,12 @@ p.required:after {
     height: 2.7rem;
 }
 
-.box_button{
+.button{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 2rem;
  }
-.box_img{
-    }
 .map{
     width: 100%;
     height: 20rem;
@@ -128,7 +124,6 @@ p.required:after {
     background-color: grey;
     width: 12rem;
     height: 3.5rem;
-          
 }
 
  
