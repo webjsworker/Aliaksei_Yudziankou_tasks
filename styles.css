@@ -1,6 +1,7 @@
 @import url("/styles/reset.css");
-@import url("/styles/header.css");
 @import url("./styles/font.css");
+@import url("/styles/header.css");
+@import url("/styles/intro.css");
 
 html{
     box-sizing: border-box;
@@ -11,9 +12,14 @@ html{
   box-sizing: inherit;
 }
 
-/* project */
-.f{
+body{
     font-family: 'Hind';
     font-style: normal;
-    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: black;
 }
+
+
+
