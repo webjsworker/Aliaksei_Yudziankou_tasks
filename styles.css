@@ -1,0 +1,19 @@
+@import url("/styles/reset.css");
+@import url("/styles/header.css");
+@import url("./styles/font.css");
+
+html{
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* project */
+.f{
+    font-family: 'Hind';
+    font-style: normal;
+    font-weight: 300;
+}
