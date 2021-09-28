@@ -1,3 +1,9 @@
+.cards{
+    display: flex; 
+    align-items: center;
+    height: 800px;
+}
+
 .cards__wrap{
     max-width: 1300px;
     background-color: darkgray;
@@ -6,7 +12,7 @@
 }
 
 .cards__contaner{
-    margin-top: 160px;    
+    margin-top: 30px;    
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
