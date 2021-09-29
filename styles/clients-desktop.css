@@ -1,0 +1,27 @@
+
+.clients__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* align-items: flex-start; */
+    max-width: 1500px; 
+    margin-top: 170px;
+    margin-left: 220px;
+    /* margin: 0 auto; */
+    margin-bottom: 80px;
+}
+.clients__item{
+    margin-left: 35px;
+    /* overflow: hidden; */
+}
+.clients__item:first-child{
+    margin-left: 0;
+}
+.clients__pic{
+    max-width: 220px;
+    transition: 0.2s all;
+}
+.clients__item:hover .clients__pic{
+    transform: scale(1.1);
+}

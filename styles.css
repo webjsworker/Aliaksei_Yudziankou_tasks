@@ -4,6 +4,7 @@
 @import url("./styles/intro-desktop.css");
 @import url("./styles/cards-desktop.css");
 @import url("./styles/product-desktop.css");
+@import url("./styles/clients-desktop.css");
 
 html{
     box-sizing: border-box;

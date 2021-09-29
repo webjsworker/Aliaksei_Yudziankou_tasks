@@ -23,6 +23,11 @@
     width: 350px;
     margin-left: 65px;
     margin-top: 20px;
+    overflow: hidden;
+    
+}
+.card__item:hover{
+    transform: scale(1, 1.4);   
 }
 
 .card__pic{
