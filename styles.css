@@ -1,8 +1,9 @@
-@import url("/styles/reset.css");
+@import url("./styles/reset.css");
 @import url("./styles/font.css");
-@import url("/styles/header-desktop.css");
-@import url("/styles/intro-desktop.css");
-@import url("/styles/cards-desktop.css");
+@import url("./styles/header-desktop.css");
+@import url("./styles/intro-desktop.css");
+@import url("./styles/cards-desktop.css");
+@import url("./styles/product-desktop.css");
 
 html{
     box-sizing: border-box;
