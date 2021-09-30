@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Task_2_HTML</title>
 </head>
@@ -81,6 +82,66 @@
         </form>
 
     </div>
+
+    <title>Task_2_HTML</title>
+
+</head>
+
+<body>
+    <h2>Online Event Registration Form</h2>
+    <br>
+    <p>If you would like to take part in our event, please fill in your details in the
+        Event Registration Form below and you will be automatically registered.
+        Event registration must be completed at least six (6) days prior to the event
+    </p>
+    <form>
+        <section>
+            <div>
+                <label for="input-name">Name</label>
+                <input type="text" id="input-name" placeholder="First" />
+                <label for="input-mail">Last</label>
+                <input type="text" id="input-mail" placeholder="Last" />
+            </div>
+            <div>
+                <label for="input-email">Email*</label>
+                <input type="email" id="input-email" />
+                <label for="input-phone">Phone*</label>
+                <input type="tel" id="input-phone" />
+            </div>
+            <div>
+                <label for="input-friends">How many friends will bring along?*</label>
+                <input type="number" id="input-friends" min="0" />
+                <label for="input-date">When will you arrive?*</label>
+                <input type="datetime-local" id="input-date">
+            </div>
+        </section>
+        <br>
+        <div>
+            <span>How did you hear about the event*</span><br>
+            <input type="radio" name="feedback" id="friend"> <label for="friend">Friends or colleage</label>
+            <br>
+            <input type="radio" name="feedback" id="Advertisement"> <label for="Advertisement">Advertisement</label>
+            <br>
+            <input type="radio" name="feedback" id="TV"> <label for="TV">TV</label>
+            <br>
+            <input type="radio" name="feedback" id="Search"> <label for="Search">Search Engine</label>
+
+        </div>
+        <p>
+            Below, you can find a map of the event venue. Please contact us for
+            any further details or use the coordinates on your GPS. See you there!
+        </p>
+        <iframe src="Map.jpg"></iframe> <br>
+        <div>
+            <span>Coordinates</span>
+            <br>
+            <textarea cols="100" rows="1"></textarea>
+            <br>
+            <input type="submit" value="REGISTER" id="register" /> <label for="register"></label>
+        </div>
+    </form>
+
+
 </body>
 
 </html>
