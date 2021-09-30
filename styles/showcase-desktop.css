@@ -1,0 +1,33 @@
+
+.showcase__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+    margin-bottom: 300px;
+}
+.showcase__item-description{
+    margin-left: 50px;
+    max-width: 500px;
+    margin-bottom: 100px;
+}
+.showcase__item-title{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+.showcase__item-text{
+    margin-bottom: 10px;
+}
+.showcase__item-image{
+    margin-left: 50px;
+    width: 200px;
+    /* height: 500px;  */
+    overflow: hidden;
+    /* position: relative; */
+}
+.showecase__item-pic{
+    
+    
+  
+}

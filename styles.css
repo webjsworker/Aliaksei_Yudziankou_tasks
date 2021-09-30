@@ -7,6 +7,7 @@
 @import url("./styles/clients-desktop.css");
 @import url("./styles/reviews-decktop.css");
 @import url("./styles/price-desktop.css");
+@import url("./styles/showcase-desktop.css");
 
 html{
     box-sizing: border-box;

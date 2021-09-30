@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
 }
 .price__wrapper{
     margin-top: 100px;
@@ -13,21 +14,24 @@
 }
 .price__item-contaner{
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
+    /* flex-wrap: wrap;
+    align-items: center; */
+    background-color:rgb(212, 216, 216);
+  }
+
 .price__item{
-     
-    background-color: rgb(212, 216, 216);
+    /* background-color: rgb(212, 216, 216); */
     max-width: 400px;
     margin-left: 20px;
     padding: 20px 10px;
+    margin:  auto 0;
 }
 
-.price__item:nth-child(2){
-    height: 110%;
-    
+.price__item-contaner:nth-child(2){
+    height: 110%; 
+     margin:  0 auto;
 }
+
 .price__pic{
     margin-bottom: 20px;
     margin-left: 15px;
