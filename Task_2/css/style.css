@@ -1,0 +1,129 @@
+
+.wrapper{
+    max-width: 980px;
+    margin: 1rem;
+    padding: 0rem;
+    background: gray;
+    font-family: Open sans-serif;
+      }
+.title {
+    font-weight: 300;
+    font-size: 2.5rem;
+    margin: 3.5rem 0rem 0rem 2.8rem;
+    }
+.title__intro{
+    font-size: 1.4rem;
+    margin: 3.2rem 0rem 0rem 2.8rem;
+    }
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+}
+.form__first-last,
+.form__Phone-Email,
+.form__Friend-Date{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+     }
+ .form__first-last{
+    margin-top: 4rem; 
+ }
+ .form__Phone-Email{
+    margin-top: 2.5rem; 
+ }
+ .form__Friend-Date{
+    margin-top: 2.3rem;
+ }
+#input__name, #input__email, 
+ #input-date {
+     width: 26.5rem;
+    height: 2.7rem;
+    outline: none;
+  }
+#input__last, #input__phone {
+    width: 24rem;
+    height: 2.7rem;
+    outline: none;
+     }
+.input{
+    margin-left: 2.8rem;   
+}
+#input__friends{
+    width: 26.5rem;
+    height: 2.7rem;
+}
+#input__date{
+    width: 24rem;
+    height: 2.7rem;
+}
+span.required{
+    font-size: 1.5rem;
+    margin-top: 50rem;
+}
+.radio{
+    font-size: 1.5rem;
+    margin: 3.5rem 0rem 0rem 1.6rem;
+}
+#friend, #Advertisement,
+#TV, #Search {
+    margin-top: 0.4rem;;
+    zoom: 2;
+}
+.map-description{
+    font-size: 1.4rem;
+    margin-top: 3.3rem;
+    margin-left: 2.5rem;
+    margin-bottom: 0rem;
+    }
+#register{
+    width: 10rem;
+    height: 25%;
+    outline: none;
+}
+label.required:after  {
+    color: red;
+    content: " *"
+}
+p.required:after {
+    color: red;
+    content: " *"
+}
+.coordinates{
+    display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  margin-top: 1.2rem;
+  margin-left: 2rem;
+  margin-bottom: 0rem;
+  }
+.coordinates__input{
+   justify-content: center;
+}
+#Coordinates {
+    margin-top: 0.1rem;
+    height: 2.7rem;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+ }
+.map{
+    width: 100%;
+    height: 20rem;
+}
+#register{
+    background-color: grey;
+    width: 12rem;
+    height: 3.5rem;
+}
+
+ 

@@ -5,6 +5,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Task_2_HTML</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2 class="title">Online Event Registration Form</h2>
+        <br>
+        <p class="title__intro">If you would like to take part in our event, please fill in your details in the
+            Event Registration Form below and you will be automatically registered.
+            Event registration must be completed at least six (6) days prior to the event
+        </p>
+        <form class="form">
+            <div class="form__first-last">
+                <div class="input">
+                    <label for="input_name" class="required">Name</label><br>
+                    <input type="text" id="input__name" placeholder="First" />
+                </div>
+                <div class="input">
+                    <label for="input_last"></label><br>
+                    <input type="text" id="input__last" placeholder="Last" />
+                </div>
+            </div>
+            <div class="form__Phone-Email">
+                <div class="input">
+                    <label for="input_email" class="required">Email</label><br>
+                    <input type="email" id="input__email" />
+                </div>
+                <div class="input">
+                    <label for="input_phone" class="required">Phone</label><br>
+                    <input type="tel" id="input__phone" placeholder="### ### ####" />
+                </div>
+            </div>
+            <div class="form__Friend-Date">
+                <div class="input">
+                    <label for="input-friends" class="required">How many friends will bring along?</label><br>
+                    <input type="number" id="input__friends" min="0" />
+                </div>
+                <div class="input">
+                    <label for="input-date" class="required">When will you arrive?</label><br>
+                    <input type="datetime-local" id="input__date">
+                </div>
+            </div>
+            <div>
+                <div class="radio">
+                    <p>How did you hear about the event</p>
+                    <input type="radio" name="feedback" id="friend"> <label for="friend">Friends or colleage</label>
+                    <br>
+                    <input type="radio" name="feedback" id="Advertisement"> <label
+                        for="Advertisement">Advertisement</label>
+                    <br>
+                    <input type="radio" name="feedback" id="TV"> <label for="TV">TV</label><br>
+                    <input type="radio" name="feedback" id="Search"> <label for="Search">Search Engine</label>
+                </div>
+            </div>
+            <p class="map-description"> Below, you can find a map of the event venue. Please contact us for
+                any further details or use the coordinates on your GPS. See you there!
+            </p>
+            <br>
+            <div>
+                <iframe src="Map.jpg" class="map" alt="Map"></iframe>
+            </div>
+            <div>
+                <div class="coordinates">
+                    <label class="coordinates__input" for="Coordinates">Coordinates</label><br>
+                    <input type="text" id="Coordinates" />
+                </div>
+                <br>
+                <div class="button">
+                    <input class="register" type="submit" value="REGISTER" id="register" /> <label
+                        for="register"></label>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
     <title>Task_2_HTML</title>
 
 </head>
@@ -62,6 +140,7 @@
             <input type="submit" value="REGISTER" id="register" /> <label for="register"></label>
         </div>
     </form>
+
 
 </body>
 
