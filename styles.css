@@ -14,6 +14,8 @@
 @import url("./styles/desktop/feetback-desktop.css");
 
 /* tablet */
+@import url("./styles/tablet/header-tablet.css") (max-width: 768px);
+
 
 
 
