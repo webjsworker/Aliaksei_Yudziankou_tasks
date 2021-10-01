@@ -1,17 +1,18 @@
-/* Desktop */
+/* Common */
+@import url("./styles/common.css");
 @import url("./styles/reset.css");
 @import url("./styles/font.css");
-@import url("./styles/header-desktop.css");
-@import url("./styles/intro-desktop.css");
-@import url("./styles/cards-desktop.css");
-@import url("./styles/product-desktop.css");
-@import url("./styles/clients-desktop.css");
-@import url("./styles/reviews-decktop.css");
-@import url("./styles/price-desktop.css");
-@import url("./styles/showcase-desktop.css");
-@import url("./styles/feetback-desktop.css");
-/* Common styles */
-@import url("./styles/common.css");
+/* Desktop */
+@import url("./styles/desktop/header-desktop.css");
+@import url("./styles/desktop/intro-desktop.css");
+@import url("./styles/desktop/cards-desktop.css");
+@import url("./styles/desktop/product-desktop.css");
+@import url("./styles/desktop/clients-desktop.css");
+@import url("./styles/desktop/reviews-decktop.css");
+@import url("./styles/desktop/price-desktop.css");
+@import url("./styles/desktop/showcase-desktop.css");
+@import url("./styles/desktop/feetback-desktop.css");
+
 /* tablet */
 
 
