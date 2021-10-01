@@ -23,6 +23,7 @@
 .feetback__link li:hover, .feetback__link li:focus,
 .feetback__link li:active {
     color: rgb(104, 103, 102);
+    
 }
 .feetback__form{
     color: white;
@@ -82,4 +83,13 @@
 .feetback__footer-link a{
     text-decoration: none;
     color: turquoise;
+}
+.feetback__footer-link a:hover, 
+.feetback__footer-link a:active,
+.feetback__footer-link a:focus{
+    color: rgb(33, 112, 104);
+}
+
+.feetback__footer a:hover{
+    transform: scale(1.1);
 }
