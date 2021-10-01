@@ -15,6 +15,9 @@
 
 /* tablet */
 @import url("./styles/tablet/header-tablet.css") (max-width: 768px);
+@import url("./styles/tablet/intro-tablet.css") (max-width: 768px);
+@import url("./styles/tablet/cards-tablet.css") (max-width: 768px);
+@import url("./styles/tablet/product-tablet.css") (max-width: 768px);
 
 
 
