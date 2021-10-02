@@ -1,7 +1,7 @@
 /* Common */
-@import url("./styles/common.css");
 @import url("./styles/reset.css");
 @import url("./styles/font.css");
+@import url("./styles/common.css");
 /* Desktop */
 @import url("./styles/desktop/header-desktop.css");
 @import url("./styles/desktop/intro-desktop.css");
@@ -18,7 +18,11 @@
 @import url("./styles/tablet/intro-tablet.css") (max-width: 768px);
 @import url("./styles/tablet/cards-tablet.css") (max-width: 768px);
 @import url("./styles/tablet/product-tablet.css") (max-width: 768px);
-
+@import url("./styles/tablet/clients-tablet.css") (max-width: 768px);
+@import url("./styles/tablet/rewiews-tablet.css") (max-width: 768px);
+@import url("./styles/tablet/price-tablet.css") (max-width: 768px);
+@import url("./styles/tablet/showcase-table.css") (max-width: 768px);
+@import url("./styles/tablet/feetback-tablet.css") (max-width: 768px);
 
 
 

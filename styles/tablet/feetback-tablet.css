@@ -1,0 +1,110 @@
+.feetback__wrapper{
+    height: 510px;
+    background: url(../../images/intro/03.jpg) no-repeat center;
+    background-size: cover;
+    }
+.feetback__link-contaner{
+   display: flex;
+    flex-wrap: wrap; 
+    align-items: flex-start;
+    margin-left: 5px;
+}
+
+.feetback__link{
+    color: white;
+    margin-left: 10px;
+    margin-top: 50px;
+}
+.feetback__link li{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+    margin-bottom: 30px;
+}
+.feetback__link li:hover, .feetback__link li:focus,
+.feetback__link li:active {
+    color: rgb(104, 103, 102);
+    
+}
+.feetback__form{
+    color: white;
+    margin-left: 80px;
+    margin-top: 60px;
+    
+}
+.feetback__form-item{
+   display: flex;
+    flex-flow: column; 
+}
+.feetback__form-item input{
+    width: 250px;
+    height: 30px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    color: white;
+    /* border: none; */
+    
+}
+.feetback__form-item textarea{
+    color: white;
+    width: 250px;
+    height: 150px;
+ resize: none;
+ margin-bottom: 20px;
+ background-color: transparent;
+}
+.feetback__form-title{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 12px;
+    margin-bottom: 10px;
+}
+.feetback__form-submit{
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 12px;
+    color: white;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    background-color: rgb(14, 229, 236);
+    border: none;
+}
+.feetback__form-submit:hover, .feetback__form-submit:focus,
+.feetback__form-submit:active{
+    background-color: rgb(9, 142, 146);
+    
+}
+
+.feetback__footer{
+    max-width: 480px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.feetback__footer-link{
+    
+    color: white;
+}
+.feetback__footer-link a{
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 12px;
+    text-decoration: none;
+    color: turquoise;
+}
+.feetback__footer-link span{
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 12px;
+}
+.feetback__footer-link a:hover, 
+.feetback__footer-link a:active,
+.feetback__footer-link a:focus{
+    color: rgb(33, 112, 104);
+}
+
+.feetback__footer a:hover{
+    transform: scale(1.1);
+}

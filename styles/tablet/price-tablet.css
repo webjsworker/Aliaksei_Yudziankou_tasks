@@ -1,0 +1,107 @@
+.price{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    
+}
+.price__wrapper{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+   /*  align-items: flex-start; */
+   align-items: center;
+    padding: 5px;
+margin-left: 20px;
+}
+.price__item-contaner{
+    display: flex;
+    /* flex-wrap: wrap;
+    align-items: center; */
+    background-color:rgb(212, 216, 216);
+max-width: 200px;  
+}
+
+.price__item{
+    /* background-color: rgb(212, 216, 216); */
+    max-width: 400px;
+    margin-left: 20px;
+    padding: 20px 10px;
+    margin:  auto 0;
+}
+
+.price__item-contaner:nth-child(2){
+    height: 110%; 
+     margin:  0 auto;
+}
+
+.price__pic{
+    max-width: 20px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+.price__item-title{
+    margin-bottom: 20px;
+}
+.price__item-title-text, 
+.price__item-title-price{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 12px;
+
+}
+.price__item-text{
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 12px;
+    max-width: 100px;
+    margin-bottom: 30px;
+}
+
+.price__item-features{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+.price__item-features-piece{
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 12px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.price__item-features-piece::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    border-top: 3px solid #4e4e4e;   
+    border-color: blue;
+    margin-top: 5px;
+    margin-left: -20px;
+}
+
+.price__button{
+  margin-left: 20px;  
+}
+.price__button-link{
+    font-size: 6px;
+    font-weight: 500;
+    line-height: 12px;
+    padding: 5px 10px ; 
+    /* border: solid;
+    border-width: 1px; */
+    background-color: rgb(146, 136, 136);
+    border-color: white;
+    text-transform: uppercase; 
+    /* font-size: 14px; */
+    color: black;
+    text-decoration: none;
+}
+
+
+
+.price__button-link:hover, .price__button-link:focus,
+.price__button-link:active{
+opacity: 0.50;
+background-color: rgb(43, 236, 243);
+}
