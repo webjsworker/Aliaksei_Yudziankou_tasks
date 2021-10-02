@@ -3,26 +3,26 @@
     height: 60%;
     background: url(../../images/intro/01.jpg) no-repeat center;
     background-size: cover;
-    padding-top: 200px;
+    padding-top: 100px;
     }
-    .intro__wrapper{
-    padding: 30px;
+    .wrapper{
+    padding: 20px;
     }
     .intro__title{
-    font-size: 28px;
+    font-size: 16px;
     font-weight: 700;
-    line-height: 24px;
+    line-height: 12px;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
     margin-bottom: 15px;
     }
  .intro__subtitle{
-    max-width: 250px;
-    font-size: 8px;
+    max-width: 180px;
+    font-size: 6px;
     line-height: 12px;
     color: white;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
  }
  .intro__explore{
     padding: 5px 10px ; 
@@ -40,9 +40,9 @@ background-color: gray;
  }
 
  .intro_radio{
-     margin-left: -220px;
+     margin-left: -110px;
     transform: scale(0.5);
-     margin-top: 150px;
+     margin-top: 50px;
      margin-bottom: 10px;
  }
 

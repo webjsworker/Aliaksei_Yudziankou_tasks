@@ -1,9 +1,5 @@
-
-.feetback{
-    /* display: none; */
-}
 .feetback__wrapper{
-    /* height: 510px; */
+    height: 510px;
     background: url(../../images/intro/03.jpg) no-repeat center;
     background-size: cover;
     }

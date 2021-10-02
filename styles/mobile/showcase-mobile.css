@@ -2,22 +2,16 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 80px;
-    margin-left: 0px;
-    margin-bottom: 20px;
-    max-width: 768px;
-    
+    margin-left: 10px;
+    margin-bottom: 50px;
 }
 .showcase__item-description{
-    margin-top: 180px;
-    margin-left: 10px;
-    max-width: 650px;
+    margin-left: 20px;
+    max-width: 450px;
     margin-bottom: 20px;
 }
-.showcase__item-description:nth-child(3){
-    max-width: 200px;
-}
 .showcase__item-title{
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 700;
     line-height: 12px;
     margin-bottom: 20px;
@@ -26,14 +20,13 @@
     font-size: 8px;
     font-weight: 500;
     line-height: 12px;
-    max-width: 600px;
     margin-bottom: 10px;
 }
 .showcase__item-image{
-    /* margin-left: 5px; */
+    margin-left: 20px;
     overflow: hidden;
     max-width: 100%;
-    /* height: 500px;  */
+    height: 500px; 
     margin-bottom: -150px;
     
 }

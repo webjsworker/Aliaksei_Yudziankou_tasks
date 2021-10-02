@@ -3,63 +3,59 @@
     /* flex-wrap: wrap;
     align-items: center; */
     /* justify-content: center; */
-    background-color: rgb(238, 236, 236);
-    padding: 20px 0px;
+    background-color: grey;
 }
 .product__wrap{
-    margin-top: 5px;
-    margin-left: 10px;
+    margin-top: 20px;
+    margin-left: -140px;
    }
 
 .product__title{
-    font-size: 16px;
+    font-size: 8px;
     font-weight: 700;
     line-height: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     }
 .product__title-description{
     font-size: 8px;
     font-weight: 500;
     line-height: 8px;
-    max-width: 180px;
-  margin-bottom: 20px;  
-}
-.product__contaner{
-    /* width: 1300px; */
-    /* background-color: grey; */
+    max-width: 200px;
+    margin-bottom: 15px;  
 }
 .product__contaner{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     margin-bottom: 20px;
-
+    max-width: 200px;
+    margin-left: 0px;
 }
 .product__item{
-    margin: 0 auto;
-    /* margin-left: 10px; */
-     max-width: 400px;
+   
+    margin-left: 0px;
+     max-width: 220px;
 }
 .product__item:first-child{
     margin-left: 0;
 }
 
 .product__cards-thumb{
-    max-width: 230px;
-    margin-bottom: 10px;
+    max-width: 210px;
+    margin-bottom: 5px;
 }
 .product__title-contater{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 .product__title-link{
     text-decoration: none;
     color: black;
 }
 .product__pic-title{
-    font-size: 12px;
+    font-size: 8px;
     font-weight: 700;
     line-height: 12px;
     /* margin-bottom: 10px; */
@@ -80,11 +76,11 @@ color: rgb(61, 60, 60);
     opacity: 0.4;
 }
 .product__description{
-    font-size: 8px;
+    font-size: 6px;
     font-weight: 500;
     line-height: 8px;
-    max-width: 210px;
-    margin-bottom: 20px;
+    max-width: 220px;
+    margin-bottom: 0px;
 }
 .product__link{
     display: inline-block;
@@ -94,6 +90,7 @@ color: rgb(61, 60, 60);
     text-transform: uppercase;
     text-decoration: none;
     color: black;
+    margin-bottom: 20px;
     }
  .product__link:hover, .product__link:active, 
  .product__link:focus {

@@ -1,23 +1,24 @@
 .reviews__wrapper{
-    max-width: 768px;
-    margin-top: 40px;
-    margin-left: 40px;
-    margin-bottom: 40px;
+    max-width: 375px;
+    margin-top: 80px;
+    margin-left: 20px;
+    margin-bottom: 80px;
 }
 .reviews__title{
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 700;
     line-height: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    margin-left: 10px;
 }
 .reviews__text-first,
 .reviews__text-second{
-    font-size: 10px;
+    font-size: 8px;
     font-weight: 500;
     line-height: 12px;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-bottom: 20px;
-    max-width: 320px;
+    max-width: 180px;
 }
 .reviews__text-first:before{
     content: ' "'; 
@@ -27,19 +28,19 @@
     color: blue;
     position: absolute;
     margin-top: 15px;
-    margin-left: -35px;
+    margin-left: -25px;
 }
 
 .reviews__autor{
-    margin-left: 20px;
+    margin-left: 10px;
 }
 .reviews__autor-name{
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 700;
     line-height: 12px;
 }
 .reviews__autor-job{
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 500;
     line-height: 12px;
 }

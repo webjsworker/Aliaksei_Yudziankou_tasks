@@ -2,27 +2,38 @@
 @import url("./styles/reset.css");
 @import url("./styles/font.css");
 @import url("./styles/common.css");
-/* Desktop */
-@import url("./styles/desktop/header-desktop.css");
-@import url("./styles/desktop/intro-desktop.css");
-@import url("./styles/desktop/cards-desktop.css");
-@import url("./styles/desktop/product-desktop.css");
-@import url("./styles/desktop/clients-desktop.css");
-@import url("./styles/desktop/reviews-decktop.css");
-@import url("./styles/desktop/price-desktop.css");
-@import url("./styles/desktop/showcase-desktop.css");
-@import url("./styles/desktop/feetback-desktop.css");
+/* Desktop 1586px */
+@import url("./styles/desktop/header-desktop.css") (max-width: 2500px) and (min-width: 769px);
+@import url("./styles/desktop/intro-desktop.css") (max-width: 2500px) and (min-width: 769px);
+@import url("./styles/desktop/cards-desktop.css") (max-width: 2500px) and (min-width: 769px);
+@import url("./styles/desktop/product-desktop.css") (max-width: 2500px) and (min-width: 769px);
+@import url("./styles/desktop/clients-desktop.css") (max-width: 2500px) and (min-width: 769px);
+@import url("./styles/desktop/reviews-decktop.css") (max-width: 2500px) and (min-width: 769px);
+@import url("./styles/desktop/price-desktop.css") (max-width: 2500px) and (min-width: 769px);
+@import url("./styles/desktop/showcase-desktop.css") (max-width: 2500px) and (min-width: 769px);
+@import url("./styles/desktop/feetback-desktop.css") (max-width: 2500px) and (min-width: 769px);
 
-/* tablet */
-@import url("./styles/tablet/header-tablet.css") (max-width: 768px);
-@import url("./styles/tablet/intro-tablet.css") (max-width: 768px);
-@import url("./styles/tablet/cards-tablet.css") (max-width: 768px);
-@import url("./styles/tablet/product-tablet.css") (max-width: 768px);
-@import url("./styles/tablet/clients-tablet.css") (max-width: 768px);
-@import url("./styles/tablet/rewiews-tablet.css") (max-width: 768px);
-@import url("./styles/tablet/price-tablet.css") (max-width: 768px);
-@import url("./styles/tablet/showcase-table.css") (max-width: 768px);
-@import url("./styles/tablet/feetback-tablet.css") (max-width: 768px);
+/* tablet  768px */
+@import url("./styles/tablet/header-tablet.css") (max-width: 768px) and (min-width: 376px); 
+@import url("./styles/tablet/intro-tablet.css") (max-width: 768px) and (min-width: 376px);
+@import url("./styles/tablet/cards-tablet.css") (max-width: 768px) and (min-width: 376px);
+@import url("./styles/tablet/product-tablet.css") (max-width: 768px) and (min-width: 376px);
+@import url("./styles/tablet/clients-tablet.css") (max-width: 768px) and (min-width: 376px);
+@import url("./styles/tablet/rewiews-tablet.css") (max-width: 768px) and (min-width: 376px);
+@import url("./styles/tablet/price-tablet.css") (max-width: 768px) and (min-width: 376px);
+@import url("./styles/tablet/showcase-table.css") (max-width: 768px) and (min-width: 376px);
+@import url("./styles/tablet/feetback-tablet.css") (max-width: 768px) and (min-width: 376px);
+
+/* mobile 375*/
+@import url("./styles/mobile/header-mobile.css") (max-width: 375px) and (min-width: 100px);
+@import url("./styles/mobile/intro-mobile.css") (max-width: 375px) and (min-width: 100px);
+@import url("./styles/mobile/cards-mobile.css") (max-width: 375px) and (min-width: 100px);
+@import url("./styles/mobile/product-mobile.css") (max-width: 375px) and (min-width: 100px);
+@import url("./styles/mobile/clients-mobile.css") (max-width: 375px) and (min-width: 100px);
+@import url("./styles/mobile/rewiews-mobile.css") (max-width: 375px) and (min-width: 100px);
+@import url("./styles/mobile/price-mobile.css") (max-width: 375px) and (min-width: 100px);
+@import url("./styles/mobile/showcase-mobile.css") (max-width: 375px) and (min-width: 100px);
+@import url("./styles/mobile/feetback-mobile.css") (max-width: 375px) and (min-width: 100px);
 
 
 

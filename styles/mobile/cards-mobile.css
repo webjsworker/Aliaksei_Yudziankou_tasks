@@ -1,12 +1,13 @@
 .cards{
     /* display: flex; 
     align-items: flex-start; */
-   /*  height: 520px; */
-    margin: 0 auto;
+    height: 880px;
+    margin-top: 20px;
 }
 
 .cards__wrap{
-    max-width: 768px;
+    max-width: 375px;
+    margin-top: -35px;
     background-color: darkgray;
     /* margin: 0 auto; */
     margin-left: 0px;
@@ -14,24 +15,20 @@
 }
 
 .cards__contaner{
-    /* margin-top: 5px; */    
+    margin-top: 5px;    
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     padding: 0 20px;
-    margin-left: 20px;
-    
-    max-width: 750px;
+    max-width: 250px;
     
 }
 
 .card__item{
-    width: 190px;
-    margin-left: 20px;
-    margin-top: 20px;
-    padding: 20px;
+    width: 120px;
+    margin-left: 40px;
+    margin-top: 10px;
     overflow: hidden;
-    background-color: rgb(177, 176, 176);
     
 }
 .card__item:hover{
@@ -39,14 +36,14 @@
 }
 
 .card__pic{
-    margin-bottom: 20px;
-    max-width: 50px;
+    margin-bottom: 5px;
+    max-width: 20px;
 }
 .card__pic-title{
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 10px;
+    font-weight: 500;
     line-height: 24px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
    }
 .cards__description{
     font-size: 8px;
@@ -54,6 +51,6 @@
     line-height: 12px;
     margin-bottom: 30px;
     margin-right: 10px;
-    max-width: 80px;
+    max-width: 120px;
    }
 
