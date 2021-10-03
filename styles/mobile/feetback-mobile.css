@@ -1,24 +1,23 @@
 .feetback__wrapper{
-    height: 510px;
+    height: 600px;
     background: url(../../images/intro/03.jpg) no-repeat center;
     background-size: cover;
-    }
+    /* padding-top: 320px; */
+    
+}
 .feetback__link-contaner{
    display: flex;
     flex-wrap: wrap; 
     align-items: flex-start;
-    margin-left: 5px;
+    margin-left: 100px;
 }
 
 .feetback__link{
     color: white;
-    margin-left: 10px;
+    margin-left: 50px;
     margin-top: 50px;
 }
 .feetback__link li{
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 12px;
     margin-bottom: 30px;
 }
 .feetback__link li:hover, .feetback__link li:focus,
@@ -28,8 +27,8 @@
 }
 .feetback__form{
     color: white;
-    margin-left: 80px;
-    margin-top: 60px;
+    margin-left: 400px;
+    margin-top: 80px;
     
 }
 .feetback__form-item{
@@ -37,35 +36,34 @@
     flex-flow: column; 
 }
 .feetback__form-item input{
-    width: 250px;
+    width: 350px;
     height: 30px;
     margin-bottom: 20px;
-    background-color: transparent;
+    /* background-color: transparent; */
+    background-color: black;
+    opacity: 0.2;
     color: white;
     /* border: none; */
     
 }
 .feetback__form-item textarea{
     color: white;
-    width: 250px;
+    width: 350px;
     height: 150px;
  resize: none;
  margin-bottom: 20px;
- background-color: transparent;
+ background-color: black;
+    opacity: 0.2;
+ /* background-color: transparent; */
 }
 .feetback__form-title{
-    font-size: 14px;
+    font-size: 24px;
     font-weight: 700;
-    line-height: 12px;
+    line-height: 24px;
     margin-bottom: 10px;
 }
 .feetback__form-submit{
-    font-size: 10px;
-    font-weight: 500;
-    line-height: 12px;
-    color: white;
-    padding: 10px 15px;
-    text-transform: uppercase;
+    padding: 15px 25px;
     background-color: rgb(14, 229, 236);
     border: none;
 }
@@ -76,28 +74,19 @@
 }
 
 .feetback__footer{
-    max-width: 480px;
-    margin-top: 20px;
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 .feetback__footer-link{
     
     color: white;
 }
 .feetback__footer-link a{
-    font-size: 8px;
-    font-weight: 500;
-    line-height: 12px;
     text-decoration: none;
     color: turquoise;
-}
-.feetback__footer-link span{
-    font-size: 8px;
-    font-weight: 500;
-    line-height: 12px;
 }
 .feetback__footer-link a:hover, 
 .feetback__footer-link a:active,

@@ -1,20 +1,32 @@
 .feetback__wrapper{
-    height: 600px;
+    /* height: 600px; */
     background: url(../../images/intro/03.jpg) no-repeat center;
     background-size: cover;
-    /* padding-top: 320px; */
+    padding:  20px 0;
     
 }
 .feetback__link-contaner{
-   display: flex;
+    display: flex;
     flex-wrap: wrap; 
-    align-items: flex-start;
-    margin-left: 100px;
+    justify-content: space-between;
+    /* align-items: flex-start; */
+    margin-left: 10px;
+    max-width: 1380px;
+}
+.feetback__link-item{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+    margin-left: 50px;
+}
+.feetback__link-item:nth-child(2){
+    max-width: 500px; 
+    margin-right: 20px; 
 }
 
 .feetback__link{
     color: white;
-    margin-left: 50px;
+    margin-left: 40px;
     margin-top: 50px;
 }
 .feetback__link li{
@@ -27,8 +39,8 @@
 }
 .feetback__form{
     color: white;
-    margin-left: 400px;
-    margin-top: 80px;
+    /* margin-right: 20px; */
+    margin-top: 60px;
     
 }
 .feetback__form-item{
@@ -78,7 +90,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 80px;
+    
 }
 .feetback__footer-link{
     

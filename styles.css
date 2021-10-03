@@ -23,7 +23,7 @@
 @import url("./styles/tablet/rewiews-tablet.css") (max-width: 768px) and (min-width: 376px);
 @import url("./styles/tablet/price-tablet.css") (max-width: 768px) and (min-width: 376px);
 @import url("./styles/tablet/showcase-table.css") (max-width: 768px) and (min-width: 376px);
-/* add gallery */
+@import url("./styles/tablet/gallery-tablet.css") (max-width: 768px) and (min-width: 376px);
 @import url("./styles/tablet/feetback-tablet.css") (max-width: 768px) and (min-width: 376px);
 
 /* mobile 375*/
@@ -35,7 +35,7 @@
 @import url("./styles/mobile/rewiews-mobile.css") (max-width: 375px) and (min-width: 100px);
 @import url("./styles/mobile/price-mobile.css") (max-width: 375px) and (min-width: 100px);
 @import url("./styles/mobile/showcase-mobile.css") (max-width: 375px) and (min-width: 100px);
-/* add gallery */
+@import url("./styles/mobile/gallery-mobile.css") (max-width: 375px) and (min-width: 100px);
 @import url("./styles/mobile/feetback-mobile.css") (max-width: 375px) and (min-width: 100px);
 
 
