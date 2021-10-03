@@ -1,13 +1,12 @@
+.clients{
+    max-width: 375px;
+}
 .clients__wrapper{
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
-    /* align-items: center; */
-    /* align-items: flex-start; */
-    max-width: 120px; 
+    margin: 0 auto;
+    max-width: 240px; 
     margin-top: 70px;
-    margin-left: 50px;
-    /* margin: 0 auto; */
     margin-bottom: 20px;
 }
 .clients__item{
@@ -19,7 +18,7 @@
     margin-left: 0;
 }
 .clients__pic{
-    max-width: 100px;
+    max-width: 270px;
     transition: 0.2s all;
 }
 .clients__item:hover .clients__pic{

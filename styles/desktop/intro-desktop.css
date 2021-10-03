@@ -5,6 +5,10 @@
     background: url(../../images/intro/01.jpg) no-repeat center;
     background-size: cover;
     padding-top: 320px;
+    /* padding: 0 20px; */
+    }
+    .intro__wrapper{
+        padding: 0 20px;
     }
     .intro__title{
     font-size: 80px;

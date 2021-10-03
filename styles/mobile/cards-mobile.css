@@ -1,7 +1,7 @@
 .cards{
     /* display: flex; 
     align-items: flex-start; */
-    height: 880px;
+    height: 900px;
     margin-top: 20px;
 }
 
@@ -12,20 +12,23 @@
     /* margin: 0 auto; */
     margin-left: 0px;
     box-shadow: 0 2px 20px grey;
+    
+
 }
 
 .cards__contaner{
+    margin: 0 auto;
     margin-top: 5px;    
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    padding: 0 20px;
-    max-width: 250px;
+    padding: 0px 20px;
+    max-width: 300px;
     
 }
 
 .card__item{
-    width: 120px;
+    max-width: 250px;
     margin-left: 40px;
     margin-top: 10px;
     overflow: hidden;
@@ -37,20 +40,20 @@
 
 .card__pic{
     margin-bottom: 5px;
-    max-width: 20px;
+    max-width: 40px;
 }
 .card__pic-title{
-    font-size: 10px;
+    font-size: 18px;
     font-weight: 500;
     line-height: 24px;
     margin-bottom: 5px;
    }
 .cards__description{
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 12px;
     margin-bottom: 30px;
     margin-right: 10px;
-    max-width: 120px;
+    max-width: 300px;
    }
 

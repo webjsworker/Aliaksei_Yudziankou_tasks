@@ -1,21 +1,25 @@
+.feetback{
+    max-width: 768px;
+}
+
 .feetback__wrapper{
-    height: 600px;
+    
     background: url(../../images/intro/03.jpg) no-repeat center;
     background-size: cover;
-    /* padding-top: 320px; */
+   
     
 }
 .feetback__link-contaner{
-   display: flex;
+    display: flex;
     flex-wrap: wrap; 
     align-items: flex-start;
-    margin-left: 100px;
+    margin-left: 5px;
 }
 
 .feetback__link{
     color: white;
-    margin-left: 50px;
-    margin-top: 50px;
+    margin-left: 5px;
+    margin-top: 5px;
 }
 .feetback__link li{
     margin-bottom: 30px;
@@ -27,7 +31,7 @@
 }
 .feetback__form{
     color: white;
-    margin-left: 400px;
+    margin-left: 4px;
     margin-top: 80px;
     
 }
@@ -41,7 +45,7 @@
     margin-bottom: 20px;
     /* background-color: transparent; */
     background-color: black;
-    opacity: 0.2;
+    opacity: 0.5;
     color: white;
     /* border: none; */
     
@@ -81,9 +85,14 @@
     padding: 0 20px;
 }
 .feetback__footer-link{
-    
+ 
     color: white;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 150px;
 }
+
+
 .feetback__footer-link a{
     text-decoration: none;
     color: turquoise;
