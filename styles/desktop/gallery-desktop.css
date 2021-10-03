@@ -17,3 +17,31 @@
    margin-top: 20px; 
    margin-left: 20px; 
 }
+/* .gallery__item img:hover{
+    opacity: 0.5;
+} */
+
+.gallery__item-contaner{
+    display:inline-block;   
+    position:relative;
+        
+}
+.gallery__item-contaner div{
+margin-left: 20px;
+
+
+    display: none;
+    position: absolute; 
+    bottom: 10px; left: 0px; 
+    background-color: rgba(0,0,0,.4); 
+    padding: 5px 5px 5px 10px;
+    color: white
+}
+.gallery__item-contaner:hover div{
+display: block
+}
+
+.gallery__item-title{
+    max-width: 300px;
+    margin-bottom: 20px;
+}
