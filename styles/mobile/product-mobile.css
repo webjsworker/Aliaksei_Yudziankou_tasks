@@ -1,0 +1,111 @@
+.product{
+    /* display: flex; */
+    /* flex-wrap: wrap;
+    align-items: center; */
+    /* justify-content: center; */
+    background-color: grey;
+    max-width: 375px;
+}
+.product__wrap{
+    max-width: 350px;
+    padding-top: 20px;
+    margin-top: 10px;
+    margin: 0 auto;
+   }
+
+.product__title{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 12px;
+    margin-bottom: 10px;
+    }
+.product__title-description{
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 8px;
+    max-width: 300px;
+    margin-bottom: 15px;  
+}
+.product__contaner{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    max-width: 360px;
+    margin-left: 0px;
+}
+.product__item{
+   
+    margin-left: 0px;
+     max-width: 350px;
+}
+.product__item:first-child{
+    margin-left: 0;
+}
+
+.product__cards-thumb{
+    max-width: 350px;
+    margin-bottom: 5px;
+}
+.product__title-contater{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.product__title-link{
+    text-decoration: none;
+    color: black;
+}
+.product__pic-title{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 12px;
+    /* margin-bottom: 10px; */
+}
+
+.product__pic-title:hover, .product__pic-title:focus,
+.product__pic-title:active{
+opacity: 0.50;
+color: rgb(61, 60, 60);
+}
+
+.product__title-status{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+    text-transform: uppercase;
+    margin-left: 10px;
+    opacity: 0.4;
+}
+.product__description{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+    max-width: 350px;
+    margin-bottom: 10px;
+}
+.product__link{
+    display: inline-block;
+    padding-top: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 20px;
+    }
+ .product__link:hover, .product__link:active, 
+ .product__link:focus {
+     opacity: 0.5;
+ }
+.product__link:after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    border-top: 2px solid #4e4e4e;   
+    border-color: blue;
+    margin-top: 5px;
+    margin-left: 4px;
+}

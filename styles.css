@@ -1,0 +1,15 @@
+/* Common */
+@import url("./styles/reset.css");
+@import url("./styles/font.css");
+@import url("./styles/common.css");
+/* Desktop 1586px */
+@import url("./styles/desktop/desktop.css") (max-width: 2500px) and (min-width: 769px);
+/* tablet  768px */
+@import url("./styles/tablet/tablet.css") (max-width: 768px) and (min-width: 376px);
+/* mobile 375*/
+@import url("./styles/mobile/mobile.css") (max-width: 375px) and (min-width: 100px);
+
+
+
+
+

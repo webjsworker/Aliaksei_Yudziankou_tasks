@@ -1,0 +1,26 @@
+.clients{
+    max-width: 375px;
+}
+.clients__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 240px; 
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+.clients__item{
+    margin-left: 0px;
+    margin-top: 20px;
+    /* overflow: hidden; */
+}
+.clients__item:first-child{
+    margin-left: 0;
+}
+.clients__pic{
+    max-width: 270px;
+    transition: 0.2s all;
+}
+.clients__item:hover .clients__pic{
+    transform: scale(1.1);
+}

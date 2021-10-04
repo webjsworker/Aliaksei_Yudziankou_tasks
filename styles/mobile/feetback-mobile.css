@@ -1,0 +1,108 @@
+.feetback{
+    max-width: 768px;
+}
+
+.feetback__wrapper{
+    
+    background: url(../../images/intro/03.jpg) no-repeat center;
+    background-size: cover;
+   
+    
+}
+.feetback__link-contaner{
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: flex-start;
+    margin-left: 5px;
+}
+
+.feetback__link{
+    color: white;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.feetback__link li{
+    margin-bottom: 30px;
+}
+.feetback__link li:hover, .feetback__link li:focus,
+.feetback__link li:active {
+    color: rgb(104, 103, 102);
+    
+}
+.feetback__form{
+    color: white;
+    margin-left: 4px;
+    margin-top: 80px;
+    
+}
+.feetback__form-item{
+   display: flex;
+    flex-flow: column; 
+}
+.feetback__form-item input{
+    width: 350px;
+    height: 30px;
+    margin-bottom: 20px;
+    /* background-color: transparent; */
+    background-color: black;
+    opacity: 0.5;
+    color: white;
+    /* border: none; */
+    
+}
+.feetback__form-item textarea{
+    color: white;
+    width: 350px;
+    height: 150px;
+ resize: none;
+ margin-bottom: 20px;
+ background-color: black;
+    opacity: 0.2;
+ /* background-color: transparent; */
+}
+.feetback__form-title{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+.feetback__form-submit{
+    padding: 15px 25px;
+    background-color: rgb(14, 229, 236);
+    border: none;
+}
+.feetback__form-submit:hover, .feetback__form-submit:focus,
+.feetback__form-submit:active{
+    background-color: rgb(9, 142, 146);
+    
+}
+
+.feetback__footer{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.feetback__footer-link{
+ 
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 150px;
+}
+
+
+.feetback__footer-link a{
+    text-decoration: none;
+    color: turquoise;
+}
+.feetback__footer-link a:hover, 
+.feetback__footer-link a:active,
+.feetback__footer-link a:focus{
+    color: rgb(33, 112, 104);
+}
+
+.feetback__footer a:hover{
+    transform: scale(1.1);
+}
