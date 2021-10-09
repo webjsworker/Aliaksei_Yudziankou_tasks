@@ -3,6 +3,9 @@ console.log("------------ task_3 ")
 let str = "aaaabbcdefffffffg";
 
 let doublbrakets = (inputString) => {
+    if (typeof (inputString) != "string") {
+        return "Please enter a valid string"
+    }
     let result = ''
     let count = 0;
     let strToArray = inputString.split('');
