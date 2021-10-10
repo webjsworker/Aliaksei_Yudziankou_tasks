@@ -9,5 +9,4 @@ function multiplyAll(arr) {
         return ret;
     }
 }
-
 console.log('multiplay = ' + multiplyAll([1, 2, 3])(2))
