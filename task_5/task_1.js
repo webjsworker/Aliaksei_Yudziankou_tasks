@@ -11,7 +11,7 @@ function pipe1(...array_of_fn) {
             let func = array_of_fn[i];
             result = func(result)
         }
-        return result;
+        return result
     }
 }
 x = pipe1(multiplyTwo, minusFour)(10);
