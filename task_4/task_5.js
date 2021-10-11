@@ -1,28 +1,28 @@
 let example_2 = [
 0 == null, /* № 1 
-результат false
+result false
 Case 
 <object vs <string>, <number>, <symbol>>
 0 - false
 null falsy  
 */
 null == undefined,/* №2
-результат true
+result true
 case   null == undefined -> return true
 */
 1 == {}, /* № 3 
-результат  false
+result false
 case 
 <object vs <string>, <number>, <symbol>>
-{} Toprimitive  "[object Object]"
+{} ToPrimitive  "[object Object]"
 case  <number> == <string>  
 toNamber "[object Object]" -> NaN -> fasle 
-Итого true -- false
+ true -- false (false)
 
 
 */
 {} == 1,/* № 4
-результат false 
+resultfalse 
 case 
 <object vs <string>, <number>, <symbol>>
 {} Toprimitive -> valueOf() = [object Object] ->  ToNamber ->  NaN -> false 
@@ -31,23 +31,23 @@ fasle -- 1 (true)
 
 
 ({}) == 1, /* № 5 
-результат false
+result false
 case 
 <object vs <string>, <number>, <symbol>> 
 ({}) Toprimitive -> valueOf() = [object Object] ->  ToNamber ->  NaN -> false 
-fasle -- 1 true 
+fasle -- 1  (false)
 */
 
 ({toString: () => '12'}) == 12 /* № 6 
-результат true
+result true
 Case 
 <object vs <string>, <number>, <symbol>>
 ({toString: () => '12'}) ToPrimitiv ->  valueOf() = 12 
-12 = 12 true
+12 = 12 (true)
 */
 ]
 
-console.log("-----------------")
+console.log("----------------- task_5 ")
 
 let number = 0 ; 
 let task_5 = function show(value) {
@@ -62,7 +62,6 @@ example_2.forEach(element => task_5(element));
 let v = ({}); 
 
 console.log("typeOff v.valueOf() = " + typeof(v) );
-/* console.log("toPromitive = " + ToPrimitive(v, number)) */
 console.log("valueOf() = " + v.valueOf() )
 console.log("ToNamber = " + Number(v) )
 

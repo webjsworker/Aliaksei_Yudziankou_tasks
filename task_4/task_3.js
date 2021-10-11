@@ -1,7 +1,6 @@
 
 console.log("------------ task_3 ")
 let str = "aaaabbcdefffffffg";
-
 let doublbrakets = (inputString) => {
     if (typeof (inputString) != "string") {
         return "Please enter a valid string"

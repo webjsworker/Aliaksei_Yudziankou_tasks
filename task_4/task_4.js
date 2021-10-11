@@ -1,52 +1,54 @@
+
+console.log("------------task_4")
 let example_1 =[ 
 1 - '0' + 2, /* №1
-результат 3. 
-приоритет операций: + и - имеет одинакове значение 13 
-Ассоциативность: слева направо
-тип данный  
+result: 3. 
+priority of operations: + and - has the same value 13 
+Associativity: left to right
+data type:  
 1   - number 
 '0' - string
 2   - number; 
-Сложение number + string (неявное преобразование типов) 
-Оператор унарного отрицания преобразует свой операнд в числовой тип. '0' -> 0 
+Number + string addition (implicit type conversion)
+The unary negation operator converts its operand to a numeric type.'0' -> 0 
 1+0+2=3
 */
 1 - '-0' + 2, /* № 2 
-результат 3. 
-приоритет операций: + и - имеет одинакове значение 13 
-Ассоциативность: слева направо
-тип данный:  
+result: 3. 
+priority of operations: + and - has the same value 13 
+Associativity: left to right
+data type::  
 1   -   number 
 '-0' -  string
 2   -   number; 
-Сложение number + string (неявное преобразование типов) 
-Оператор унарного отрицания преобразует свой операнд в числовой тип. '-0' -> 0 
+Number + string addition (implicit type conversion)
+The unary negation operator converts its operand to a numeric type.'-0' -> 0 
 1-0+2=3
 */
 1 - '-0-' + 'NaN', /* № 3
-результат NaNNaN.
-приоритет операций: + и - имеет одинакове значение 13 
-Ассоциативность: слева направо
-тип данный: 
+result: NaNNaN.
+priority of operations: + and - has the same value 13  
+Associativity: left to right
+data type:: 
 1     - number;
 '-0-' - string;
 'NaN' - string
-Оператор унарного +/- преобразует свой операнд в числовой тип. 
+The unary +/- operator converts its operand to a numeric type. 
 '-0-' -> NaN
 'NaN' -> NaN 
 1- NaN + NaN -> NaNNaN
 */
 'b' + [NaN + 'ba', 'CC'] - {}, /* № 4
-результат NaN
-приоритет операций: + и - имеет одинакове значение 13 
-Ассоциативность: слева направо
-тип данный:
+result: NaN
+priority of operations: + and - has the same value 13  
+Associativity: left to right
+data type::
 'b' - string
 NaN - number NaN
 'ba'- string
 'CC'- string
 {}  - number NaN
-Оператор унарного +/- преобразует свой операнд в числовой тип. 
+The unary +/- operator converts its operand to a numeric type. 
 'b' -> number NaN
 NaN -> number NaN
 'ba'-> number NaN
@@ -54,145 +56,145 @@ NaN -> number NaN
 {}  -> number NaN
 */
 [] + (()=>{}), /* № 5 
-результат ()=>{}
-приоритет операций: + и - имеет одинакове значение 13 
-Ассоциативность: слева направо
-тип данных:
+result: ()=>{}
+priority of operations: + and - has the same value 13  
+Associativity: left to right
+data type:
 []       -  0    number ;
-(()=>{}) -  ()=>{} результат автоматического вызова valueOf; 
-Конкатенация 
-0 и ()=>{} 
+(()=>{}) -  ()=>{} the result of the automatic call to valueOf; 
+concatenation 
+0 and ()=>{} 
 */
 [] + (()=>({})), /* № 6 
-Результат ()=>({})
-приоритет операций: + и - имеет одинакове значение 13 
-Ассоциативность: слева направо
-тип данных: 
+result: ()=>({})
+priority of operations: + and - has the same value 13  
+Associativity: left to right
+data type: 
 []       -  0    number ;
-(()=>({}))  - ()=>({}) результат автоматического вызова valueOf;
-конкатенация 0 и ()=>({})
+(()=>({}))  - ()=>({}) the result of the automatic call to valueOf;
+concatenation 0 and ()=>({})
 */
 [] + (()=>({}))(), /* № 7 
-результат [object Object]
- приоритет операций: + и - имеет одинакове значение 13 
-Ассоциативность: слева направо
-тип данных: 
+result: [object Object]
+priority of operations: + and - has the same value 13  
+Associativity: left to right
+data type: 
 []       -  0    number ;
-(()=>({}))() - [object Object] результат автоматического вызова valueOf;
-конкатенация 0 и [object Object]
+(()=>({}))() - [object Object] the result of the automatic call to valueOf;
+concatenation 0 and [object Object]
  */
 [] + (() => new Object(123))(), /* № 8 
-результат 123
-приоритет операций: + и - имеет одинакове значение 13 
-Ассоциативность: слева направо
-тип данных: 
+result: 123
+priority of operations: + and - has the same value 13  
+Associativity: left to right
+data type: 
 []       -  0    number ;
-(() => new Object(123))() - 123 результат автоматического вызова valueOf; 
-конкатенация 0 и 123  (string)
+(() => new Object(123))() - 123 the result of the automatic call to valueOf; 
+concatenation 0 and 123  (string)
  */
 {} + (() => new Object(123))(), /* № 9 
-результат [object Object]123
-приоритет операций: + и - имеет одинакове значение 13 
-Ассоциативность: слева направо
-тип данных: 
-{} -  [object Object]   результат автоматического вызова valueOf; 
-(() => new Object(123))()        - 123  результат автоматического вызова valueOf;
-конкатенация [object Object] и  123 
+result: [object Object]123
+priority of operations: + and - has the same value 13  
+Associativity: left to right
+data type: 
+{} -  [object Object]   the result of the automatic call to valueOf; 
+(() => new Object(123))()        - 123  the result of the automatic call to valueOf;
+concatenation [object Object] and  123 
 */
 (() => new Object(123))() + {}, /* № 10 
-результат 
-приоритет операций: + и - имеет одинакове значение 13 
-Ассоциативность: слева направо
-тип данных: 
-(() => new Object(123))() - 123  результат автоматического вызова valueOf;
-{} -  [object Object]   результат автоматического вызова valueOf; 
-конкатенация 123 и [object Object]  123[object Object] 
+result:  123[object Object]
+priority of operations: + and - has the same value 13  
+Associativity: left to right
+data type: 
+(() => new Object(123))() - 123  the result of the automatic call to valueOf;
+{} -  [object Object]   the result of the automatic call to valueOf; 
+concatenation 123 and [object Object]  123[object Object] 
 */
 ({}).valueOf() + 1, /* № 11 
-результат [object Object]1 
-езультат вызова ({}).valueOf() - [object Object] 
-Конкатенация 
-[object Object] и 1
+result: [object Object]1 
+call result ({}).valueOf() - [object Object] 
+concatenation 
+[object Object] and 1
 */
 {} + 2, /* № 12 
-результат [object Object]2
-тип данных:
-{} -  [object Object]  - результат автоматического вызова valueOf; 
+result: [object Object]2
+data type:
+{} -  [object Object]  - the result of the automatic call to valueOf; 
 2 - number 
-Конкатенация 
-[object Object] и 2 
+concatenation 
+[object Object] and 2 
 */
 typeof ({}).valueOf() + 2, /* № 13 
-результат object2 
-результат вызова  typeof ({}) -[object Object]  
-JavaScript автоматически вызывает valueOf при обнаружении объекта, когда ожидается примитивное значение. 
-результат вызова [object Object].valueOf() - object
+result: object2 
+call result  typeof ({}) -[object Object]  
+JavaScript automaticand calls valueOf when an object is detected, when a primitive value is expected. 
+call result [object Object].valueOf() - object
 object + 2 ->  object2 
 */
 +{}, /* № 14 
-результат NaN
-приоритет операций: + и - имеет одинакове значение 13 
-Ассоциативность: слева направо
-тип данных: 
-{} -  [object Object]  - результат автоматического вызова valueOf; 
-Оператор унарного +/- преобразует свой операнд в числовой тип.
+result: NaN
+priority of operations: + and - has the same value 13  
+Associativity: left to right
+data type: 
+{} -  [object Object]  - the result of the automatic call to valueOf; 
+The unary +/- operator converts its operand to a numeric type.
 +{} -> NaN 
 */
 +{}+[], /* № 15 
-результат NaN 
-приоритет операций: + и - имеет одинакове значение 13 
-Ассоциативность: слева направо
-тип данный: 
-{}  - [object Object]; результат автоматического вызова valueOf; 
+result: NaN 
+priority of operations: + and - has the same value 13 
+Associativity: left to right
+data type:: 
+{}  - [object Object]; the result of the automatic call to valueOf; 
 []  - 0 
-Оператор унарного +/- преобразует свой операнд в числовой тип.
+The unary +/- operator converts its operand to a numeric type.
 +{} -> NaN
 +[] -> 0  
-Конкатенация 
+concatenation 
 NaN + 0 -> NaN 
 */
 +[], /* № 16
-результат 0 
-приоритет операций: + и - имеет одинакове значение 13 
-Ассоциативность: слева направо
-тип данный:
+result: 0 
+priority of operations: + and - has the same value 13 
+Associativity: left to right
+data type::
 [] - number 
-Оператор унарного +/- преобразует свой операнд в числовой тип.
+The unary +/- operator converts its operand to a numeric type.
 [] -> 0 
 
 */
 +[]+{}, /* № 17 
-результат 0[object Object]
-приоритет операций: + и - имеет одинакове значение 13 
-Ассоциативность: слева направо
-тип данный:
+result: 0[object Object]
+priority of operations: + and - has the same value 13 
+Associativity: left to right
+data type::
 [] - 0 number;
-{} - [object Object]  результат автоматического вызова valueOf; ; 
-Конкатенация строк 
-0  и [object Object];
+{} - [object Object]  the result of the automatic call to valueOf; ; 
+concatenation  
+0  and [object Object];
 
 */
 +[10, 1]+{}, /* №18
-результат NaN[object Object]
-приоритет операций: + и - имеет одинакове значение 13 
-Ассоциативность: слева направо
-тип данный:
+result: NaN[object Object]
+priority of operations: + and - has the same value 13 
+Associativity: left to right
+data type::
 +[10, 1] - NaN; 
 {}       - [object Object]; 
-Конкатенация строк 
-NaN и [object Object];
+concatenation  
+NaN and [object Object];
 */
 {} + [10] /* № 19 
-результат [object Object]10
-приоритет операций: + и - имеет одинакове значение 13 
-Ассоциативность: слева направо
-тип данный:
+result: [object Object]10
+priority of operations: + and - has the same value 13 
+Associativity: left to right
+data type::
 {}     -[object Object] ;  number NaN
 [10]   - number      
-Оператор унарного +/- преобразует свой операнд в числовой тип.
+The unary +/- operator converts its operand to a numeric type.
 [10] -> 10
-Конкатенация строк 
-[object Object] и  10
+concatenation  
+[object Object] and  10
 */
 ] 
 
@@ -203,8 +205,8 @@ let task_4 = function show(value) {
     console.log("example " + numberOfExample + " = "+value + " typeOf = " + typeof(value))
     
 }
-/* 
-task_4(example_1); */
+
+
 example_1.forEach(element => task_4(element));
 
 
