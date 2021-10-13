@@ -1,4 +1,4 @@
-console.log("----------")
+console.log("---------- task_3 ")
 
 let obj = {
     firstName: "Ivan",
@@ -8,11 +8,11 @@ let arg = ["Vasia", "Vasianon"]
 function apply(Fn, obj, arg) {
     obj.firstName = arg[0];
     obj.secondName = arg[1];
-    debugger
+    
      obj.Fm = Fn;
     return     obj.Fm()
 }
 function Fn() {
     return this.firstName;
 }
-console.log( ` apply = ${apply(Fn, obj, arg)} `  ) 
+console.log( `apply = ${apply(Fn, obj, arg)} `  ) 
