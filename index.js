@@ -1,30 +1,31 @@
 let obj = {
     name: "Bob",
-    job:"driver",
+    job: "driver",
     age: {
         month: "March",
-        day: 20, 
+        day: 20,
         year: 2020,
     },
     experience: {
-        track:{
+        track: {
             first: "man",
-            second:"maz",
+            second: "maz",
         }
     }
 }
 
-let copyObj = {};
+let copyObj = Object.assign({}, obj)
+/* console.log(copyObj)  */
 
-copyObj = Object.assign({}, obj)
-
-
-
-console.log( obj) 
-console.log(copyObj) 
-
-if( obj == copyObj) {
-    console.log("don't work")
-} else { 
-    console.log("work")
+function clone(object) {
+    let newObject = {}
+    for (let key in object) {
+        if (typeof object[key] !== 'object') {
+            newObject[key] = object[key]
+        } else {
+            newObject[key] = clone(object[key])
+        }
+    }
+    return newObject
 }
+console.log(clone(obj))
