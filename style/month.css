@@ -1,0 +1,45 @@
+.month{
+    margin: 0 auto;
+    padding: 10px;
+    width: 980px;
+    height: 100px;
+    background-color: rgb(120, 120, 122);
+    margin-top: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.month__month_year{
+    color: white;
+    font-size: 30px;
+    margin-left: 15px;
+    
+}
+
+.month__month_year:hover,
+.month__month_year:focus,
+.month__month_year:active{
+    /* margin-left: 20px; */
+    color: rgb(209, 208, 208);
+}
+
+
+.month__switch{
+    display: flex;
+    color: white;
+
+    font-size: 50px;
+
+}
+
+.month__switch div {
+ width: 50px;
+ height: 50px; 
+ background-color: rgb(120, 120, 122);
+}
+
+.month__switch div:hover {
+    color: rgb(209, 208, 208);
+}
