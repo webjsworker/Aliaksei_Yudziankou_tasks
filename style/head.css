@@ -7,7 +7,7 @@
     background-color: rgb(120, 120, 122);
     margin: 0 auto;
     padding: 10px;
-    
+  
     
 
 }
@@ -17,23 +17,22 @@
     
     align-items: flex-end;
     flex-direction: row;
-    /* margin-top: 20px; */
+    
    
 
 }
 
 .head__time{
-    /* margin-left: 20px; */
-    /* width: 300px; */
+    
     color: white;
     font-size: 100px;
-    /* background-color: rgb(180, 192, 191); */
+   
 }
 .head__part_of_day{
     color: white;
     font-size: 50px;
     margin-left: 20px;
-    /* background-color: rgb(201, 190, 201); */
+   
 }
 
 .head_full_data{
