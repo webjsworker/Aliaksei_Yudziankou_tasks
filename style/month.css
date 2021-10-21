@@ -1,0 +1,63 @@
+.month{
+    margin: 0 auto;
+    padding: 10px;
+    width: 980px;
+    height: 100px;
+    background-color: rgb(120, 120, 122);
+    margin-top: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.month__month_year{
+    color: white;
+    font-size: 30px;
+    margin-left: 15px;
+}
+.month__month_year:hover,
+.month__month_year:focus,
+.month__month_year:active{
+    color: rgb(209, 208, 208);
+}
+.month__switch{
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+    padding-right: 30px;
+    font-size: 50px;
+    width: 300px;
+    height: 90px;
+}
+.month__arrow_contaner{
+    margin-left: 40px ;
+}
+.month__arrow_contaner:last-child{
+    margin-left: 80px ;
+}
+.month__arrow {
+    display: flex;
+    justify-content: flex-end;
+    width: 60px;
+    height: 60px;
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    margin-left: 10px;
+    margin-top: 5px;
+}    
+.arrow_top {
+    position: relative;
+    top: 40px;
+    transform: rotate(-45deg); 
+}
+      
+.arrow_bottom {
+    transform: rotate(135deg);
+}
+.month__arrow:hover,
+.month__arrow:focus,
+.month__arrow:active{
+    border-color: rgb(209, 208, 208);
+}
+.month__switch div:hover {
+    color: rgb(209, 208, 208);
+}
