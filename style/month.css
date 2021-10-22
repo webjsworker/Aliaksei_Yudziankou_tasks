@@ -9,14 +9,18 @@
     justify-content: space-between;
     align-items: center;
 }
-.month__month_year{
+.month__month,
+.month__year{
     color: white;
     font-size: 30px;
     margin-left: 15px;
 }
-.month__month_year:hover,
-.month__month_year:focus,
-.month__month_year:active{
+.month__month:hover,
+.month__month:focus,
+.month__month:active,
+.month__year:hover,
+.month__year:focus,
+.month__year:active{
     color: rgb(209, 208, 208);
 }
 .month__switch{

@@ -2,10 +2,10 @@
 
 function clock(id) {
     /* debugger */
-    let date = new Date().toLocaleTimeString();
-    document.getElementById(id).innerText = date;
-    let currentData = setTimeout(function () { clock() }, 1000);
+    let time = new Date().toLocaleTimeString();
+    document.getElementById(id).innerText = time;
+    let currentData = setTimeout(function () { clock("clock") }, 1000);
 }
-clock(clock);
+clock("clock");
 
 
