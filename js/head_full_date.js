@@ -1,7 +1,7 @@
 
-function FullDate() {
+function FullDate(id) {
 let  date = new Date();
 let fulldata = date.toDateString();
-document.getElementById("head_full_data").innerText = fulldata;
+document.getElementById(id).innerText = fulldata;
 }
-FullDate();
+FullDate("head_full_data");
