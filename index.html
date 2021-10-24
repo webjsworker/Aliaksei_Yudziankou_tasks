@@ -17,7 +17,7 @@
             <div class="head__time_contaner">
                 <div class="head__time" id="clock"> 10:23:12 </div>
                 <!--  <div class="head__part_of_day"> PM </div> -->
-                <div class="head__settings">
+                <div class="head__settings" id="settings">
                     <div class="head__settings_icon"></div>
                     <div class="head__settings_icon"></div>
                     <div class="head__settings_icon"></div>
@@ -27,44 +27,45 @@
         </div>
 
         <div class="month">
-            <div class="month__month" id="month">_October_ </div>
-            <div class="month__year" id="year"> _2021_</div>
+            <div class="month__month" id="month">_ </div>
+            <div class="month__year" id="year"> _</div>
             <div class="month__switch">
 
-                <div class="month__arrow_contaner" id="prev">
+                <div class="month__arrow_contaner" id="next">
                     <div class="month__arrow arrow_top"></div>
                 </div>
-                <div class="month__arrow_contaner" >
-                    <div class="month__arrow arrow_bottom" id="next"></div>
+                <div class="month__arrow_contaner">
+                    <div class="month__arrow arrow_bottom" id="back"></div>
                 </div>
 
 
             </div>
         </div>
 
-        <div class="days">
-
-            <div class="days__name">
-                <div>Mo</div>
-                <div>Tu</div>
-                <div>We</div>
-                <div>Th</div>
-                <div>Fr</div>
-                <div>Sa</div>
-                <div>Su</div>
+        <div class="days" id="days">
+            <div class="days__name" id="weeks_name">
+                <div>-</div>
+                <div>-</div>
+                <div>-</div>
+                <div>-</div>
+                <div>-</div>
+                <div>-</div>
+                <div>-</div>
             </div>
             <div class="days__days">
-                <div class="days__week" id="week_1">  <!-- 1 -->
-                    <div class="days_number different_month" >30</div>
-                    <div class="days_number different_month">31</div>
-                    <div class="days_number current_day">1</div>
+                <div class="days__week" id="week_1">
+                    <!-- 1 -->
+                    <div class="days_number">30</div>
+                    <div class="days_number">31</div>
+                    <div class="days_number">1</div>
                     <div class="days_number">3</div>
                     <div class="days_number">4</div>
                     <div class="days_number">2</div>
                     <div class="days_number">5</div>
                 </div>
 
-                <div class="days__week" id="week_2"> <!-- 2 -->
+                <div class="days__week" id="week_2">
+                    <!-- 2 -->
                     <div class="days_number">6</div>
                     <div class="days_number">6</div>
                     <div class="days_number">8</div>
@@ -74,9 +75,10 @@
                     <div class="days_number">12</div>
                 </div>
 
-                <div class="days__week " id="week_3"> <!-- 3 -->
+                <div class="days__week " id="week_3">
+                    <!-- 3 -->
                     <div class="days_number">13</div>
-                    <div class="days_number celebrate_day">14</div>
+                    <div class="days_number">14</div>
                     <div class="days_number">15</div>
                     <div class="days_number">16</div>
                     <div class="days_number">17</div>
@@ -84,7 +86,8 @@
                     <div class="days_number">19</div>
                 </div>
 
-                <div class="days__week" id="week_4"> <!-- 4 -->
+                <div class="days__week" id="week_4">
+                    <!-- 4 -->
                     <div class="days_number">20</div>
                     <div class="days_number">21</div>
                     <div class="days_number">22</div>
@@ -94,27 +97,41 @@
                     <div class="days_number">26</div>
                 </div>
 
-                <div class="days__week" id="week_5"> <!-- 5 -->
+                <div class="days__week" id="week_5">
+                    <!-- 5 -->
                     <div class="days_number">27</div>
                     <div class="days_number">28</div>
                     <div class="days_number">29</div>
                     <div class="days_number">30</div>
-                    <div class="days_number different_month">1</div>
-                    <div class="days_number different_month">2</div>
-                    <div class="days_number different_month">3</div>
+                    <div class="days_number">1</div>
+                    <div class="days_number">2</div>
+                    <div class="days_number">3</div>
                 </div>
-                <div class="days__week" id="week_6"> <!-- 6 -->
-                    <div class="days_number different_month">4</div>
-                    <div class="days_number different_month">5</div>
-                    <div class="days_number different_month">6</div>
-                    <div class="days_number different_month">7</div>
-                    <div class="days_number different_month">8</div>
-                    <div class="days_number different_month">9</div>
-                    <div class="days_number different_month">10</div>
+                <div class="days__week" id="week_6">
+                    <!-- 6 -->
+                    <div class="days_number">4</div>
+                    <div class="days_number">5</div>
+                    <div class="days_number">6</div>
+                    <div class="days_number">7</div>
+                    <div class="days_number">8</div>
+                    <div class="days_number">9</div>
+                    <div class="days_number">10</div>
                 </div>
             </div>
 
         </div>
+
+
+        <div class="settings" id="menu">
+            <label class="sittings__show_prev">
+                <input type="checkbox" class="setting__checkbox" id="show" /> Show previos days</label>
+            <div class="settings__button_container">
+                <button class="settings_button" id="menu_back">back</button>
+                <!-- <button class="settings_button">Set</button> -->
+            </div>
+        </div>
+
+
         <div class="event">
             <div class="event__head">
 
@@ -139,7 +156,13 @@
     <script src="./js/month.js"></script>
     <script src="./js/days.js"></script> -->
 
+    <script src="./js/holiday.js"></script>
+
     <script src="./js/calend.js"></script>
+
+    <script src="./js/settings.js"></script>
+
+    <script src="./js/day_of_week.js"></script>
 </body>
 
 </html>
