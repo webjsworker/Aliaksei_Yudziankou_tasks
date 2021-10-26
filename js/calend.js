@@ -12,52 +12,89 @@ let nowDate = new Date(),
 const DAYINCALENDAR = 42;
 FullnameMonth = monthName[nowDate.getMonth()];
 let curDate = nowDate.setMonth(nowDate.getMonth() - 1);
-/* console.log(nowDate.getFullYear()); */
 
 let Month = {
     nowDate: nowDate,
     nowMonth: nowMonth,
     monthId: 'month',
-    nowYear: nowYear,
-    yearId: 'year',
+    curMonth: 1,
+
+    getFullNameMonth: function () {
+        return monthName[this.curMonth]
+    },
     monthName: monthName,
     FullnameMonth: FullnameMonth,
-}
+    alldaysarr: [],
+    nowYear: nowYear,
+    yearId: 'year',
+    curYear: 1,
+    getYearContent: function () {
+        return document.getElementById('year').textContent
+    },
 
+};
+let setCurMonth = function () {
+    let c = document.getElementById('month').textContent;
+    let b = Month.monthName.indexOf(c)
+    Month.curMonth = b
+}
 writeItem(Month.monthId, FullnameMonth)
 writeItem(Month.yearId, Month.nowYear)
+setCurMonth()
 
+/* console.log("curMonth = " + Month.curMonth) */
+
+
+let DatefromPage = new Date(Month.getYearContent(), monthName.indexOf(Month.getFullNameMonth()));
 
 function setMonthCalendar(year, month) {
     let monthDays = new Date(year, month + 1, 0).getDate();
     let monthPrefix = new Date(year, month, 0).getDay();
     let monthDaysText = '';
 
-   monthContainer.textContent = monthName[month];
-   yearContainer.textContent = year;
+    //получить дни выбранного месяца // number
+    let dayFromCurrentMonth = function () {
+        let alldays = new Date(Month.getYearContent(), Month.curMonth + 1, 0).getDate();
+        return alldays; 
+    }
+    let alldays = dayFromCurrentMonth() //получить дни выбранного месяца // number
+   
 
-    //получить дни выбранного месяца 
-    let curDate = new Date(yearContainer.textContent, monthName.indexOf(monthContainer.textContent));
-    let mn = curDate.getMonth()
-    let alldays = new Date(year, mn + 1, 0).getDate();
-    // получить номер первого дня 
-    let numberOfday = new Date(year, mn, 1).getDay()
+    
+    // получить номер первого дня //mn - номер месяца 
+    //let numberOfday = new Date(year, mn, 1).getDay()
+
+    let getNumberOfFirstDay = function () {
+        return new Date(Month.getYearContent(), Month.curMonth, 1).getDay()
+    }
+    let numberOfday = getNumberOfFirstDay ()
 
     //создать массив всех дней.
-    let alldaysarr = [];
+    let alldaysarr = Month.alldaysarr ; 
+
+
     // массив дней предыдущего месяца 
     for (i = 0; i < numberOfday - 1; i++) {
         // показать дни предыдущего месяца
         ShowPrevDay(alldaysarr, numberOfday, year, month)
-
     }
+
     PaintdyasBefore(numberOfday)
-    // заполнить массив днями месяца 
-    for (i = 1; i <= alldays; i++) {
+
+
+    // заполнить массив днями месяца /
+let fillArr = (alldays)=>{
+for (i = 1; i <= alldays; i++) {
         alldaysarr.push(String(i))
     }
+    return alldaysarr
+}
+fillArr(alldays)
+
+
     // разместить массив дней в массив календаря
     let differ = DAYINCALENDAR - alldaysarr.length
+
     PaintdyasAfter(differ);
 
     // заполнить концес массива днями с другого месяца 
@@ -66,14 +103,6 @@ function setMonthCalendar(year, month) {
             ShowLastDay(alldaysarr, differ, DAYINCALENDAR)
         }
     }
-    // закрасить дни другого месяца 
-    /* Paintdyas(numberOfday, differ) */
-    /* console.log("alldays with number = " + alldaysarr) */
-
-    // принять массиви 
-
-
-
 
     // поделить массив календаря на недели
     let week_1 = alldaysarr.slice([0], [7]);
@@ -83,10 +112,6 @@ function setMonthCalendar(year, month) {
     let week_5 = alldaysarr.slice([28], [35]);
     let week_6 = alldaysarr.slice([35], [42]);
     // промапить масив в календарь
-
-
-    /* console.log("now day = " + nowDateNumber) */
-
 
     var nodes = document.getElementById("week_1").getElementsByTagName("div");
     for (var i = 0; i < nodes.length; i++) {
@@ -151,22 +176,6 @@ function CurDay(week, i, node) {
     }
 }
 
-back.onclick = function () {
-    let curDate = new Date(yearContainer.textContent, monthName.indexOf(monthContainer.textContent));
-    curDate.setMonth(curDate.getMonth() - 1);
-    let curYear = curDate.getFullYear(),
-        curMonth = curDate.getMonth();
-    setMonthCalendar(curYear, curMonth);
-
-}
-
-next.onclick = function () {
-    let curDate = new Date(yearContainer.textContent, monthName.indexOf(monthContainer.textContent));
-    curDate.setMonth(curDate.getMonth() + 1);
-    let curYear = curDate.getFullYear(),
-        curMonth = curDate.getMonth();
-    setMonthCalendar(curYear, curMonth);
-}
 
 function ShowPrevDay(arr, days, year, month) {
     var elem = document.getElementById('show');
