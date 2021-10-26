@@ -14,24 +14,32 @@ FullnameMonth = monthName[nowDate.getMonth()];
 let curDate = nowDate.setMonth(nowDate.getMonth() - 1);
 /* console.log(nowDate.getFullYear()); */
 
+let Month = {
+    nowDate: nowDate,
+    nowMonth: nowMonth,
+    monthId: 'month',
+    nowYear: nowYear,
+    yearId: 'year',
+    monthName: monthName,
+    FullnameMonth: FullnameMonth,
+}
 
+writeItem(Month.monthId, FullnameMonth)
+writeItem(Month.yearId, Month.nowYear)
 
 
 function setMonthCalendar(year, month) {
-    /* debugger */
     let monthDays = new Date(year, month + 1, 0).getDate();
     let monthPrefix = new Date(year, month, 0).getDay();
     let monthDaysText = '';
-    monthContainer.textContent = monthName[month];
-    yearContainer.textContent = year;
 
+   monthContainer.textContent = monthName[month];
+   yearContainer.textContent = year;
 
     //получить дни выбранного месяца 
     let curDate = new Date(yearContainer.textContent, monthName.indexOf(monthContainer.textContent));
     let mn = curDate.getMonth()
     let alldays = new Date(year, mn + 1, 0).getDate();
-    /* console.log("alldays = " + alldays) */
-    /* console.log("alldays = " + typeof (alldays)) */
     // получить номер первого дня 
     let numberOfday = new Date(year, mn, 1).getDay()
 
@@ -199,14 +207,14 @@ function PaintdyasAfter(afterdays) {
     var node5 = document.getElementById("week_5").getElementsByTagName("div");
     var node6 = document.getElementById("week_6").getElementsByTagName("div");
     let nodelength = node5.length;
-    
+
     for (let i = 0; i < node5.length; i++) {
-            node5[i].classList.remove("different_month")
-            node6[i].classList.remove("different_month")
-        }
+        node5[i].classList.remove("different_month")
+        node6[i].classList.remove("different_month")
+    }
 
     if (elem.checked) {
-        
+
 
         if (afterdays <= 7) {
             for (let i = 0; i < afterdays - 1; i++) {
@@ -216,12 +224,12 @@ function PaintdyasAfter(afterdays) {
 
         if (afterdays > 7) {
             lastElements = (afterdays) - 7
-            for (let i = 0; i <= lastElements -1  ; i++) {
-                let dif = 6 - i ;
+            for (let i = 0; i <= lastElements - 1; i++) {
+                let dif = 6 - i;
                 node5[dif].classList.add("different_month")
             }
 
-            for (let i = 0; i < 7 ; i++) {
+            for (let i = 0; i < 7; i++) {
                 node6[i].classList.add("different_month")
             }
 
