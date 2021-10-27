@@ -95,7 +95,12 @@ function PaintdyasBefore(beforeDays) {
     for (let i = 0; i < node.length; i++) {
         node[i].classList.remove("different_month")
     }
-    for (let i = 0; i < beforeDays; i++) {
+    let length = 0;
+    if (firstDay.checked) {
+        length = beforeDays
+    } else { length = beforeDays - 1 }
+
+    for (let i = 0; i < length; i++) {
         node[i].classList.add("different_month")
         HideDays(node[i])
         HideBorder(node[i])
@@ -109,15 +114,20 @@ let setDaysInMonth = function () {
 
 
 let setAfterDays = function (DAYINCALENDAR, NumberOfFirstDay, dayInMonth) {
-    Calendar.afterdays = DAYINCALENDAR - NumberOfFirstDay - dayInMonth
+    let correct = 0 
+     if (firstDay.checked) {
+        correct = 1  
+        } else correct = 0 
+    Calendar.afterdays = DAYINCALENDAR - (NumberOfFirstDay - 1) - dayInMonth + correct
 }
 
 function PaintdyasAfter(afterdays) {
+    
     var elem = document.getElementById('show');
     var node5 = document.getElementById("week_5").getElementsByTagName("div");
     var node6 = document.getElementById("week_6").getElementsByTagName("div");
     let nodelength = node5.length;
-
+    console.log('afterdays = ' + afterdays)
     for (let i = 0; i < node5.length; i++) {
         node5[i].classList.remove("different_month")
         node6[i].classList.remove("different_month")
@@ -129,19 +139,26 @@ function PaintdyasAfter(afterdays) {
             HideDays(node6[i])
             HideBorder(node6[i])
         }
-
-        let lenght = afterdays - 6;
-        for (let i = 0; i < lenght - 1; i++) {
+        let lenght = 0;
+        lenght = afterdays - 7;
+        for (let i = 0; i < lenght; i++) {
             let elem = 6 - i;
             node5[elem].classList.add("different_month")
             HideDays(node5[elem])
             HideBorder(node5[elem])
         }
     }
-    if (afterdays <= 6) {
+    if (afterdays <= 7) {
+        let length = 0
+          /*  if (firstDay.checked) {
+            length =(afterdays - 1) 
+        } else { length = afterdays } */
 
-        for (let i = 0; i < afterdays; i++) {
-            let elem = 6 - i;
+        let elem = 0 ; 
+        for (let i = 0; i < length     ; i++) {
+           
+            elem = 6 - i;
+            console.log("elem = " + elem)
             node6[elem].classList.add("different_month")
             HideDays(node6[elem])
             HideBorder(node6[elem])

@@ -60,8 +60,7 @@ let Calendar = {
         return this.alldays.slice([35], [42])
     },
     afterdays: 0,
-    
-
+   
 };
 
 console.log("Calendar.firstDay = " + Calendar.firstDay) 
@@ -88,6 +87,7 @@ let apdateApp = function () {
     PaintdyasBefore(Calendar.NumberOfFirstDay)
 
     setDaysInMonth()
+    
     setAfterDays(DAYINCALENDAR, Calendar.NumberOfFirstDay, Calendar.dayInMonth);
 
     PaintdyasAfter(Calendar.afterdays)

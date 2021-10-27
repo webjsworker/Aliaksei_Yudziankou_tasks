@@ -60,10 +60,10 @@ opacity: 0.6;
     border-color: rgb(179, 179, 179);
 
 }
-.days__week div:nth-child(1n + 6){
+/* .days__week div:nth-child(1n + 6){
     color: hotpink;
     opacity: 0.6;
-}
+} */
 
 .current_day{
     background-color: rgb(185, 179, 179) 
