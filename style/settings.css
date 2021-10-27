@@ -30,3 +30,22 @@
     width: 30px;
     height: 30px;  
 }
+
+.settings__contaner{
+    color: white;
+    font-size: 36px;
+}
+.settings__list_contaner{
+    display: flex; 
+
+}
+.settings__list_item{
+      
+    width: 200px;
+    height: 40px; 
+    font-size: 24px;
+}
+.settings__list:last-child  {
+ margin-left: 80px;   
+ 
+}

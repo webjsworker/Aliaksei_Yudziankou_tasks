@@ -60,8 +60,12 @@ let Calendar = {
         return this.alldays.slice([35], [42])
     },
     afterdays: 0,
+    
 
 };
+
+console.log("Calendar.firstDay = " + Calendar.firstDay) 
+
 initialisation()
 // получить текущий месяц и год со страницы 
 let DatefromPage = new Date(Calendar.getYearContent(), monthName.indexOf(Calendar.getFullNameMonth()));
@@ -72,7 +76,7 @@ let apdateApp = function () {
     getNumberOfFirstDay() // номер дня начала месяца
 
     // заполенние массива дней
-    setPrevDays();
+    setPrevDays(Calendar.firstDay);
     setCurDays()
     setLastDays()
 
@@ -83,53 +87,13 @@ let apdateApp = function () {
 
     PaintdyasBefore(Calendar.NumberOfFirstDay)
 
-  
     setDaysInMonth()
-    setAfterDays(DAYINCALENDAR, Calendar.NumberOfFirstDay, Calendar.dayInMonth)
+    setAfterDays(DAYINCALENDAR, Calendar.NumberOfFirstDay, Calendar.dayInMonth);
 
-    console.log("Calendar.afterdays = " + Calendar.afterdays)
-
-
-
-
-
-    function PaintdyasAfter(afterdays) {
-        var elem = document.getElementById('show');
-        var node5 = document.getElementById("week_5").getElementsByTagName("div");
-        var node6 = document.getElementById("week_6").getElementsByTagName("div");
-        let nodelength = node5.length;
-    
-        for (let i = 0; i < node5.length; i++) {
-            node5[i].classList.remove("different_month")
-            node6[i].classList.remove("different_month")
-        }
-    
-        /* if (elem.checked) { */
-    
-    
-            if (afterdays > 7) {
-                for (let i = 0; i < afterdays - 1; i++) {
-                    console.log("i = " + i)
-                    node6[i].classList.add("different_month")
-                }
-            }
-    
-           /*  if (afterdays > 7) {
-                lastElements = (afterdays) - 7
-                for (let i = 0; i <= lastElements - 1; i++) {
-                    let dif = 6 - i;
-                    node5[dif].classList.add("different_month")
-                }
-    
-                for (let i = 0; i < 7; i++) {
-                    node6[i].classList.add("different_month")
-                }
-    
-            }
-            } */
-        }
     PaintdyasAfter(Calendar.afterdays)
 
+    
+    
 
 
 }
