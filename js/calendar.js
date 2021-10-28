@@ -8,11 +8,13 @@ let nowDate = new Date(),
     /* daysContainer = container.getElementsByClassName('days')[0], */
     back = document.getElementById('back'),
     next = document.getElementById('next'),
-    monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-const DAYINCALENDAR = 42;
+    AddEvent = document.getElementById('event'),
+    Fulldate = document.getElementById('head_full_data'),
+    monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    dayName = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Suturday", "Sunday"];
+    const DAYINCALENDAR = 42;
 FullnameMonth = monthName[nowDate.getMonth()];
 let curDate = nowDate.setMonth(nowDate.getMonth() - 1);
-
 
 let Calendar = {
     nowDate: nowDate,
@@ -60,44 +62,11 @@ let Calendar = {
         return this.alldays.slice([35], [42])
     },
     afterdays: 0,
-   
+
 };
 
-console.log("Calendar.firstDay = " + Calendar.firstDay) 
-
-initialisation()
-// получить текущий месяц и год со страницы 
-let DatefromPage = new Date(Calendar.getYearContent(), monthName.indexOf(Calendar.getFullNameMonth()));
-
-let apdateApp = function () {
-    set_week_name(Calendar.language);// установка надписей дней недели 
-    setMaxDaysInMonth() //получить число дней выбранного месяца // number
-    getNumberOfFirstDay() // номер дня начала месяца
-
-    // заполенние массива дней
-    setPrevDays(Calendar.firstDay);
-    setCurDays()
-    setLastDays()
-
-    let arrId = ["week_1", "week_2", "week_3", "week_4", "week_5", "week_6"];
-    let arrweek = [Calendar.week_1(), Calendar.week_2(), Calendar.week_3(), Calendar.week_4(), Calendar.week_5(), Calendar.week_6()]
-    setAllDay(arrId, arrweek)
-    setCurDay(arrId, arrweek)
-
-    PaintdyasBefore(Calendar.NumberOfFirstDay)
-
-    setDaysInMonth()
-    
-    setAfterDays(DAYINCALENDAR, Calendar.NumberOfFirstDay, Calendar.dayInMonth);
-
-    PaintdyasAfter(Calendar.afterdays)
-
-    
-    
 
 
-}
-apdateApp()
 
-
+ 
 

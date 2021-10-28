@@ -1,17 +1,31 @@
 let initialisation = function () {
-    // установили номер текущего месяца.
+    
     setCurMonth()
-    // записать значение месяца и года
+    
     writeItem(Calendar.monthId, Calendar.getFullNameMonth())
     writeItem(Calendar.yearId, Calendar.nowYear)
 }
 
-// установили номер текущего месяца. 
+function writeItem(id, value) {
+    document.getElementById(id).textContent = value;
+}
+
+function SetFullDate() {
+    let date = new Date();
+    Clock.fulldate = date.toDateString();
+    writeItem(Clock.fulldataId, Clock.fulldate)
+}
+
+function SetTime() {
+    Clock.time = new Date().toLocaleTimeString();
+    writeItem(Clock.id, Clock.time)
+}
+
 let setCurMonth = function () {
     Calendar.curMonth = nowDate.getMonth() + 1;
 }
 
-//получить дни выбранного месяца // number
+
 let setMaxDaysInMonth = function () {
     Calendar.maxDaysInMonth = new Date(Calendar.getYearContent(), Calendar.curMonth + 1, 0).getDate();
 }
@@ -34,7 +48,7 @@ function FirstDay(dayOfweek) {
     }
 }
 
-///////////////////////////////////////////////////////
+
 let setPrevDays = function () {
     Calendar.alldays = [];
     let DaysPrevMonth = new Date(Calendar.getYearContent(), monthName.indexOf(Calendar.getFullNameMonth()), 0).getDate();
@@ -89,50 +103,51 @@ function setCurDay(arrId, arrweek) {
     }
 }
 
-
 function PaintdyasBefore(beforeDays) {
     var node = document.getElementById("week_1").getElementsByTagName("div");
     for (let i = 0; i < node.length; i++) {
-        node[i].classList.remove("different_month")
+        node[i].classList.remove("different_month");
+        AddBorder(node[i]);
     }
     let length = 0;
     if (firstDay.checked) {
         length = beforeDays
     } else { length = beforeDays - 1 }
-
     for (let i = 0; i < length; i++) {
         node[i].classList.add("different_month")
         HideDays(node[i])
         HideBorder(node[i])
     }
-
 }
 
 let setDaysInMonth = function () {
     Calendar.dayInMonth = new Date(Calendar.nowYear, Calendar.curMonth + 1, 0).getDate();
 }
 
-
 let setAfterDays = function (DAYINCALENDAR, NumberOfFirstDay, dayInMonth) {
-    let correct = 0 
-     if (firstDay.checked) {
-        correct = 1  
-        } else correct = 0 
-    Calendar.afterdays = DAYINCALENDAR - (NumberOfFirstDay - 1) - dayInMonth + correct
+    let correct = 0
+    let prevdays = 0
+    if (firstDay.checked && NumberOfFirstDay !== 0) {
+        prevdays = NumberOfFirstDay
+    } else {
+        if (NumberOfFirstDay === 0) {
+            prevdays = 0
+        } else { prevdays = NumberOfFirstDay - 1 }
+    }
+    Calendar.afterdays = DAYINCALENDAR - prevdays - dayInMonth;
 }
 
 function PaintdyasAfter(afterdays) {
-    
     var elem = document.getElementById('show');
     var node5 = document.getElementById("week_5").getElementsByTagName("div");
     var node6 = document.getElementById("week_6").getElementsByTagName("div");
     let nodelength = node5.length;
-    console.log('afterdays = ' + afterdays)
     for (let i = 0; i < node5.length; i++) {
         node5[i].classList.remove("different_month")
         node6[i].classList.remove("different_month")
+        AddBorder(node5[i])
+        AddBorder(node6[i])
     }
-
     if (afterdays >= 7) {
         for (let i = 0; i <= 6; i++) {
             node6[i].classList.add("different_month")
@@ -150,15 +165,10 @@ function PaintdyasAfter(afterdays) {
     }
     if (afterdays <= 7) {
         let length = 0
-          /*  if (firstDay.checked) {
-            length =(afterdays - 1) 
-        } else { length = afterdays } */
-
-        let elem = 0 ; 
-        for (let i = 0; i < length     ; i++) {
-           
+        length = afterdays;
+        let elem = 0;
+        for (let i = 0; i < length; i++) {
             elem = 6 - i;
-            console.log("elem = " + elem)
             node6[elem].classList.add("different_month")
             HideDays(node6[elem])
             HideBorder(node6[elem])
@@ -169,29 +179,42 @@ function PaintdyasAfter(afterdays) {
 let HideDays = function (node) {
     if (hidedays.checked) {
         node.innerText = ""
-
     }
 }
-
 
 let HideBorder = function (node) {
     if (hidedays.checked) {
         node.style.borderColor = "rgb(120, 120, 122)";
-
     }
 }
 
+let AddBorder = function (node) {
+    node.style.borderColor = "rgb(179, 179, 179)";
+}
+
+let setCurDate = function () {
+    alert("sdsdscsdc")
+};
 
 
 
+let apdateApp = function () {
+    set_week_name(Calendar.language);
+    setMaxDaysInMonth() 
+    getNumberOfFirstDay() 
+    
+    setPrevDays(Calendar.firstDay);
+    setCurDays();
+    setLastDays();
 
+    let arrId = ["week_1", "week_2", "week_3", "week_4", "week_5", "week_6"];
+    let arrweek = [Calendar.week_1(), Calendar.week_2(), Calendar.week_3(), Calendar.week_4(), Calendar.week_5(), Calendar.week_6()];
+    setAllDay(arrId, arrweek);
+    setCurDay(arrId, arrweek);
 
-/* let removeAfterDays = function (beforeDays) {
-    if (elem.checked) {
-        var node = document.getElementById("week_1").getElementsByTagName("div");
-        for (let i = 0; i < beforeDays; i++) {
-            node[i].innerText = ""
-        }
+    PaintdyasBefore(Calendar.NumberOfFirstDay);
+    setDaysInMonth();
+    setAfterDays(DAYINCALENDAR, Calendar.NumberOfFirstDay, Calendar.dayInMonth);
+    PaintdyasAfter(Calendar.afterdays);
+}
 
-    }
-} */

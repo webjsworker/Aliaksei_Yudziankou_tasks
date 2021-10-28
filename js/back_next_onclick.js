@@ -8,9 +8,7 @@ back.onclick = function () {
     writeItem(Calendar.yearId, Calendar.curYear)
 
     apdateApp()
-    
-
-}
+  }
 next.onclick = function () {
     let curDate = DatefromPage
     curDate.setMonth(curDate.getMonth() + 1);
@@ -20,7 +18,15 @@ next.onclick = function () {
     writeItem(Calendar.yearId, Calendar.curYear)
 
     apdateApp()
-    
+   }
+
+Fulldate.onclick = function () {
+    initialisation()
+    apdateApp()
+}
+
+AddEvent.onclick = function () {
+    console.log ("Please, Add new event")
 }
 
 

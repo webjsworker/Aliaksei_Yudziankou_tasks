@@ -12,10 +12,6 @@ Blockback.onclick = function () {
     Blockdays.style.display = "block"
 }
 
-
-// конфигурация блока настроек
-
-
 let hidedays = document.getElementById('show');
 hidedays.onclick = function () {
     apdateApp()
@@ -27,7 +23,4 @@ firstDay.onclick = function () {
 }
 
 
-// обработка состояние чекбокс 
-//именениея значения переменной вклю.выкл
-// создать функцию дополняющую массив предыдущими днями 
-// закрашивать предыдущие дни. 
+
