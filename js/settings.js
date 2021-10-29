@@ -10,6 +10,10 @@ Blocksettings.onclick = function () {
 Blockback.onclick = function () {
     Blockmenu.style.display = "none"
     Blockdays.style.display = "block"
+    
+    apdateApp()
+    
+    /* setAllDay(arrId, arrweek); */
 }
 
 let hidedays = document.getElementById('show');
@@ -19,6 +23,17 @@ hidedays.onclick = function () {
 
 let firstDay = document.getElementById('first_day');
 firstDay.onclick = function () {
+
+    if (firstDay.checked) {
+       Calendar.weekendDays[0] = Calendar.weekendDays[0] + 1  
+        if (Calendar.weekendDays[0] > 6 ) {Calendar.weekendDays[0] = 0}
+        Calendar.weekendDays[1] = Calendar.weekendDays[1] + 1 
+        if (Calendar.weekendDays[1] > 6 ) {Calendar.weekendDays[1] = 0}
+    } 
+
+
+
+
     apdateApp()
 }
 

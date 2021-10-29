@@ -19,14 +19,14 @@ align-items: center;
 padding: 5px;
 }
 
-.days__name div:last-child{
+/* .days__name div:last-child{
 opacity: 0.6;
-}
+} */
 
-.days__name div:nth-child(1n + 6){
+/* .days__name div:nth-child(1n + 6){
     color: hotpink;
     opacity: 0.6;
-}
+} */
 
 .days__days{
    
@@ -58,10 +58,15 @@ opacity: 0.6;
     border-color: rgb(179, 179, 179);
 
 }
-.days__week div:nth-child(1n + 6){
+/* .days__week div:nth-child(1n + 6){
     color: hotpink;
     opacity: 0.6;
-}
+} */
+
+.weekends {
+    color: hotpink; 
+} 
+
 
 .current_day{
     background-color: rgb(185, 179, 179) 

@@ -1,9 +1,19 @@
 let initialisation = function () {
-    
+
     setCurMonth()
-    
+
     writeItem(Calendar.monthId, Calendar.getFullNameMonth())
     writeItem(Calendar.yearId, Calendar.nowYear)
+
+    set_days_name(Calendar.language)
+
+    let selectDefault = function () {
+         document.getElementById("first_weekeaen_day").options[5].selected=true;
+        document.getElementById("second_weekeaen_day").options[6].selected=true;
+    } 
+    selectDefault()
+
+
 }
 
 function writeItem(id, value) {
@@ -75,18 +85,27 @@ let setLastDays = function () {
     }
 }
 
+//////////////////////////////////////////////////////
+
 
 let setAllDay = function (arrId, arrweek) {
     for (var i = 0; i < 6; i++) {
         let nodes = document.getElementById(arrId[i]).getElementsByTagName("div");
+        
         for (var x = 0; x < 7; x++) {
             nodes[x].innerText = arrweek[i][x]
+            
         }
+        paintWeekend(Calendar.weekendDays, nodes)
     }
 }
 
-function setCurDay(arrId, arrweek) {
-    let curday = Calendar.nowDate.getDate() + Calendar.NumberOfFirstDay
+function setCurDay(arrId, dayBefore) {
+
+    let corect = 0 
+    if (firstDay.checked){corect = 1  }
+    let curday = Calendar.nowDate.getDate() + dayBefore + corect
+    /* let curday = Calendar.nowDate.getDate() + Calendar.NumberOfFirstDay */   
     let counter = 0;
     for (var i = 0; i < 6; i++) {
         for (var x = 0; x < 7; x++) {
@@ -192,29 +211,83 @@ let AddBorder = function (node) {
     node.style.borderColor = "rgb(179, 179, 179)";
 }
 
-let setCurDate = function () {
+/* let setCurDate = function () {
     alert("sdsdscsdc")
+}; */
+
+function set_days_name(language) {
+    let dayOfweek_EN = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Suturday", "Sunday"]
+    let dayOfweek_RU = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскрпесенье"]
+    language === 0 ? dayOfweek = dayOfweek_EN : dayOfweek = dayOfweek_RU;
+    let node1 = document.getElementById("first_weekeaen_day").options
+    let node2 = document.getElementById("second_weekeaen_day").options
+    for (let i = 0; i < dayOfweek.length; i++) {
+        node1[i] = new Option(dayOfweek[i], [i]);
+    }
+    for (let i = 0; i < dayOfweek.length; i++) {
+        node2[i] = new Option(dayOfweek[i], [i]);
+    }
 };
 
 
 
+
+
+let set_weekend_days = function () {
+    let node1 = document.getElementById("first_weekeaen_day");
+    let node2 = document.getElementById("second_weekeaen_day");
+    Calendar.weekendDays[0] = Number(node1.options[node1.selectedIndex].value);
+    Calendar.weekendDays[1] = Number(node2.options[node2.selectedIndex].value);
+}
+
+let paintWeekend = function (weekends, node) {
+  let week = [] 
+if (firstDay.checked)  {
+    week[0] = weekends[0] + 1 
+    if ( week[0] > 6 ) { week[0] = 0 }
+    week[1] = weekends[1] + 1 
+    if ( week[1] > 6 ) { week[1] = 0 }
+} else {  week[0] = weekends[0]
+    week[1] = weekends[1]
+}
+        /* let node = document.getElementById("weeks_name").getElementsByTagName("div"); */
+    for (let i = 0; i < node.length; i++) {
+        node[i].classList.remove("weekends")
+    }
+    /* node[weekends[0]].classList.add("weekends")
+    node[weekends[1]].classList.add("weekends") */
+    node[week[0]].classList.add("weekends")
+    node[week[1]].classList.add("weekends")
+
+}
+
 let apdateApp = function () {
     set_week_name(Calendar.language);
-    setMaxDaysInMonth() 
-    getNumberOfFirstDay() 
-    
+    setMaxDaysInMonth()
+    getNumberOfFirstDay()
+
     setPrevDays(Calendar.firstDay);
     setCurDays();
     setLastDays();
 
+    set_weekend_days()
+
     let arrId = ["week_1", "week_2", "week_3", "week_4", "week_5", "week_6"];
     let arrweek = [Calendar.week_1(), Calendar.week_2(), Calendar.week_3(), Calendar.week_4(), Calendar.week_5(), Calendar.week_6()];
     setAllDay(arrId, arrweek);
-    setCurDay(arrId, arrweek);
+    setCurDay(arrId,Calendar.getDaysbefore());
 
     PaintdyasBefore(Calendar.NumberOfFirstDay);
     setDaysInMonth();
     setAfterDays(DAYINCALENDAR, Calendar.NumberOfFirstDay, Calendar.dayInMonth);
     PaintdyasAfter(Calendar.afterdays);
+
+    /* set_days_name(Calendar.language) */
+
+    paintWeekend(Calendar.weekendDays, weekItem)
+
+
+    
+
 }
 

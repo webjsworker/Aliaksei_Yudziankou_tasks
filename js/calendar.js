@@ -5,10 +5,12 @@ let nowDate = new Date(),
     container = document.getElementById('month-calendar'),
     monthContainer = document.getElementById('month'),
     yearContainer = document.getElementById('year'),
+    weekItem = document.getElementById("weeks_name").getElementsByTagName("div");
     /* daysContainer = container.getElementsByClassName('days')[0], */
     back = document.getElementById('back'),
     next = document.getElementById('next'),
     AddEvent = document.getElementById('event'),
+    language = document.getElementById('language'),
     Fulldate = document.getElementById('head_full_data'),
     monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     dayName = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Suturday", "Sunday"];
@@ -62,6 +64,15 @@ let Calendar = {
         return this.alldays.slice([35], [42])
     },
     afterdays: 0,
+    weekendDays: [5,6],
+    getDaysbefore: function () {
+        if (this.NumberOfFirstDay === 0 ) {
+            return  this.NumberOfFirstDay
+        } else {   return this.NumberOfFirstDay - 1  }
+
+
+       
+    },
 
 };
 

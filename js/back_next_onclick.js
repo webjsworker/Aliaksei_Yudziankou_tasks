@@ -29,4 +29,11 @@ AddEvent.onclick = function () {
     console.log ("Please, Add new event")
 }
 
+language.onclick = function () {
+    if(language.checked){
+        Calendar.language = 1 ; 
+    } else {Calendar.language = 0}
+    apdateApp()
+}
+
 

@@ -48,8 +48,8 @@
                 <div>-</div>
                 <div>-</div>
                 <div>-</div>
-                <div>-</div>
-                <div>-</div>
+                <div >-</div>
+                <div >-</div>
             </div>
             <div class="days__days">
                 <div class="days__week" id="week_1">
@@ -117,10 +117,15 @@
 
 
         <div class="settings" id="menu">
-            <label class="sittings__show_prev">
-                <input type="checkbox" class="setting__checkbox" id="show" /> Hide previos days</label>
-
-
+            <div>
+                <div><label class="sittings__show_prev"></label>
+                    <input type="checkbox" class="setting__checkbox" id="language" /> Ru/EN</label>
+                </div>
+                <div>
+                    <label class="sittings__show_prev">
+                        <input type="checkbox" class="setting__checkbox" id="show" /> Hide previos days</label>
+                </div>
+            </div>
 
             <div class="settings__contaner">
                 <div class="settings__first_day">
@@ -132,26 +137,26 @@
                 <span>Choose weekend</span>
                 <div class="settings__list_contaner">
                     <div class="settings__list ">
-                        <select class="settings__list_item">
-                            <option value="Monday">Monday</option>
-                            <option value="Tuesday">Tuesday</option>
+                        <select class="settings__list_item" id="first_weekeaen_day">
+                            <option></option>
+                            <!-- <option value="Tuesday">Tuesday</option>
                             <option value="Wednesday">Wednesday</option>
                             <option value="Thursday">Thursday</option>
                             <option value="Fridays">Friday</option>
                             <option value="Suturday">Suturday</option>
-                            <option value="Sunday">Sunday</option>
+                            <option value="Sunday">Sunday</option> -->
                         </select>
                     </div>
 
                     <div class="settings__list ">
-                        <select class="settings__list_item">
-                            <option value="Monday">Monday</option>
-                            <option value="Tuesday">Tuesday</option>
+                        <select class="settings__list_item" id="second_weekeaen_day">
+                            <option></option>
+                            <!-- <option value="Tuesday">Tuesday</option>
                             <option value="Wednesday">Wednesday</option>
                             <option value="Thursday">Thursday</option>
                             <option value="Fridays">Friday</option>
                             <option value="Suturday">Suturday</option>
-                            <option value="Sunday">Sunday</option>
+                            <option value="Sunday">Sunday</option> -->
                         </select>
                     </div>
                 </div>
