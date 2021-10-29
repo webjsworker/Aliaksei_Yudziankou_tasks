@@ -30,12 +30,7 @@ firstDay.onclick = function () {
         Calendar.weekendDays[1] = Calendar.weekendDays[1] + 1 
         if (Calendar.weekendDays[1] > 6 ) {Calendar.weekendDays[1] = 0}
     } 
-
-
-
-
     apdateApp()
 }
-
 
 

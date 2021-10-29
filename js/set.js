@@ -6,15 +6,19 @@ let initialisation = function () {
     writeItem(Calendar.yearId, Calendar.nowYear)
 
     set_days_name(Calendar.language)
-
-    let selectDefault = function () {
-         document.getElementById("first_weekeaen_day").options[5].selected=true;
-        document.getElementById("second_weekeaen_day").options[6].selected=true;
+    
+    let selectDefault = function (weekendDays) {
+     let elem1= weekendDays[0]
+     let elem2= weekendDays[1]   
+        document.getElementById("first_weekeaen_day").options[elem1].selected=true;
+        document.getElementById("second_weekeaen_day").options[elem2].selected=true;
     } 
-    selectDefault()
+    selectDefault(Calendar.weekendDays)
 
 
 }
+
+
 
 function writeItem(id, value) {
     document.getElementById(id).textContent = value;
