@@ -9,46 +9,49 @@ let todo = {
 }
 
 let setMesage = function (text, fullDate) {
-    
-    for(let key in todo){
-       if(key === fullDate){
-        todo[fullDate].push(text)
-       } else {
-           todo[fullDate] = [];
+
+
+if(todo[fullDate] === undefined) {
+    todo[fullDate] = [];
            todo[fullDate].push(text)
-        }
-    }
+} else todo[fullDate].push(text)
 
-
-   /*  if(todo[fullDate].length == 0  ){
-    todo[fullDate] = [text] ;    
-    } else {todo[fullDate].push(text) } */
-     
     console.log("todo[fullDate] = " + todo[fullDate]) 
-    console.log("day = " + todo.day) 
+    
 }
 
 let addText = function () {
     removeText()
-
     for (key in todo) {
         if (key == todo.fullDate) {
             insertText(key)
         }
     }
 }
+
 let insertText = function (key) {
-    let div = document.createElement('div')
-    eventText.append(div)
+   
+    
+ for (let i= 0 ; i < todo[key].length; i++ ){
+      let div = document.createElement('div')
+     eventText.appendChild(div)
     let nodes = eventText.getElementsByTagName("div");
-    nodes[0].innerText = todo[key];
+     nodes[i].innerText = todo[key][i];
+ }
+    
+    
     eventInput.value = "";
 }
 let removeText = function () {
     let nodes = eventText.getElementsByTagName("div");
-    for (let i = 0; i < nodes.length; i++) {
-        nodes[i].remove()
+    let length = nodes.length ;
+    if (length >  0 ) {
+for (let i = 0; i < length; i++) {
+        nodes[0].remove()
     }
+
+    }
+    
 }
 
 AddEvent.onclick = function () {
