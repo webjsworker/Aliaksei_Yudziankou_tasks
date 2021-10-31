@@ -79,3 +79,10 @@ opacity: 0.6;
     opacity: 0.5;
 }
 
+.selected_day {
+    /* background-color: rgb(207, 81, 81) */
+    border: solid;
+    border-width: 2px;
+    border-color: rgb(179, 179, 179);
+    border-radius: 50%;
+}

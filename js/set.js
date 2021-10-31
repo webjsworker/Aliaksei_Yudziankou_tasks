@@ -36,7 +36,7 @@ function SetTime() {
 }
 
 let setCurMonth = function () {
-    Calendar.curMonth = nowDate.getMonth() + 1;
+    Calendar.curMonth = nowDate.getMonth() /* + 1 */;
 }
 
 
@@ -108,7 +108,8 @@ function setCurDay(arrId, dayBefore) {
 
     let corect = 0 
     if (firstDay.checked){corect = 1  }
-    let curday = Calendar.nowDate.getDate() + dayBefore + corect
+    let curday = nowDateNumber + dayBefore + corect
+    /* let curday = Calendar.nowDate.getDate() + dayBefore + corect */
     /* let curday = Calendar.nowDate.getDate() + Calendar.NumberOfFirstDay */   
     let counter = 0;
     for (var i = 0; i < 6; i++) {
@@ -265,6 +266,8 @@ if (firstDay.checked)  {
 
 }
 
+let arrId = ["week_1", "week_2", "week_3", "week_4", "week_5", "week_6"];
+
 let apdateApp = function () {
     set_week_name(Calendar.language);
     setMaxDaysInMonth()
@@ -276,7 +279,7 @@ let apdateApp = function () {
 
     set_weekend_days()
 
-    let arrId = ["week_1", "week_2", "week_3", "week_4", "week_5", "week_6"];
+    /* let arrId = ["week_1", "week_2", "week_3", "week_4", "week_5", "week_6"]; */
     let arrweek = [Calendar.week_1(), Calendar.week_2(), Calendar.week_3(), Calendar.week_4(), Calendar.week_5(), Calendar.week_6()];
     setAllDay(arrId, arrweek);
     setCurDay(arrId,Calendar.getDaysbefore());

@@ -5,7 +5,11 @@
     height: auto;
     background-color: rgb(120, 120, 122);
     margin-top: 2px;
-   
+    color: white;
+    
+}
+.event__data{
+    margin-left: 50px;
 }
 .event__head{
     color: white;
@@ -15,7 +19,7 @@
     justify-content: space-between;
     padding: 10px;
 }
-
+/* 
 .event__add-del{
     display: flex;
     justify-content: space-between;
@@ -24,37 +28,42 @@
 }
 .event__add-del:hover {
     color:rgb(209, 208, 208);
-} 
+}  */
 
 
 
 .event__add{
-    margin-right: 20px;
+    font-size: 30px;
+    margin-left: 20px;
 }
+.event__add:hover {
+    color:rgb(209, 208, 208);
+}
+
 .event__add:hover .event__add_plus_line{
     background-color: rgb(209, 208, 208);
 }
-.event__del{
+/* .event__del{
     
   width: 50px;
   height: 50px;
 
-}
-.event__del:hover div,
+} */
+/* .event__del:hover div,
 .event__del:focus div,
 .event__del:active div
 {
     background-color: rgb(209, 208, 208);
-}
+} */
 
-.event__del div {
+/* .event__del div {
     margin: 20px 10px;
     width: 30px;
     height: 3px;
     background-color: white;  
-}
+} */
 
-.event__add_plus_line {
+/* .event__add_plus_line {
     background: white;
     height: 3px; 
     width: 30px;
@@ -70,12 +79,27 @@
     position: absolute; 
     left: 14px; 
     top: -15px;
-    }
+    } */
 
+.event__input{
+    background-color: rgb(187, 187, 190); 
+    border: none;
+    outline: 0;
+}
+.event__input_contaner{
+    display: flex;
+}
+.event__head{
+    display: flex;
+    flex-direction: column ;
+}
+.event__text {
+    /* display: flex;
+    flex-direction: column; */
+    font-size: 24px;
+    
 
-
-
-
+}
 
 
 

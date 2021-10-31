@@ -8,6 +8,7 @@ back.onclick = function () {
     writeItem(Calendar.yearId, Calendar.curYear)
 
     apdateApp()
+    removeSelected(arrId)
   }
 next.onclick = function () {
     let curDate = DatefromPage
@@ -18,6 +19,7 @@ next.onclick = function () {
     writeItem(Calendar.yearId, Calendar.curYear)
 
     apdateApp()
+    removeSelected(arrId)
    }
 
 Fulldate.onclick = function () {
@@ -25,9 +27,9 @@ Fulldate.onclick = function () {
     apdateApp()
 }
 
-AddEvent.onclick = function () {
+/* AddEvent.onclick = function () {
     console.log ("Please, Add new event")
-}
+} */
 
 language.onclick = function () {
     if(language.checked){

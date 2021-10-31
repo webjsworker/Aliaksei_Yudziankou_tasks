@@ -48,12 +48,11 @@
                 <div>-</div>
                 <div>-</div>
                 <div>-</div>
-                <div >-</div>
-                <div >-</div>
+                <div>-</div>
+                <div>-</div>
             </div>
-            <div class="days__days">
+            <div class="days__days" id="full_month" >
                 <div class="days__week" id="week_1">
-                    <!-- 1 -->
                     <div class="days_number">30</div>
                     <div class="days_number">31</div>
                     <div class="days_number">1</div>
@@ -63,7 +62,6 @@
                     <div class="days_number">5</div>
                 </div>
                 <div class="days__week" id="week_2">
-                    <!-- 2 -->
                     <div class="days_number">6</div>
                     <div class="days_number">6</div>
                     <div class="days_number">8</div>
@@ -139,24 +137,12 @@
                     <div class="settings__list ">
                         <select class="settings__list_item" id="first_weekeaen_day">
                             <option></option>
-                            <!-- <option value="Tuesday">Tuesday</option>
-                            <option value="Wednesday">Wednesday</option>
-                            <option value="Thursday">Thursday</option>
-                            <option value="Fridays">Friday</option>
-                            <option value="Suturday">Suturday</option>
-                            <option value="Sunday">Sunday</option> -->
                         </select>
                     </div>
 
                     <div class="settings__list ">
                         <select class="settings__list_item" id="second_weekeaen_day">
                             <option></option>
-                            <!-- <option value="Tuesday">Tuesday</option>
-                            <option value="Wednesday">Wednesday</option>
-                            <option value="Thursday">Thursday</option>
-                            <option value="Fridays">Friday</option>
-                            <option value="Suturday">Suturday</option>
-                            <option value="Sunday">Sunday</option> -->
                         </select>
                     </div>
                 </div>
@@ -169,21 +155,17 @@
 
 
         <div class="event">
+            <div class="event__data" id="event__data"> </div>
             <div class="event__head">
-
-                <div>Event</div>
-                <div class="event__add-del" id="event"> Add
-                    <!-- <div class="event__add">
-                        <div class="event__add_plus_line "></div>
-                        <div class="event__add_plus_rotate"></div>
+                <div class="event__input_contaner">
+                    <div>
+                        <input class="event__input" id="event-input" type="text" size="40" placeholder="new text">
                     </div>
-                    <div class="event__del">
-                        <div></div>
-                    </div> -->
+                    <div class="event__add" id="event"> Add
+                    </div>
                 </div>
-
+                <div class="event__text" id="event__text"></div>
             </div>
-
         </div>
     </div>
 
@@ -194,6 +176,7 @@
     <script src="./js/calendar.js"></script>
     <script src="./index.js"></script>
     <script src="./js/back_next_onclick.js"></script>
+    <script src="./js/todo.js"></script>
 
 </body>
 
