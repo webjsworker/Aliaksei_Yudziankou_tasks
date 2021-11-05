@@ -1,0 +1,60 @@
+.settings{
+    display: none;
+    margin: 0 auto;
+    padding: 10px;
+    width: 480px;
+    height: 420px;
+    background-color: rgb(120, 120, 122);
+    margin-top: 2px;
+    font-size: 26px;
+    color: white;
+    
+   
+}
+.settings div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.settings__back{
+   
+}
+.settings_button{
+    width: 150px;
+    height: 30px;
+    margin-top: 20px;
+    padding: 0 25px;
+    background-color: #96c2af;
+    font-size: 20px;
+    
+    
+}
+.sittings__show_prev{
+    color: white;
+    /* font-size: 36px; */
+}
+.setting__checkbox{
+   
+    width: 20px;
+    height: 20px;  
+}
+
+.settings__contaner{
+    
+    
+}
+.settings__list_contaner{
+    display: flex; 
+
+}
+.settings__list_item{
+      
+    width: 150px;
+    height: 30px; 
+    font-size: 24px;
+}
+.settings__list:last-child  {
+ margin-left: 80px;   
+ 
+}

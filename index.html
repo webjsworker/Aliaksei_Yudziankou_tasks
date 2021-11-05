@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="javascript">
+    <title>Task_7_ teplate</title>
+</head>
+
+<body>
+
+    <div class="calendar">
+        <div class="head">
+            <div class="head__time_contaner">
+                <div class="head__time" id="clock"> 10:23:12 </div>
+                <div class="head__settings" id="settings">
+                    <div class="head__settings_icon"></div>
+                    <div class="head__settings_icon"></div>
+                    <div class="head__settings_icon"></div>
+                </div>
+            </div>
+            <div class="head_full_data" id="head_full_data">Wed Oct 20 2021</div>
+        </div>
+
+        <div class="month">
+            <div class="month__month" id="month">_ </div>
+            <div class="month__year" id="year"> _</div>
+            <div class="month__switch">
+
+                <div class="month__arrow_contaner" id="next">
+                    <div class="month__arrow arrow_top"></div>
+                </div>
+                <div class="month__arrow_contaner">
+                    <div class="month__arrow arrow_bottom" id="back"></div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="days" id="days">
+            <div class="days__name" id="weeks_name">
+                <div>-</div>
+                <div>-</div>
+                <div>-</div>
+                <div>-</div>
+                <div>-</div>
+                <div>-</div>
+                <div>-</div>
+            </div>
+            <div class="days__days" id="full_month" >
+                <div class="days__week" id="week_1">
+                    <div class="days_number">30</div>
+                    <div class="days_number">31</div>
+                    <div class="days_number">1</div>
+                    <div class="days_number">3</div>
+                    <div class="days_number">4</div>
+                    <div class="days_number">2</div>
+                    <div class="days_number">5</div>
+                </div>
+                <div class="days__week" id="week_2">
+                    <div class="days_number">6</div>
+                    <div class="days_number">6</div>
+                    <div class="days_number">8</div>
+                    <div class="days_number">9</div>
+                    <div class="days_number">10</div>
+                    <div class="days_number">11</div>
+                    <div class="days_number">12</div>
+                </div>
+                <div class="days__week " id="week_3">
+                    <!-- 3 -->
+                    <div class="days_number">13</div>
+                    <div class="days_number">14</div>
+                    <div class="days_number">15</div>
+                    <div class="days_number">16</div>
+                    <div class="days_number">17</div>
+                    <div class="days_number">18</div>
+                    <div class="days_number">19</div>
+                </div>
+                <div class="days__week" id="week_4">
+                    <!-- 4 -->
+                    <div class="days_number">20</div>
+                    <div class="days_number">21</div>
+                    <div class="days_number">22</div>
+                    <div class="days_number">23</div>
+                    <div class="days_number">24</div>
+                    <div class="days_number">25</div>
+                    <div class="days_number">26</div>
+                </div>
+                <div class="days__week" id="week_5">
+                    <!-- 5 -->
+                    <div class="days_number">27</div>
+                    <div class="days_number">28</div>
+                    <div class="days_number">29</div>
+                    <div class="days_number">30</div>
+                    <div class="days_number">1</div>
+                    <div class="days_number">2</div>
+                    <div class="days_number">3</div>
+                </div>
+                <div class="days__week" id="week_6">
+                    <!-- 6 -->
+                    <div class="days_number">4</div>
+                    <div class="days_number">5</div>
+                    <div class="days_number">6</div>
+                    <div class="days_number">7</div>
+                    <div class="days_number">8</div>
+                    <div class="days_number">9</div>
+                    <div class="days_number">10</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="settings" id="menu">
+            <div>
+                <div><label class="sittings__show_prev"></label>
+                    <input type="checkbox" class="setting__checkbox" id="language" /> EN/RU</label>
+                </div>
+                <div>
+                    <label class="sittings__show_prev">
+                        <input type="checkbox" class="setting__checkbox" id="show" /> Hide previos days</label>
+                </div>
+            </div>
+
+            <div class="settings__contaner">
+                <div class="settings__first_day">
+                    <label class="sittings__show_prev">
+                        <input type="checkbox" class="setting__checkbox" id="first_day" /> Start the week on
+                        sunday</label>
+
+                </div>
+                <span>Choose weekend</span>
+                <div class="settings__list_contaner">
+                    <div class="settings__list ">
+                        <select class="settings__list_item" id="first_weekeaen_day">
+                            <option></option>
+                        </select>
+                    </div>
+
+                    <div class="settings__list ">
+                        <select class="settings__list_item" id="second_weekeaen_day">
+                            <option></option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="settings__button_container">
+                <button class="settings_button" id="menu_back">back</button>
+                <!-- <button class="settings_button">Set</button> -->
+            </div>
+        </div>
+
+
+        <div class="event">
+            <div class="event__data" id="event__data"> </div>
+            <div class="event__head">
+                <div class="event__input_contaner">
+                    <div>
+                        <input class="event__input" id="event-input" type="text" size="40" placeholder="new text">
+                    </div>
+                    <div class="event__add" id="event"> Add
+                    </div>
+                </div>
+                <div class="event__text" id="event__text"></div>
+            </div>
+        </div>
+    </div>
+    <!-- <script type="module" src="./js/set.js"></script>
+    <script type="module" src="./js/clock.js"></script>
+    <script type="module" src="./js/settings.js"></script>
+    <script type="module" src="./js/get.js"></script>
+    <script type="module" src="./js/calendar.js"></script> -->
+
+
+    <!-- <script type="module" src="./index.js"></script> -->
+
+
+    <!-- <script type="module" src="./js/back_next_onclick.js"></script>
+    <script type="module" src="./js/todo.js"></script> -->
+
+    <script  src="./dist/main.app.js"></script>
+
+</body>
+
+</html>

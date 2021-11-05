@@ -1,0 +1,12 @@
+{
+     "scripts": {
+          "build": "webpack"
+     },
+     "dependencies": {
+          "webpack": "^5.61.0"
+     },
+     "devDependencies": {
+          "clean-webpack-plugin": "^4.0.0",
+          "webpack-cli": "^4.9.1"
+     }
+}
