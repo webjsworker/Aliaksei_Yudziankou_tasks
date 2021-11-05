@@ -1,4 +1,4 @@
-
+import {AddEvent, eventInput, eventText } from './calendar.js'
 
 let todo = {
     /* text: [], */
@@ -22,7 +22,7 @@ if(todo[fullDate] === undefined) {
 
 let addText = function () {
     removeText()
-    for (key in todo) {
+    for (let key in todo) {
         if (key == todo.fullDate) {
             insertText(key)
         }
@@ -77,7 +77,7 @@ let getDay = function (event) {
     }
 }
 
-let removeSelected = function (arrId) {
+export let removeSelected = function (arrId) {
     for (let i = 0; i < 6; i++) {
         let nodes = document.getElementById(arrId[i]).getElementsByTagName("div");
         for (let x = 0; x < 7; x++) {

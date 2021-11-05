@@ -1,5 +1,6 @@
+import {SetFullDate , SetTime} from './set.js'
 
-let Clock = {
+export let Clock = {
     time: "00:00:00",
     id: "clock",
     fulldate: "Wed Oct 20 2021",

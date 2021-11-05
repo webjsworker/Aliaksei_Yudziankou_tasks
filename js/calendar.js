@@ -1,26 +1,27 @@
-let nowDate = new Date(),
+export let nowDate = new Date(),
     nowDateNumber = nowDate.getDate(),
     nowMonth = nowDate.getMonth(),
     nowYear = nowDate.getFullYear(),
     container = document.getElementById('month-calendar'),
     monthContainer = document.getElementById('month'),
     yearContainer = document.getElementById('year'),
-    weekItem = document.getElementById("weeks_name").getElementsByTagName("div");
+    weekItem = document.getElementById("weeks_name").getElementsByTagName("div"),
     /* daysContainer = container.getElementsByClassName('days')[0], */
     back = document.getElementById('back'),
     next = document.getElementById('next'),
     AddEvent = document.getElementById('event'),
-    eventInput = document.getElementById('event-input'), 
-    eventText = document.getElementById('event__text'),   
+    eventInput = document.getElementById('event-input'),
+    eventText = document.getElementById('event__text'),
     language = document.getElementById('language'),
     Fulldate = document.getElementById('head_full_data'),
     monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-    dayName = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Suturday", "Sunday"];
-    const DAYINCALENDAR = 42;
-FullnameMonth = monthName[nowDate.getMonth()];
-let curDate = nowDate.setMonth(nowDate.getMonth() - 1);
+    dayName = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Suturday", "Sunday"],
+    FullnameMonth = monthName[nowDate.getMonth()];
 
-let Calendar = {
+export const DAYINCALENDAR = 42;
+export let curDate = nowDate.setMonth(nowDate.getMonth() - 1);
+
+export let Calendar = {
     nowDate: nowDate,
     nowMonth: nowMonth,
     monthId: 'month',
@@ -46,7 +47,6 @@ let Calendar = {
     NumberOfFirstDay: 1,
     alldays: [],
     dayInMonth: 1,
-
     week_1: function () {
         return this.alldays.slice([0], [7])
     },
@@ -66,20 +66,16 @@ let Calendar = {
         return this.alldays.slice([35], [42])
     },
     afterdays: 0,
-    weekendDays: [5,6],
+    weekendDays: [5, 6],
     getDaysbefore: function () {
-        if (this.NumberOfFirstDay === 0 ) {
-            return  this.NumberOfFirstDay
-        } else {   return this.NumberOfFirstDay - 1  }
-
-
-       
+        if (this.NumberOfFirstDay === 0) {
+            return this.NumberOfFirstDay
+        } else { return this.NumberOfFirstDay - 1 }
     },
-
 };
 
 
 
 
- 
+
 

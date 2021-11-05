@@ -1,3 +1,6 @@
+import { apdateApp} from './set.js'
+import {Calendar} from './calendar.js'
+
 let Blocksettings = document.getElementById('settings')
 let Blockdays = document.getElementById('days')
 let Blockmenu = document.getElementById('menu')
@@ -16,12 +19,12 @@ Blockback.onclick = function () {
     /* setAllDay(arrId, arrweek); */
 }
 
-let hidedays = document.getElementById('show');
+export let hidedays = document.getElementById('show');
 hidedays.onclick = function () {
     apdateApp()
 }
 
-let firstDay = document.getElementById('first_day');
+export let firstDay = document.getElementById('first_day');
 firstDay.onclick = function () {
 
     if (firstDay.checked) {

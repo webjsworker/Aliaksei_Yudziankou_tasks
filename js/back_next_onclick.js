@@ -1,3 +1,8 @@
+import {Fulldate, back , next, language, Calendar} from './calendar.js'
+import {DatefromPage} from '../index.js'
+import {apdateApp, writeItem , initialisation , arrId} from './set.js'
+import {removeSelected} from './todo.js'
+
 back.onclick = function () {
     /* let curDate = new Date(yearContainer.textContent, monthName.indexOf(monthContainer.textContent)); */
     let curDate = DatefromPage
@@ -6,7 +11,6 @@ back.onclick = function () {
     Calendar.curMonth = curDate.getMonth();
     writeItem(Calendar.monthId, Calendar.getFullNameMonth())
     writeItem(Calendar.yearId, Calendar.curYear)
-
     apdateApp()
     removeSelected(arrId)
   }
@@ -17,7 +21,6 @@ next.onclick = function () {
     Calendar.curMonth = curDate.getMonth();
     writeItem(Calendar.monthId, Calendar.getFullNameMonth())
     writeItem(Calendar.yearId, Calendar.curYear)
-
     apdateApp()
     removeSelected(arrId)
    }
@@ -27,10 +30,6 @@ Fulldate.onclick = function () {
     apdateApp()
 }
 
-/* AddEvent.onclick = function () {
-    console.log ("Please, Add new event")
-} */
-
 language.onclick = function () {
     if(language.checked){
         Calendar.language = 1 ; 
@@ -38,4 +37,15 @@ language.onclick = function () {
     apdateApp()
 }
 
+export let a = 10 ;
 
+
+
+
+
+
+
+
+/* AddEvent.onclick = function () {
+    console.log ("Please, Add new event")
+} */
