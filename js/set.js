@@ -35,7 +35,7 @@ export function SetTime() {
 }
 
 export let setCurMonth = function () {
-    Calendar.curMonth = nowDate.getMonth() /* + 1 */;
+    Calendar.curMonth = nowDate.getMonth() + 1;  //////
 }
 
 
