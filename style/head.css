@@ -8,8 +8,6 @@
     margin: 0 auto;
     padding: 10px;
     font-size: 36px;
-  
-    
 
 }
 
@@ -27,6 +25,13 @@
     /* font-size: 42px; */
    
 }
+.head__weather{
+    font-size: 30px;
+    color:burlywood;
+}
+
+
+
 /* .head__part_of_day{
     color: white;
     font-size: 50px;
