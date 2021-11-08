@@ -1,8 +1,8 @@
-const path = require('path')
+const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const Dotenv = require('dotenv-webpack');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-module.exports = (env) => {
+module.exports = () => {
     return {
         entry: {
             main: path.resolve(__dirname, './index.js'),
@@ -11,13 +11,20 @@ module.exports = (env) => {
             path: path.resolve(__dirname, './dist'),
             filename: '[name].app.js',
         },
-        /* devtool: 'source-map', */
-        watch: false,
         plugins: [
             new CleanWebpackPlugin(),
-            new Dotenv({
-                path: `./.env.${env}`
-            }),
         ],
+        module: {
+            rules: [
+                {
+                    test: /\.css$/i,
+                    use: ["style-loader", "css-loader"],
+                },
+
+            ],
+        },
     }
 }
+
+
+

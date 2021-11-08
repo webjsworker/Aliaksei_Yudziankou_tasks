@@ -3,9 +3,11 @@ import {Clock} from './clock.js'
 import {Calendar, nowDate, monthName, DAYINCALENDAR , nowDateNumber, weekItem
 } from './calendar.js'
 import {firstDay, hidedays} from './settings.js'
+import { getWeather } from './weather.js'
 
 
 export let initialisation = function () {
+    getWeather(); ///// the weather
     setCurMonth()
     writeItem(Calendar.monthId, Calendar.getFullNameMonth())
     writeItem(Calendar.yearId, Calendar.nowYear)
