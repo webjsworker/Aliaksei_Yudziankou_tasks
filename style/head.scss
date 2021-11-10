@@ -1,68 +1,80 @@
 @import './colors.scss' ;
+@import './font-size.scss';
+@import './mexins.scss' ;
+@import './Inheritance.scss';
 
 .head{
-    display: flex;
+    /* display: flex; */
+    @extend %flex-wrap;
     flex-direction: column;
-    width: 480px;
-    height: auto;
+    /* width: 480px;
+    height: auto; */
+    @include width-height(480px, auto);
     background-color: $background-color;
     margin: 0 auto;
     padding: 10px;
-    font-size: 36px;
+    font-size: $head-font-size;
 
-}
-
-.head__time_contaner{
-       display: flex;
+    &__time_contaner{
+       /* display: flex; */
+       @extend %flex-wrap;
        justify-content: space-between;
  }
 
-.head__time{
+    &__time{
     margin-left: 20px;
-    color: rgb(235, 229, 229);
-    /* font-size: 42px; */
-   
-}
-.head__weather{
-    font-size: 30px;
-    color:burlywood;
+    color: $head-time-color;
 }
 
-.head__settings{
-  width: auto;
-  height: auto;
-  display: flex;
+   &__weather{
+    font-size: $head-font-size - 10px;
+    color:$head-weather-color;
+} 
+
+    &__settings{
+  /* width: auto;
+  height: auto; */
+  @include width-height(auto, auto);
+  @extend %flex-wrap;
   flex-direction: column;
   margin-top: 5px;
   margin-right: 20px;
   padding: 10px;
 }
-.head__settings:hover .head__settings_icon,
-.head__settings:active .head__settings_icon,
-.head__settings:focus .head__settings_icon{
- 
-    background: $background-setting;
-}
-.head__settings_icon{
-  width: 5px;
-  height: 5px;
+
+  &__settings_icon{
+  /* width: 5px;
+  height: 5px; */
+  @include width-height(5px, 5px);
   border-radius: 50%;
   background: $head-settings-background;
   margin-bottom: 8px;  
 }
 
-.head_full_data{
+&_full_data{
     margin-left: 20px;
     margin-top: 20px;
-   color: $font-color;
-   font-size: 20px; 
+    color: $font-color;
+    font-size: $head-font-size - 16px; 
 }
-.head_full_data:hover,
-.head_full_data:focus,
-.head_full_data:active{
-    
+
+&__settings:hover &__settings_icon,
+&__settings:active &__settings_icon,
+&__settings:focus &__settings_icon{
+     background: $background-setting;
+}
+
+&_full_data:hover,
+&_full_data:focus,
+&_full_data:active{
     color: $font-color-hover;
 }
+
+}
+
+
+
+
 
 
 
