@@ -1,10 +1,11 @@
+@import './colors.scss' ;
 
 .head{
     display: flex;
     flex-direction: column;
     width: 480px;
     height: auto;
-    background-color: rgb(120, 120, 122);
+    background-color: $background-color;
     margin: 0 auto;
     padding: 10px;
     font-size: 36px;
@@ -14,10 +15,7 @@
 .head__time_contaner{
        display: flex;
        justify-content: space-between;
-    
-   
-
-}
+ }
 
 .head__time{
     margin-left: 20px;
@@ -30,13 +28,6 @@
     color:burlywood;
 }
 
-
-
-/* .head__part_of_day{
-    color: white;
-    font-size: 50px;
-    margin-left: 20px;
- } */
 .head__settings{
   width: auto;
   height: auto;
@@ -50,27 +41,27 @@
 .head__settings:active .head__settings_icon,
 .head__settings:focus .head__settings_icon{
  
-    background: rgb(209, 208, 208);
+    background: $background-setting;
 }
 .head__settings_icon{
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: white;
+  background: $head-settings-background;
   margin-bottom: 8px;  
 }
 
 .head_full_data{
     margin-left: 20px;
     margin-top: 20px;
-   color: white;
+   color: $font-color;
    font-size: 20px; 
 }
 .head_full_data:hover,
 .head_full_data:focus,
 .head_full_data:active{
     
-    color: rgb(209, 208, 208);
+    color: $font-color-hover;
 }
 
 

@@ -18,12 +18,20 @@ module.exports = /* () => */ {
         module: {
             rules: [
                 {
-                    test: /\.css$/i,
-                    use: [MiniCssExtractPlugin.loader,
-                        { loader: 'css-loader' }],
+                    test: /\.s[ac]ss$/i,
+                    use: [
+                        "style-loader",
+                        MiniCssExtractPlugin.loader,
+                        "css-loader",
+                        "sass-loader",
+                        /* {
+                            loader: 'sass-resources-loader',
+                            options: {
+                              resources: ['colors.scss', 'head.scss']
+                            },
+                          }, */
+                    ],
                 },
-                
-
             ],
         },
    /*  } */
