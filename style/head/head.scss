@@ -1,0 +1,71 @@
+@import '.././colors.scss' ;
+@import '.././font-size.scss';
+@import '.././mexins.scss' ;
+@import '.././Inheritance.scss';
+
+.head{
+    @extend %flex-wrap-column;
+    @include width-height(480px, auto);
+    background-color: $background-color;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: $head-font-size;
+    &__time_contaner{
+        @extend %flex-wrap;
+       justify-content: space-between;
+ }
+
+    &__time{
+    margin-left: 20px;
+    color: $head-time-color;
+}
+
+   &__weather{
+    font-size: $head-font-size - 10px;
+    color:$head-weather-color;
+} 
+
+    &__settings{
+  
+  @include width-height(auto, auto);
+  @extend %flex-wrap-column;
+  margin-top: 5px;
+  margin-right: 20px;
+  padding: 10px;
+}
+
+  &__settings_icon{
+  @include width-height(5px, 5px);
+  border-radius: 50%;
+  background: $head-settings-background;
+  margin-bottom: 8px;  
+}
+
+&_full_data{
+    margin-left: 20px;
+    margin-top: 20px;
+    color: $font-color;
+    font-size: $head-font-size - 16px; 
+}
+
+&__settings:hover &__settings_icon,
+&__settings:active &__settings_icon,
+&__settings:focus &__settings_icon{
+     background: $background-setting;
+}
+
+&_full_data:hover,
+&_full_data:focus,
+&_full_data:active{
+    color: $font-color-hover;
+}
+
+}
+
+
+
+
+
+
+
+ 

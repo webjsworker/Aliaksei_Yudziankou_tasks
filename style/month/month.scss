@@ -1,0 +1,66 @@
+@import '.././colors.scss' ;
+@import '.././font-size.scss';
+@import '.././mexins.scss' ;
+@import '.././Inheritance.scss';
+.month{
+    margin: 0 auto;
+    padding: 10px;
+    @include width-height(480px,100px);
+    background-color: $background-color;
+    margin-top: 2px;
+    @extend %felx-space-between-center;
+}
+.month__month,
+.month__year{
+    width: 80px;
+    color: $font-color;
+    font-size: $head-font-size - 14px;
+    margin-left: 15px;
+}
+.month__month:hover,
+.month__month:focus,
+.month__month:active,
+.month__year:hover,
+.month__year:focus,
+.month__year:active{
+    color: $background-setting;
+}
+.month__switch{
+    @extend %flex-start;
+    color: $font-color;
+    padding-right: 30px;
+    font-size: $head-font-size + 14px;
+    @include width-height(150px,90px);
+}
+.month__arrow_contaner{
+    padding-top: 15px;
+    margin-left: 10px ;
+}
+.month__arrow_contaner:last-child{
+    margin-left: 30px ;
+}
+.month__arrow {
+@extend %flex-end;
+    @include width-height(30px,30px);
+    border-top: 3px solid $font-color;
+    border-right: 3px solid $font-color;
+    margin-left: 10px;
+    margin-top: 5px;
+}    
+.arrow_top {
+    position: relative;
+    top: 20px;
+    transform: rotate(-45deg); 
+}      
+.arrow_bottom {
+    top: 30px;
+    transform: rotate(135deg);
+}
+.month__arrow:hover,
+.month__arrow:focus,
+.month__arrow:active{
+    border-color: $background-setting;
+}
+.month__switch div:hover {
+    color: $background-setting;
+}
