@@ -1,23 +1,17 @@
-@import './colors.scss' ;
-@import './font-size.scss';
-@import './mexins.scss' ;
-@import './Inheritance.scss';
+@import '.././colors.scss' ;
+@import '.././font-size.scss';
+@import '.././mexins.scss' ;
+@import '.././Inheritance.scss';
 
 .head{
-    /* display: flex; */
-    @extend %flex-wrap;
-    flex-direction: column;
-    /* width: 480px;
-    height: auto; */
+    @extend %flex-wrap-column;
     @include width-height(480px, auto);
     background-color: $background-color;
     margin: 0 auto;
     padding: 10px;
     font-size: $head-font-size;
-
     &__time_contaner{
-       /* display: flex; */
-       @extend %flex-wrap;
+        @extend %flex-wrap;
        justify-content: space-between;
  }
 
@@ -32,19 +26,15 @@
 } 
 
     &__settings{
-  /* width: auto;
-  height: auto; */
+  
   @include width-height(auto, auto);
-  @extend %flex-wrap;
-  flex-direction: column;
+  @extend %flex-wrap-column;
   margin-top: 5px;
   margin-right: 20px;
   padding: 10px;
 }
 
   &__settings_icon{
-  /* width: 5px;
-  height: 5px; */
   @include width-height(5px, 5px);
   border-radius: 50%;
   background: $head-settings-background;

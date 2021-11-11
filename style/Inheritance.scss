@@ -3,4 +3,41 @@
     flex-wrap: wrap;
   }
   
-  
+  %flex-wrap-column {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  %felx-space-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  %felx-space-between {
+    display: flex;
+    justify-content: space-between;
+    }
+
+
+  %felx-space-around-center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  %felx-row {
+  display: flex;
+  flex-direction: row ;
+  }
+
+%flex-start {
+  display: flex;
+  justify-content: flex-start;
+}
+%flex-end{
+  display: flex;
+  justify-content: flex-end;
+}
+
