@@ -1,0 +1,52 @@
+@import '.././colors.scss' ;
+@import '.././font-size.scss';
+@import '.././mexins.scss' ;
+@import '.././Inheritance.scss';
+.event{
+    margin: 0 auto;
+    padding: 10px;
+    @include width-height(480px,auto);
+    background-color: $background-color;
+    margin-top: 2px;
+    color: $font-color;
+    
+}
+.event__data{
+    margin-left: 50px;
+}
+.event__head{
+    color: $font-color;
+    font-size: $head-font-size - 6px;
+    margin-left: 15px;
+    @extend %felx-space-between;
+    padding: 10px;
+}
+.event__add{
+    font-size: $head-font-size - 6px;
+    margin-left: 20px;
+}
+.event__add:hover {
+    color:$background-setting;
+}
+
+.event__add:hover .event__add_plus_line{
+    background-color: $background-setting;
+}
+
+.event__input{
+    background-color: $event-input-background-color; 
+    border: none;
+    outline: 0;
+}
+.event__input_contaner{
+    display: flex;
+}
+.event__head{
+    @extend %flex-wrap-column ; 
+    }
+.event__text {
+        font-size: $head-font-size - 12px;
+}
+
+
+

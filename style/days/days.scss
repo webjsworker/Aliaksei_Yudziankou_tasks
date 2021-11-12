@@ -1,0 +1,69 @@
+@import '.././colors.scss' ;
+@import '.././font-size.scss';
+@import '.././mexins.scss' ;
+@import '.././Inheritance.scss';
+
+.days{
+    margin: 0 auto;
+    padding: 10px;
+    @include  width-height(480px, auto);
+    background-color: $background-color;
+    margin-top: 2px;
+}
+
+.days__name{
+color: $font-color;
+font-size: $head-font-size - 6px;
+@extend %felx-row;
+@extend  %felx-space-between-center ;
+padding: 5px;
+}
+
+.days__days{
+ }
+
+.days__week{
+    @extend %felx-space-between-center;
+    color: $font-color;
+    font-size: $head-font-size - 6px;
+    padding: 5px;
+}
+
+
+.days__week div {
+    @include  width-height(50px, 50px);
+    padding: auto;
+    @extend %felx-space-around-center;
+  }
+
+.days_number:hover,
+.days_number:focus,
+.days_number:active{
+    border: solid;
+    border-width: 2px;
+    border-color: $days-border-color;
+
+}
+
+.weekends {
+    color: $days-weekends-color; 
+} 
+
+
+.current_day{
+    background-color: $current-day-background-color; 
+}
+.celebrate_day{
+    color:$days-celebrate-color;
+}
+
+.different_month{
+    opacity: 0.5;
+}
+
+.selected_day {
+    border: solid;
+    border-width: 2px;
+    border-color: $days-border-color;
+    border-radius: 50%;
+}

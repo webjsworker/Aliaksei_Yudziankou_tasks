@@ -1,0 +1,12 @@
+@import '../mexins.scss';
+@import '../Inheritance.scss';
+@import '../colors.scss';
+.calendar{
+    margin: 0 auto;
+    @include width-height(500px, auto);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: $background-color-calendar;
+    @extend %flex-wrap-column ; 
+}
+
