@@ -12,11 +12,11 @@ export let initialisation = function () {
     writeItem(Calendar.monthId, Calendar.getFullNameMonth())
     writeItem(Calendar.yearId, Calendar.nowYear)
     set_days_name(Calendar.language)
-    let selectDefault = function (weekendDays) {
-        let elem1 = weekendDays[0]
-        let elem2 = weekendDays[1]
-        document.getElementById("first_weekeaen_day").options[elem1].selected = true;
-        document.getElementById("second_weekeaen_day").options[elem2].selected = true;
+    let selectDefault = function (weekendDays: any) {
+        let elem1: number = weekendDays[0]
+        let elem2: any = weekendDays[1]
+        (document.getElementById("first_weekeaen_day") as HTMLInputElement).options[elem1].selected = true;
+        (document.getElementById("second_weekeaen_day") as any).options[elem2].selected = true;
     }
     selectDefault(Calendar.weekendDays)
 }
@@ -42,11 +42,11 @@ export let setCurMonth = function () {
 
 
 export let setMaxDaysInMonth = function () {
-    Calendar.maxDaysInMonth = new Date(Calendar.getYearContent(), Calendar.curMonth + 1, 0).getDate();
+    Calendar.maxDaysInMonth = new Date(Number( Calendar.getYearContent()), Calendar.curMonth + 1, 0).getDate();
 }
 
 export function set_week_name(language) {
-    let dayOfweek = '';
+    let dayOfweek = [];
     let dayOfweek_EN = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"]
     let dayOfweek_RU = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
     language === 0 ? dayOfweek = dayOfweek_EN : dayOfweek = dayOfweek_RU;
@@ -58,7 +58,7 @@ export function set_week_name(language) {
 };
 
 export function FirstDay(dayOfweek) {
-    if (firstDay.checked) {
+    if ((firstDay as HTMLInputElement).checked) {
         let el = dayOfweek.pop()
         dayOfweek.unshift(el)
     }
@@ -67,9 +67,9 @@ export function FirstDay(dayOfweek) {
 
 export let setPrevDays = function () {
     Calendar.alldays = [];
-    let DaysPrevMonth = new Date(Calendar.getYearContent(), monthName.indexOf(Calendar.getFullNameMonth()), 0).getDate();
+    let DaysPrevMonth = new Date(Number(Calendar.getYearContent()), monthName.indexOf(Calendar.getFullNameMonth()), 0).getDate();
     let length = 0;
-    if (firstDay.checked) {
+    if ((firstDay as HTMLInputElement).checked) {
         length = Calendar.NumberOfFirstDay
     } else { length = Calendar.NumberOfFirstDay - 1 }
     for (let i = 0; i < length; i++) {
@@ -78,7 +78,7 @@ export let setPrevDays = function () {
 }
 
 export let setCurDays = function () {
-    let alldays = new Date(Calendar.getYearContent(), Calendar.curMonth + 1, 0).getDate();
+    let alldays = new Date(Number(Calendar.getYearContent()), Calendar.curMonth + 1, 0).getDate();
     for (let i = 1; i <= alldays; i++) {
         Calendar.alldays.push(String(i))
     }
@@ -91,25 +91,19 @@ export let setLastDays = function () {
     }
 }
 
-//////////////////////////////////////////////////////
-
-
 export let setAllDay = function (arrId, arrweek) {
     for (var i = 0; i < 6; i++) {
         let nodes = document.getElementById(arrId[i]).getElementsByTagName("div");
-
         for (var x = 0; x < 7; x++) {
             nodes[x].innerText = arrweek[i][x]
-
         }
         paintWeekend(Calendar.weekendDays, nodes)
     }
 }
 
 export function setCurDay(arrId, dayBefore) {
-
     let corect = 0
-    if (firstDay.checked) { corect = 1 }
+    if ((firstDay as HTMLInputElement).checked) { corect = 1 }
     let curday = nowDateNumber + dayBefore + corect
     /* let curday = Calendar.nowDate.getDate() + dayBefore + corect */
     /* let curday = Calendar.nowDate.getDate() + Calendar.NumberOfFirstDay */
@@ -120,7 +114,7 @@ export function setCurDay(arrId, dayBefore) {
             let nodes = document.getElementById(arrId[i]).getElementsByTagName("div");
             if (curday === counter
                 && Calendar.getFullNameMonth() === Calendar.getCurMonth()
-                && Calendar.getYearContent() == Calendar.nowYear) {
+                && Calendar.getYearContent() == String(Calendar.nowYear) ) {   // string()
                 nodes[x].classList.add("current_day")
             } else {
                 nodes[x].classList.remove("current_day")
@@ -136,7 +130,7 @@ export function PaintdyasBefore(beforeDays) {
         AddBorder(node[i]);
     }
     let length = 0;
-    if (firstDay.checked) {
+    if ((firstDay as HTMLInputElement).checked) {
         length = beforeDays
     } else { length = beforeDays - 1 }
     for (let i = 0; i < length; i++) {
@@ -153,7 +147,7 @@ export let setDaysInMonth = function () {
 export let setAfterDays = function (DAYINCALENDAR, NumberOfFirstDay, dayInMonth) {
     let correct = 0
     let prevdays = 0
-    if (firstDay.checked && NumberOfFirstDay !== 0) {
+    if ((firstDay as HTMLInputElement).checked && NumberOfFirstDay !== 0) {
         prevdays = NumberOfFirstDay
     } else {
         if (NumberOfFirstDay === 0) {
@@ -203,13 +197,13 @@ export function PaintdyasAfter(afterdays) {
 }
 
 export let HideDays = function (node) {
-    if (hidedays.checked) {
+    if ((hidedays as HTMLInputElement).checked) {
         node.innerText = ""
     }
 }
 
 export let HideBorder = function (node) {
-    if (hidedays.checked) {
+    if ((hidedays as HTMLInputElement).checked) {
         node.style.borderColor = "rgb(120, 120, 122)";
     }
 }
@@ -218,35 +212,31 @@ export let AddBorder = function (node) {
     node.style.borderColor = "rgb(179, 179, 179)";
 }
 
-/* let setCurDate = function () {
-    alert("sdsdscsdc")
-}; */
-
 export function set_days_name(language) {
-    let dayOfweek = '';
+    let dayOfweek = [];
     let dayOfweek_EN = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Suturday", "Sunday"]
     let dayOfweek_RU = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскрпесенье"]
     language === 0 ? dayOfweek = dayOfweek_EN : dayOfweek = dayOfweek_RU;
-    let node1 = document.getElementById("first_weekeaen_day").options
-    let node2 = document.getElementById("second_weekeaen_day").options
+    let node1 = (document.getElementById("first_weekeaen_day") as any).options 
+    let node2 = (document.getElementById("second_weekeaen_day") as any).options 
     for (let i = 0; i < dayOfweek.length; i++) {
-        node1[i] = new Option(dayOfweek[i], [i]);
+        node1[i] = new Option(dayOfweek[i], String([i]));  // [i]
     }
     for (let i = 0; i < dayOfweek.length; i++) {
-        node2[i] = new Option(dayOfweek[i], [i]);
+        node2[i] = new Option(dayOfweek[i], String([i]) ); // [i]
     }
 };
 
 export let set_weekend_days = function () {
-    let node1 = document.getElementById("first_weekeaen_day");
-    let node2 = document.getElementById("second_weekeaen_day");
+    let node1: any = document.getElementById("first_weekeaen_day");
+    let node2: any = document.getElementById("second_weekeaen_day");
     Calendar.weekendDays[0] = Number(node1.options[node1.selectedIndex].value);
     Calendar.weekendDays[1] = Number(node2.options[node2.selectedIndex].value);
 }
 
 export let paintWeekend = function (weekends, node) {
     let week = []
-    if (firstDay.checked) {
+    if ((firstDay as HTMLInputElement).checked) {
         week[0] = weekends[0] + 1
         if (week[0] > 6) { week[0] = 0 }
         week[1] = weekends[1] + 1
@@ -271,7 +261,8 @@ export let apdateApp = function () {
     set_week_name(Calendar.language);
     setMaxDaysInMonth()
     getNumberOfFirstDay()
-    setPrevDays(Calendar.firstDay);
+    setPrevDays();
+    /* setPrevDays(Calendar.firstDay); */
     setCurDays();
     setLastDays();
     set_weekend_days()

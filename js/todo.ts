@@ -38,7 +38,7 @@ let insertText = function (key) {
         nodes[i].innerText = todo[key][i];
         addDel(nodes[i])
     }
-    eventInput.value = "";
+    (eventInput as any).value = "";
 }
 
 let addDel = function (node) {
@@ -73,11 +73,11 @@ let addicone = function (day, number) {
         if (!elem[i].classList.contains('different_month')) {
             /*  let index = elem.indexOf(elem[i])
              elem.splice(index, 1 ) */
-            if (elem[i].innerText == day && number === 0) {
-                elem[i].style.color = "green"
+            if ((elem[i] as HTMLElement).innerText == day && number === 0) {
+                (elem[i] as HTMLElement).style.color = "green"
             }
-            if (elem[i].innerText == day && number === 1) {
-                elem[i].style.color = "white"
+            if ((elem[i] as HTMLElement).innerText == day && number === 1) {
+                (elem[i] as HTMLElement).style.color = "white"
             }
         }
     }
@@ -94,8 +94,8 @@ let removeText = function () {
 }
 
 AddEvent.onclick = function () {
-        if (eventInput.value !== "") {
-        let text = eventInput.value;
+        if ((eventInput as HTMLInputElement).value !== "") {
+        let text = (eventInput as HTMLInputElement).value;
         setMesage(text, todo.fullDate)
         addText()
     }
@@ -132,19 +132,6 @@ let setSelectedDateEvent = function () {
     let day = todo.day;
     let monthNumber = Calendar.curMonth;
     let year = Calendar.getYearContent();
-    let dateEvent = new Date(year, monthNumber, day).toDateString();
+    let dateEvent = new Date(Number(year), monthNumber, day).toDateString();
     todo.fullDate = dateEvent;
 }
-
-
- /*  let day = elem[i].innerText
-             let d = todo.day
-             if(day == d ){
-              console.log('Ok')
-              elem[i].classList.style.color="green"
-      
-             } */
-            /* console.log(day)
-            console.log(todo.fullDate)
-            console.log('todo.day = ' + d ) */
-            /*  elem[i].style.color = 'green'; */

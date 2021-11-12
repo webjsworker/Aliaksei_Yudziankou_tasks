@@ -31,21 +31,10 @@ Fulldate.onclick = function () {
 }
 
 language.onclick = function () {
-    if(language.checked){
+    if((language as HTMLInputElement).checked){
         Calendar.language = 1 ; 
     } else {Calendar.language = 0}
     apdateApp()
 }
 
 export let a = 10 ;
-
-
-
-
-
-
-
-
-/* AddEvent.onclick = function () {
-    console.log ("Please, Add new event")
-} */
