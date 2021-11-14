@@ -1,0 +1,12 @@
+<ul>
+    <li *ngFor="let elem of elems; let i = index">
+        <span [class.done]="elem.completed">
+            <input type="checkbox" [checked]="elem.completed">
+            <strong>{{ i + 1 }} </strong> {{elem.title}}
+        </span>
+        <small>{{elem.date | date:'shortDate'}}</small>
+        <button class="rm">&times;</button>
+
+    </li>
+
+</ul>
