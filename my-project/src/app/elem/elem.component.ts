@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Elem } from '../app.component';
+import { Component, OnInit} from '@angular/core';
+import { ElemsService } from '../shared/elem.service';
+
 
 @Component({
   selector: 'app-elem',
@@ -8,11 +9,16 @@ import { Elem } from '../app.component';
 })
 export class ElemComponent implements OnInit {
   
- @Input() elems: Elem[] = []
-
-  constructor() { }
+   constructor(public elemService: ElemsService)  { }
 
   ngOnInit(): void {
+  }
+
+  onChange(id: number) {
+   this.elemService.onToggle(id)
+  }
+  removeElem(id: number) {
+    this.elemService.removeElem(id)
   }
 
 }

@@ -1,12 +1,14 @@
-<ul>
-    <li *ngFor="let elem of elems; let i = index">
+<ul *ngIf="elemService.elems.length; else noElems">
+    <li *ngFor="let elem of elemService.elems; let i = index">
         <span [class.done]="elem.completed">
-            <input type="checkbox" [checked]="elem.completed">
+            <input type="checkbox" [checked]="elem.completed" (change)="onChange(elem.id)">
             <strong>{{ i + 1 }} </strong> {{elem.title}}
         </span>
         <small>{{elem.date | date:'shortDate'}}</small>
-        <button class="rm">&times;</button>
-
+        <button class="rm" (click)="removeElem(elem.id)">&times;</button>
     </li>
-
 </ul>
+
+<ng-template #noElems>
+    <p style="text-align: center;">No elements now ! </p>
+</ng-template>

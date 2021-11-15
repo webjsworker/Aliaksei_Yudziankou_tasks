@@ -1,0 +1,25 @@
+ul {
+    li{ 
+        list-style-type: none;
+        border: solid #ccc;
+        border-radius: 5px;
+        input {
+        }
+        small {
+        } 
+        button {
+            margin-left: 50%;
+        } 
+    }
+}
+
+.done {
+    text-decoration: line-through;
+}
+.rm{
+    color: red;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s all ;
+}
