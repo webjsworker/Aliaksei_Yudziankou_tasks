@@ -23,3 +23,13 @@ ul {
     cursor: pointer;
     transition: .3s all ;
 }
+
+.filter{
+    display: flex;
+    align-items: center;
+    input {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+    }
+}

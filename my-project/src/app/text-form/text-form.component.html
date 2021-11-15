@@ -1,0 +1,9 @@
+<div>
+    <input 
+    type="text" 
+    placeholder="Add your message ... "
+    [(ngModel)]="title"
+    (keydown.enter)="addText()"
+        >
+    <button (click)="addText()">Send</button>
+</div>

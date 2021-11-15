@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
-
+import {HttpClient} from '@angular/common/http'
+import { Observable, tap } from "rxjs";
 export interface Elem {
     id: number
     title: string
@@ -10,11 +11,14 @@ export interface Elem {
 @Injectable({ providedIn: 'root' })
 export class ElemsService {
 
-    public elems: Elem[] = [
-        { id: 1, title: 'first title', completed: false, date: new Date() },
-        { id: 2, title: 'second title', completed: true, date: new Date() },
-        { id: 3, title: 'third title', completed: false, date: new Date() },
-    ]
+    public elems: Elem[] = []
+
+    constructor(public http: HttpClient){}
+
+    fetchElems(): Observable<Elem[]> {
+       return this.http.get<Elem[]>('https://jsonplaceholder.typicode.com/todos?_limit=10')
+       .pipe(tap(elems => this.elems = elems))
+    }
     
   onToggle(id:number){
     const idx = this.elems.findIndex(t => t.id === id)
@@ -23,6 +27,10 @@ export class ElemsService {
 
    removeElem(id: number) {
     this.elems = this.elems.filter(t => t.id !== id )
+}
+
+addText(elem: Elem) {
+this.elems.push(elem)
 }
 
 }

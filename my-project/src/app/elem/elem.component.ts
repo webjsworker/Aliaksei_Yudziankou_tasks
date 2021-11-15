@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import { delay } from 'rxjs';
 import { ElemsService } from '../shared/elem.service';
 
 
@@ -8,10 +9,18 @@ import { ElemsService } from '../shared/elem.service';
   styleUrls: ['./elem.component.scss']
 })
 export class ElemComponent implements OnInit {
+
+  public loading: boolean = true
+  public searchString: string = ''
   
    constructor(public elemService: ElemsService)  { }
 
   ngOnInit(): void {
+    this.elemService.fetchElems()
+    .pipe(delay(500))
+    .subscribe(()=>{
+      this.loading = false
+    })
   }
 
   onChange(id: number) {
