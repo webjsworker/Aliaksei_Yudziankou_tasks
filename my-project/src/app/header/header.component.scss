@@ -1,0 +1,22 @@
+.header {
+    background-color: rgb(236, 240, 189);
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 80px;
+    
+    &__name{
+     /* padding-left: 50px;     */
+     font-size: 50px;
+     text-decoration: none;
+     /* margin: auto ; */
+     color: rgb(207, 177, 177) ;    
+    }
+    &__name:hover {
+        color: darkgrey;
+    }
+    &__score{
+        color: rgb(207, 177, 177) ;
+    }
+} 

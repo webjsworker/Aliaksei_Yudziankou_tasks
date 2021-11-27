@@ -1,0 +1,22 @@
+.nav{
+background-color: rgb(236, 240, 189);
+height: 80px;
+
+
+  ul{
+    width: 80%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+li{
+    margin-left: 20px;
+    color: rgb(172, 201, 160);
+    /* background-color: darkkhaki; */
+    list-style-type: none;
+    font-size: 25px;
+} 
+li:hover{
+    color: white;
+} 
+}

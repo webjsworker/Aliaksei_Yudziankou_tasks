@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { ElemComponent } from './elem/elem.component';
 import { ElemsFilterPipe } from './shared/elems-filter.pipe';
 import { TextFormComponent } from './text-form/text-form.component';
+import { HeaderComponent } from './header/header.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ElemComponent,
     TextFormComponent,
-    ElemsFilterPipe
+    ElemsFilterPipe,
+    HeaderComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
