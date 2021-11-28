@@ -10,6 +10,13 @@ import { ElemsFilterPipe } from './shared/elems-filter.pipe';
 import { TextFormComponent } from './text-form/text-form.component';
 import { HeaderComponent } from './header/header.component';
 import { NavComponent } from './nav/nav.component';
+import { AboutComponent } from './about/about.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
+import { FindComponent } from './find/find.component';
+import { ViewComponent } from './view/view.component';
+import { CreateComponent } from './create/create.component';
+import { FeetbackComponent } from './feetback/feetback.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +25,19 @@ import { NavComponent } from './nav/nav.component';
     TextFormComponent,
     ElemsFilterPipe,
     HeaderComponent,
-    NavComponent
+    NavComponent,
+    AboutComponent,
+    HomeComponent,
+    FindComponent,
+    ViewComponent,
+    CreateComponent,
+    FeetbackComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
 
   ],
   providers: [],
