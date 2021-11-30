@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  public headerDate: Date = new Date();
+  public score: number = 10; 
+
   constructor() { }
 
   ngOnInit(): void {
