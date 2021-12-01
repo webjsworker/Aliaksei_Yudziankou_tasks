@@ -1,1 +1,22 @@
-<p>find works!</p>
+
+<button (click)="getAdvice()"> Find  </button>
+<div class="advice"  *ngIf="vision" >
+    <h4>Advice card</h4>
+    <li>{{activity}}</li>
+    <li>{{type}}</li>
+    <li>{{participants}}</li>
+    <li>{{price}}</li>
+    <li>{{link}}</li>
+    <li>{{key}}</li>
+    <li>{{accessibility}}</li>
+</div>
+
+<div class="advice__hidden" *ngIf="!vision">
+    <ul>
+    <li>There's nothing </li>
+    <li *ngIf="loading">... Loading</li>    
+    </ul>
+    </div>
+
+
+  
