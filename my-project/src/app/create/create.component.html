@@ -1,1 +1,108 @@
-<p>create works!</p>
+<!-- <div class="feetback"> 
+    <div class="feetback__form_contaner">
+     <div class="feetback__name">
+        <label>Autor name: </label>
+        <input class="feetback__input" 
+        name="Author" [(ngModel)]="name" 
+        placeholder="Autor Name"/>
+    </div>    
+<div class="feetback__feetback">
+        <label>Feetback: </label>
+        <textarea class="feetback__input textArea" 
+        name="Feetback" [(ngModel)]="message" 
+        placeholder="message"></textarea>
+    </div>
+<div class="feetback__rating">
+        <label>Rating</label>
+        <select class="feetback__select" name="Rating" [(ngModel)]="rating">
+            <option  *ngFor="let value of values" [value]="value">
+                {{value}}
+            </option>
+        </select>
+    </div>
+    <div class="feetback__button">
+        <button class="btn btn-default" (click)="addMessage()">Send message</button>
+    </div>
+
+
+    </div>
+   
+  
+ <div class="feetback__comments"><h3>Feetback :  </h3>
+    <ul *ngFor="let message of messages">
+        <li> <span>{{Date | date :'mediumDate' }}</span>
+         <span [ngStyle]="{'font-weight':'bold'}">  {{ message.name}}: </span>
+         {{message.message}} -  ({{message.rating}})  </li>
+    </ul>
+</div>   
+    
+    
+</div> -->
+
+
+
+
+
+
+
+
+
+<div class="creat">
+
+    <div class="creat__activity">
+        <label>activity: </label>
+        <input class="creat__input" name="activity" [(ngModel)]="activity" placeholder="Enter activity" />
+    </div>
+
+    <div class="creat__type">
+        <label>type: </label>
+        <input class="creat__input" name="type" [(ngModel)]="type" placeholder="Type of activity" />
+    </div>
+
+    <div class="creat__participants">
+        <label>participants: </label>
+        <input class="creat__input" name="participants" [(ngModel)]="participants" placeholder="Participants" />
+    </div>
+
+    <div class="creat__price">
+        <label>price: </label>
+        <input class="creat__input" name="price" [(ngModel)]="price" placeholder="price $" />
+    </div>
+
+    <div class="creat__link">
+        <label>link: </label>
+        <input class="creat__input" name="link" [(ngModel)]="link" placeholder="link" />
+    </div>
+
+    <div class="creat__key">
+        <label>key: </label>
+        <input class="creat__input" name="key" [(ngModel)]="key" placeholder="key" />
+    </div>
+
+    <div class="creat__accessibility">
+        <label>accessibility: </label>
+        <input class="creat__input" name="accessibility" [(ngModel)]="accessibility" placeholder="accessibility" />
+    </div>
+
+    <div class="creat__button">
+        <button class="creat__button_default" (click)="creatAdvice()">Create</button>
+    </div>
+
+    <div class="created__element"><h3>Feetback :  </h3>
+        <ul *ngFor="let advice of advices">
+            <li>activity: {{ advice.activity}}</li>
+            <li>type:{{ advice.type}}</li>
+            <li>participants:{{ advice.participants}}</li>
+            <li>price:{{ advice.price}}</li>
+            <li>link:{{ advice.link}}</li>
+            <li>key:{{ advice.key}}</li>
+            <li>accessibility:{{ advice.accessibility}}</li>
+          <li class="created__button">
+            <button class="creat__button_default" >Add</button>
+          </li>  
+         </ul>
+         
+    </div> 
+</div>
+
+

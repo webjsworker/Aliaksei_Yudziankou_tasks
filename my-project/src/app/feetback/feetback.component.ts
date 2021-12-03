@@ -10,8 +10,8 @@ export class Message{
 @Component({
   selector: 'app-feetback',
   templateUrl: './feetback.component.html',
-  styleUrls: ['./feetback.component.scss']
-})
+  styleUrls: ['./feetback.component.scss'],
+  })
 export class FeetbackComponent implements OnInit {
   name: string = "";
   message: string = "";
