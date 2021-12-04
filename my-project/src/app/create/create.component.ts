@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewService } from '../shared/view.service';
 
 export class Advice {
   constructor(public activity: string,
@@ -13,7 +14,8 @@ export class Advice {
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
-  styleUrls: ['./create.component.scss']
+  styleUrls: ['./create.component.scss'],
+  providers: [ViewService],
 })
 
 export class CreateComponent implements OnInit {
@@ -31,7 +33,11 @@ export class CreateComponent implements OnInit {
     this.advices.push(new Advice(this.activity, this.type, this.participants, this.price, this.link, this.key, this.accessibility));
   }
 
-  constructor() { }
+  addAdvice(){
+    this.newAdvice.addElement(this.activity);
+  }
+
+  constructor(private newAdvice: ViewService) { }
   ngOnInit(): void {
   }
 

@@ -1,0 +1,32 @@
+.creat{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgb(236, 240, 189);
+    font-size: 25px;
+    display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start; 
+
+    
+    &__contaner{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        /*  background-color: blanchedalmond; */
+       }
+    &__activity, &__type, &__participants,
+    &__price, &__link, &__key,
+    &__accessibility {
+        margin-top: 10px;
+        /* background-color: rgb(243, 173, 68); */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 400px;
+        }
+    
+} 
+
+.created__element{
+            margin-left: 100px;
+        }
