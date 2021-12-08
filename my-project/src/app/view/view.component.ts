@@ -5,7 +5,7 @@ import { ViewService } from '../shared/view.service';
   selector: 'app-view',
   templateUrl: './view.component.html',
   styleUrls: ['./view.component.scss'],
-  providers: [ViewService], 
+  providers: [ViewService]
 })
 
 export class ViewComponent implements OnInit {
@@ -15,7 +15,7 @@ export class ViewComponent implements OnInit {
 
   ngOnInit(): void {
     this.elem = this.elements.getElement();
-    console.log("view.component = " + this.elem  )
+    /* console.log("view.component = " + this.elem  ) */
   }
 
 }

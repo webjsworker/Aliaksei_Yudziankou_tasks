@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
-
 import { AppComponent } from './app.component';
 import { ElemComponent } from './elem/elem.component';
 import { ElemsFilterPipe } from './shared/elems-filter.pipe';
