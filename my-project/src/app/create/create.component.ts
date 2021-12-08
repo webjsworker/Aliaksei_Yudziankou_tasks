@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewService } from '../shared/view.service';
+import { ViewingService } from '../shared/viewing.service';
 
 export class Advice {
   constructor(public activity: string,
@@ -35,9 +36,16 @@ export class CreateComponent implements OnInit {
 
   addAdvice(){
     this.newAdvice.addElement(this.activity);
+
+    this.element.addE(new Advice(this.activity, this.type, this.participants, this.price, this.link, this.key, this.accessibility) /* {id: 1232,
+      title: "string",
+      completed: false,
+      date: this.activity} */  )
+   
   }
 
-  constructor(private newAdvice: ViewService) { }
+  constructor(private newAdvice: ViewService,
+    public element: ViewingService) { }
   ngOnInit(): void {
   }
 

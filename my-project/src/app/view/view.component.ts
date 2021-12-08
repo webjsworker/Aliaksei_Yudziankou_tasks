@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewService } from '../shared/view.service';
 
+
+import { ElemsService } from '../shared/elem.service';
+import { ViewingService } from '../shared/viewing.service';
+
+import { delay } from 'rxjs';
+
+
 @Component({
   selector: 'app-view',
   templateUrl: './view.component.html',
@@ -9,13 +16,32 @@ import { ViewService } from '../shared/view.service';
 })
 
 export class ViewComponent implements OnInit {
-   elem: any = []
+   elem: any = [];
 
-  constructor(private elements: ViewService) { }
+   /* com: any = []; */
+
+  constructor(public elements: ViewService,
+     /* public comp: ElemsService, */
+     public viewing: ViewingService
+    ) { }
 
   ngOnInit(): void {
     this.elem = this.elements.getElement();
-    /* console.log("view.component = " + this.elem  ) */
+    
+
+    /* this.viewing.fetchElems()
+    .subscribe(()=>{ }) */
+
+    this.viewing.fetchElems()
+
+    /* this.com = this.comp.fetchElems(); */
+
+
+    
+
+  
+
+    
   }
 
 }

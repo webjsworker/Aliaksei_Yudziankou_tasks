@@ -4,4 +4,42 @@
     {{el}}
 </div>
 
+<!-- <li *ngFor="let elem of comp.elems ; let i = index">
+    <span >
+         <strong>{{ i + 1 }} </strong> {{elem.title}}
+    </span>
+    <small>{{elem.date | date:'shortDate'}}</small>
+    
+</li> -->
+
+
+<li *ngFor="let elements of viewing.elems ; let i = index">
+    <p >
+         <strong>activity:  </strong> {{elements.activity}}
+    </p>
+    <p >
+        <strong>type: </strong> {{elements.type}}
+   </p>
+   <p >
+    <strong>participants: </strong> {{elements.participants}}
+</p>
+<p >
+    <strong>price: </strong> {{elements.price}}
+</p>
+<p >
+    <strong>link: </strong> {{elements.link}}
+</p>
+<p >
+    <strong>key: </strong> {{elements.key}}
+</p>
+<p >
+    <strong>accessibility: </strong> {{elements.accessibility}}
+</p>
+    <!-- <small>{{elements.date | date:'shortDate'}}</small> -->
+    
+</li>
+
+<!-- <span *ngFor="let elenetOfArray of viewingElement"
+>{{elenetOfArray}}</span> -->
+
 </div> 
