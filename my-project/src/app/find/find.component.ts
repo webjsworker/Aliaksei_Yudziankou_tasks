@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Advice } from '../create/create.component';
+import { ViewingService } from '../shared/viewing.service';
 
 @Component({
   selector: 'app-find',
@@ -9,6 +11,7 @@ export class FindComponent implements OnInit {
   
   public vision: boolean = false;
   public loading: boolean = false;
+  public addCard: boolean = false;
   public activity: string = ""; 
   public type: string =  '';
   public participants: number = 0  ; 
@@ -17,17 +20,19 @@ export class FindComponent implements OnInit {
   public key: string =  '';
   public accessibility: number = 0 ;
   
-  constructor() { }
+  constructor(private findedAdvice: ViewingService) { }
 
   async  getAdvice() {
     this.loading = true;
+    this.addCard = false;
+
     const URL = `https://www.boredapi.com/api/activity?participants=1`
     try{
 let res = await fetch(URL);
     let advice = await res.json();
 
     this.loading = false;
-
+    
     this.activity = advice.activity
     this.type = advice.type
     this.participants = advice.participants
@@ -36,14 +41,19 @@ let res = await fetch(URL);
     this.key = advice.key
     this.accessibility = advice.accessibility
     this.vision= true;
-      
 
-    /* console.log(advice)
-    console.log("prece = " + advice.price) */
+   
+     
 } catch (err){
         console.log(err)
     }
   }
+
+  addAdvice(){
+    this.addCard = true;
+    this.findedAdvice.addE(new Advice(this.activity, this.type, this.participants, this.price, this.link, this.key, this.accessibility)  )
+    }
+
 
   ngOnInit(): void {
   }

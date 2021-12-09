@@ -1,4 +1,37 @@
 .view{
     margin-top: 20px;
     background-color: rgb(236, 240, 189);
+    font-size: 25px; 
+    height: auto;
+    padding: 20px;
+}
+
+
+
+.view__card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 20px;
+    word-break: break-all;
+
+    div {
+        margin-top: 10px;
+        padding: 20px;
+        color: black;
+    }
+
+    ul{
+        padding: 10px;
+        background-color: rgba(201, 192, 180, 0.705);
+        width: 280px;
+        border: 2px solid;
+        border-radius: 5%;
+    }
+    li{
+        list-style-type: none; 
+    }
+    span{
+        font-weight: 700;
+    }
 }

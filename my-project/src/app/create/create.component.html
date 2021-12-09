@@ -46,6 +46,13 @@
 
         <div class="created__element">
             <h3>Element : </h3>
+
+            <div> <!--  {{advices.length}} -->
+                <li *ngIf="advices.length"> Entered : {{advices[1].activity}}</li>
+                <!-- <li>activity: {{ advices[advices.length]}}</li>  -->
+            </div>
+            
+
             <ul *ngFor="let advice of advices">
                 <li>activity: {{ advice.activity}}</li>
                 <li>type:{{ advice.type}}</li>
@@ -55,7 +62,10 @@
                 <li>key:{{ advice.key}}</li>
                 <li>accessibility:{{ advice.accessibility}}</li>
                 <li class="created__button">
-                    <button class="creat__button_default" (click)="addAdvice()">Add</button>
+                <button class="creat__button_default" 
+                (click)="addAdvice()"
+                *ngIf="!Cardcondition"
+                >Add</button>
                 </li>
             </ul>
 

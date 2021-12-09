@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { CreateComponent } from './create/create.component';
-import { ElemComponent } from './elem/elem.component';
 import { FeetbackComponent } from './feetback/feetback.component';
 import { FindComponent } from './find/find.component';
 import { HomeComponent } from './home/home.component';
@@ -33,10 +32,7 @@ component: FindComponent
     path: 'feetback',
     component: FeetbackComponent
   },
-  {
-    path: 'list',
-    component: ElemComponent
-  },
+  
 ];    
 
 @NgModule({

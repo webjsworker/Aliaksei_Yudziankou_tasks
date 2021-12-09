@@ -18,11 +18,10 @@
     &__price, &__link, &__key,
     &__accessibility {
         margin-top: 10px;
-        /* background-color: rgb(243, 173, 68); */
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            width: 400px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 400px;
         }
     
 } 

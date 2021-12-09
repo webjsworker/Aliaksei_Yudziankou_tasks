@@ -6,14 +6,39 @@
     margin-top: 20px;
     background-color: rgb(236, 240, 189);
     padding: 20px;
+    font-size: 25px;
+
+    &__form_contaner{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        /*  background-color: blanchedalmond; */
+       }
+
+
 &__name, &__feetback, &__rating, &__button{
+    input{
+        width: 390px;
+    }
+    /* margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 400px; */
+    
+    font-weight: 700;
     display: flex;
     flex-wrap: wrap;
     flex-flow: column;
     margin-top: 20px;
-
     width: 200px;
 }
+
+&__feetback{
+    width: 400px;
+}
+
+
     .textArea{
         height: 80px;
        

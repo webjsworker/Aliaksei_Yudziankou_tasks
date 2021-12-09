@@ -1,40 +1,39 @@
-<div class="feetback"> 
+<div class="feetback">
     <div class="feetback__form_contaner">
-     <div class="feetback__name">
-        <label>Autor name: </label>
-        <input class="feetback__input" 
-        name="Author" [(ngModel)]="name" 
-        placeholder="Autor Name"/>
-    </div>    
-<div class="feetback__feetback">
-        <label>Feetback: </label>
-        <textarea class="feetback__input textArea" 
-        name="Feetback" [(ngModel)]="message" 
-        placeholder="message"></textarea>
-    </div>
-<div class="feetback__rating">
-        <label>Rating</label>
-        <select class="feetback__select" name="Rating" [(ngModel)]="rating">
-            <option  *ngFor="let value of values" [value]="value">
-                {{value}}
-            </option>
-        </select>
-    </div>
-    <div class="feetback__button">
-        <button class="btn btn-default" (click)="addMessage()">Send message</button>
-    </div>
+        <div class="feetback__name">
+            <label>Autor name: </label>
+            <input class="feetback__input" name="Author" [(ngModel)]="name" placeholder="Autor Name" />
+        </div>
+        <div class="feetback__feetback">
+            <label>Feetback: </label>
+            <textarea class="feetback__input textArea" name="Feetback" [(ngModel)]="message"
+                placeholder="message"></textarea>
+        </div>
+        <div class="feetback__rating">
+            <label>Rating</label>
+            <select class="feetback__select" name="Rating" [(ngModel)]="rating">
+                <option *ngFor="let value of values" [value]="value">
+                    {{value}}
+                </option>
+            </select>
+        </div>
+        <div class="feetback__button">
+            <button class="btn btn-default" (click)="addMessage()">Send message</button>
+        </div>
 
 
     </div>
-   
-  
- <div class="feetback__comments"><h3>Feetback :  </h3>
-    <ul *ngFor="let message of messages">
-        <li> <span>{{Date | date :'mediumDate' }}</span>
-         <span [ngStyle]="{'font-weight':'bold'}">  {{ message.name}}: </span>
-         {{message.message}} -  ({{message.rating}})  </li>
-    </ul>
-</div>   
-    
-    
+
+
+    <div class="feetback__comments">
+        <h3>Feetback : </h3>
+        <ul *ngFor="let message of messages">
+            <li> <span>{{Date | date :'mediumDate' }}</span>
+                <span [ngStyle]="{'font-weight':'bold'}"> {{ message.name}}: </span>
+                {{message.message}} - ({{message.rating}})
+            </li>
+        </ul>
+    </div>
+
+
 </div>

@@ -1,24 +1,39 @@
+<!-- <button (click)="getAdvice()"> Find </button> -->
+<div class="advice" *ngIf="vision">
 
-<button (click)="getAdvice()"> Find  </button>
-<div class="advice"  *ngIf="vision" >
-    <h4>Advice card</h4>
-    <li>{{activity}}</li>
-    <li>{{type}}</li>
-    <li>{{participants}}</li>
-    <li>{{price}}</li>
-    <li>{{link}}</li>
-    <li>{{key}}</li>
-    <li>{{accessibility}}</li>
-    <li><button class="creat__button_default">Add</button></li>
+    <button (click)="getAdvice()" *ngIf="!loading"> One more time </button>
+    <li *ngIf="loading"> ... Loading</li>
+
+    <div class="find__card">
+        <ul>
+            <h4>Advice Card</h4>
+            <li> <span>activity:</span>{{activity}} </li>
+            <li><span>type:</span> {{type}}</li>
+            <li><span>participants:</span> {{participants}}</li>
+            <li><span>price:</span> {{price}}</li>
+            <li><span>link:</span> {{link}} </li>
+            <li><span>key:</span> {{key}}</li>
+            <li><span>accessibility:</span> {{accessibility}}</li>
+        </ul>
+    </div>
+    
+<li *ngIf="!addCard"><button class="creat__button_default" 
+        (click)="addAdvice()"
+        *ngIf="!loading"
+       
+        >Add</button></li>
+
+    
     
 </div>
 
 <div class="advice__hidden" *ngIf="!vision">
     <ul>
-    <li>There's nothing </li>
-    <li *ngIf="loading">... Loading</li>    
+        <li>Find your personal advice. Good luck! </li>
+        <div class="advice__hidden_item">
+            <button (click)="getAdvice()" *ngIf="!loading"> Try it </button>
+            <li *ngIf="loading">... Loading</li>
+        </div>
+
     </ul>
-    </div>
-
-
-  
+</div>

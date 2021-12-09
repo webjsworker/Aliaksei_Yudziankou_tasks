@@ -30,11 +30,16 @@ export class CreateComponent implements OnInit {
   accessibility: number = 0;
   advices: Advice[] = [];
 
+  public Cardcondition: boolean = false;
+
   creatAdvice() {
+    this.Cardcondition = false;
+
     this.advices.push(new Advice(this.activity, this.type, this.participants, this.price, this.link, this.key, this.accessibility));
   }
 
   addAdvice(){
+    this.Cardcondition = true;
     this.newAdvice.addElement(this.activity);
 
     this.element.addE(new Advice(this.activity, this.type, this.participants, this.price, this.link, this.key, this.accessibility) /* {id: 1232,
