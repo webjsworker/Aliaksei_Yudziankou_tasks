@@ -1,27 +1,32 @@
 import { Observable } from "rxjs";
 import { Injectable } from "@angular/core";
 
+export interface Element {
+  activity: string ;
+  type: string ;
+  participants: number ;
+  price: number ;
+  link: string ;
+  key: string ;
+  accessibility: number ;
+}
+
 @Injectable({ providedIn: 'root' })
-
-
-/* export interface Elem {
-    date?: any
-} */
 
 export class ViewService {
 
     /* public elements: Elem[] = [["world"], ["hello"],[3,4,5,6,]]; */
-    public elements: any = [ /* ["hello"], ['world'] */];
+    /* public elements: Element{} ; */
 
-   /*  public elements: any = []; */
+    public elements: any = [];
        
-    getElement(): Observable<any> {
+    getElement(): any {
         console.log("get elements = " + this.elements)
         return this.elements;
     }
 
     addElement(element: any){
-        this.elements.push(element) ;
+        /* this.elements.push(element) ; */
         console.log("add element = " + element)
         console.log("add elements = " + this.elements)
     }

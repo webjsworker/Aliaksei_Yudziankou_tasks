@@ -1,74 +1,66 @@
 <div class="creat">
-  
-        <div class="creat__contaner">
-            <h3>Create your element</h3>
-            <div class="creat__activity">
-                <label>activity: </label>
-                <input class="creat__input" name="activity" [(ngModel)]="activity" placeholder="Enter activity" />
-            </div>
 
-            <div class="creat__type">
-                <label>type: </label>
-                <input class="creat__input" name="type" [(ngModel)]="type" placeholder="Type of activity" />
-            </div>
-
-            <div class="creat__participants">
-                <label>participants: </label>
-                <input class="creat__input" name="participants" [(ngModel)]="participants" placeholder="Participants" />
-            </div>
-
-            <div class="creat__price">
-                <label>price: </label>
-                <input class="creat__input" name="price" [(ngModel)]="price" placeholder="price $" />
-            </div>
-
-            <div class="creat__link">
-                <label>link: </label>
-                <input class="creat__input" name="link" [(ngModel)]="link" placeholder="link" />
-            </div>
-
-            <div class="creat__key">
-                <label>key: </label>
-                <input class="creat__input" name="key" [(ngModel)]="key" placeholder="key" />
-            </div>
-
-            <div class="creat__accessibility">
-                <label>accessibility: </label>
-                <input class="creat__input" name="accessibility" [(ngModel)]="accessibility"
-                    placeholder="accessibility" />
-            </div>
-
-            <div class="creat__button">
-                <button class="creat__button_default" (click)="creatAdvice()">Create</button>
-            </div>
-
+    <div class="creat__contaner" >
+        <h3>Create your element</h3>
+        <div class="creat__activity">
+            <label>activity: </label>
+            <input class="creat__input" name="activity" [(ngModel)]="activity" placeholder="Enter activity" />
         </div>
 
-        <div class="created__element">
-            <h3>Element : </h3>
+        <div class="creat__type">
+            <label>type: </label>
+            <input class="creat__input" name="type" [(ngModel)]="type" placeholder="Type of activity" />
+        </div>
 
-            <div> <!--  {{advices.length}} -->
-                <li *ngIf="advices.length"> Entered : {{advices[1].activity}}</li>
-                <!-- <li>activity: {{ advices[advices.length]}}</li>  -->
-            </div>
-            
+        <div class="creat__participants">
+            <label>participants: </label>
+            <input class="creat__input" name="participants" [(ngModel)]="participants" placeholder="Participants" />
+        </div>
 
-            <ul *ngFor="let advice of advices">
-                <li>activity: {{ advice.activity}}</li>
-                <li>type:{{ advice.type}}</li>
-                <li>participants:{{ advice.participants}}</li>
-                <li>price:{{ advice.price}}</li>
-                <li>link:{{ advice.link}}</li>
-                <li>key:{{ advice.key}}</li>
-                <li>accessibility:{{ advice.accessibility}}</li>
-                <li class="created__button">
-                <button class="creat__button_default" 
-                (click)="addAdvice()"
-                *ngIf="!Cardcondition"
-                >Add</button>
-                </li>
+        <div class="creat__price">
+            <label>price: </label>
+            <input class="creat__input" name="price" [(ngModel)]="price" placeholder="price $" />
+        </div>
+
+        <div class="creat__link">
+            <label>link: </label>
+            <input class="creat__input" name="link" [(ngModel)]="link" placeholder="link" />
+        </div>
+
+        <div class="creat__key">
+            <label>key: </label>
+            <input class="creat__input" name="key" [(ngModel)]="key" placeholder="key" />
+        </div>
+
+        <div class="creat__accessibility">
+            <label>accessibility: </label>
+            <input class="creat__input" name="accessibility" [(ngModel)]="accessibility" placeholder="accessibility" />
+        </div>
+
+        <div class="creat__button">
+            <button class="creat__button_default" (click)="creatAdvice()">Preview</button>
+            <button class="creat__button_default" (click)="Reset()">Reset</button>
+        </div>
+
+    </div>
+
+    <div class="created__element">
+        <h3>Element : </h3>
+        <div *ngIf="!advices.length">Your card will be displayed here.</div>
+        <div class="creat__card" *ngIf="advices.length">
+            <ul>
+                <h4>Advice Card</h4>
+                <li> <span>activity:</span>{{ elementOfArray.activity}} </li>
+                <li><span>type:</span> {{ elementOfArray.type}}</li>
+                <li><span>participants:</span> {{ elementOfArray.participants}}</li>
+                <li><span>price:</span> {{ elementOfArray.price}}</li>
+                <li><span>link:</span> {{ elementOfArray.link}}</li>
+                <li><span>key:</span> {{ elementOfArray.key}}</li>
+                <li><span>accessibility:</span> {{ elementOfArray.accessibility}}</li>
             </ul>
-
         </div>
-   
+        <div *ngIf="advices.length">
+            <button class="creat__button_default" (click)="addAdvice()" *ngIf="!Cardcondition">Add</button>
+        </div>
+    </div>
 </div>

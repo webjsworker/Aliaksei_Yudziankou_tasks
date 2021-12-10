@@ -27,21 +27,17 @@ export class ViewComponent implements OnInit {
 
   ngOnInit(): void {
     this.elem = this.elements.getElement();
-    
-
-    /* this.viewing.fetchElems()
+      /* this.viewing.fetchElems()
     .subscribe(()=>{ }) */
 
     this.viewing.fetchElems()
 
     /* this.com = this.comp.fetchElems(); */
-
-
     
+  }
 
-  
-
-    
+  Reset(value : any) {
+     console.log("reset value = " + value)
   }
 
 }

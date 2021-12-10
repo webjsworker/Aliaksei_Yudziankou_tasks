@@ -1,6 +1,6 @@
 <div class="view">
     <h3>Favorite cards : </h3>
-    
+     
 <div *ngFor="let el of elem">
     {{el}}
 </div>
@@ -16,7 +16,13 @@
 <div class="view__card">
   <div *ngFor="let elements of viewing.elems ; let i = index">
     <ul>
-        <span>Advice Card</span>
+        <div class="view__card_header">
+          <span>Advice Card</span> 
+          <button class="cross" 
+          (click)="Reset(elements.key)"
+          >&times;</button>  
+        </div>
+        
        <li> <span>activity:</span>{{elements.activity}} </li>
        <li><span>type:</span> {{elements.type}}</li>
        <li><span>participants:</span> {{elements.participants}}</li>

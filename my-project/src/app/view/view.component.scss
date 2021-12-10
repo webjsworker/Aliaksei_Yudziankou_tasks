@@ -4,6 +4,21 @@
     font-size: 25px; 
     height: auto;
     padding: 20px;
+
+
+    .cross{
+       /*  color:red;
+        margin-left: 50px;
+        border: solid 1px red;
+        border-radius: 50%;
+        padding: 10px; */
+    font-size: 25px;
+    color: red;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s all ;
+    }
 }
 
 
@@ -33,5 +48,19 @@
     }
     span{
         font-weight: 700;
-    }
+      }
+      .cross{
+        font-size: 25px;
+        color: red;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: .3s all ;
+      }
+
+      .view__card_header{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+      }
 }
