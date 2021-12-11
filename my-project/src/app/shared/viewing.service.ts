@@ -30,4 +30,9 @@ export class ViewingService {
         this.elems.push(element) 
     }
 
+    RemoveElement(key : any){
+        this.elems = this.elems.filter(t => t.key !== key)
+
+    }
+
 }

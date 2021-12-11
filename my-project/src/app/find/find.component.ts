@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Advice } from '../create/create.component';
+import { FindService } from '../shared/find.service';
 import { ViewingService } from '../shared/viewing.service';
 
 @Component({
   selector: 'app-find',
   templateUrl: './find.component.html',
-  styleUrls: ['./find.component.scss']
+  styleUrls: ['./find.component.scss'],
+  providers: [FindService]
 })
 export class FindComponent implements OnInit {
   
@@ -20,17 +22,19 @@ export class FindComponent implements OnInit {
   public key: string =  '';
   public accessibility: number = 0 ;
   
-  constructor(private findedAdvice: ViewingService) { }
+  constructor(private findedAdvice: ViewingService,
+    public item : FindService) { }
 
   async  getAdvice() {
+ 
     this.loading = true;
     this.addCard = false;
 
     const URL = `https://www.boredapi.com/api/activity?participants=1`
     try{
-let res = await fetch(URL);
+    let res = await fetch(URL);
     let advice = await res.json();
-
+        
     this.loading = false;
     
     this.activity = advice.activity
@@ -41,8 +45,7 @@ let res = await fetch(URL);
     this.key = advice.key
     this.accessibility = advice.accessibility
     this.vision= true;
-
-   
+  
      
 } catch (err){
         console.log(err)
@@ -53,7 +56,6 @@ let res = await fetch(URL);
     this.addCard = true;
     this.findedAdvice.addE(new Advice(this.activity, this.type, this.participants, this.price, this.link, this.key, this.accessibility)  )
     }
-
 
   ngOnInit(): void {
   }

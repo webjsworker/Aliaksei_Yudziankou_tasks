@@ -32,6 +32,7 @@
         <li>Find your personal advice. Good luck! </li>
         <div class="advice__hidden_item">
             <button (click)="getAdvice()" *ngIf="!loading"> Try it </button>
+            <!-- <button (click)="FindAdvice()" *ngIf="!loading"> Try from servise </button> -->
             <li *ngIf="loading">... Loading</li>
         </div>
 
