@@ -1,9 +1,12 @@
 .advice{
     font-size: 25px;
     background-color: rgb(236, 240, 189);
+    background-image: url(../../assets/background_find_hidden.jpg) ;
+    background-size: 100%;
     width:auto;
     margin-top: 20px;
     padding: 20px;
+    
 li{
    
     list-style-type: none;
@@ -13,6 +16,8 @@ li{
 .advice__hidden{
     font-size: 25px;
     background-color: rgb(236, 240, 189);  
+    background-image: url(../../assets/background_find_hidden.jpg) ;
+    background-size: 100%;
     width:auto; 
     height: 800px;
     margin-top: 20px;

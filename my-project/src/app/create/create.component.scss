@@ -1,32 +1,44 @@
 .creat{
     margin-top: 20px;
+    
     padding: 20px;
     background-color: rgb(236, 240, 189);
+    background-image: url(../../assets/background_create.jpg) ;
+    background-size: 100%;
     font-size: 25px;
     display: flex;
         flex-wrap: wrap;
         justify-content: flex-start; 
+       /*  color: white; */
     
     &__contaner{
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+        padding-top: 40px;
         /*  background-color: blanchedalmond; */
        }
     &__activity, &__type, &__participants,
     &__price, &__link, &__key,
     &__accessibility {
         margin-top: 10px;
+        margin-right: 200px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        width: 400px;
+        max-width: 400px;
         }
-    
+    input{
+        /* margin-left: 150px; */
+    }
 } 
 
 .created__element{
-            margin-left: 100px;
+            margin-left: 20px;
+            padding-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            
         }
 
         .creat__card{
@@ -37,6 +49,7 @@
            word-break: break-all;
             div {
                margin-top: 10px;
+               
                padding: 20px;
                color: black;
            }

@@ -1,6 +1,19 @@
+@font-face {
+    font-family: 'Bilbo Swash Caps';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../assets/font/bilbo-swash-caps-v15-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../../assets/font/bilbo-swash-caps-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../../assets/font/bilbo-swash-caps-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../../assets/font/bilbo-swash-caps-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../../assets/font/bilbo-swash-caps-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../../assets/font/bilbo-swash-caps-v15-latin-regular.svg#BilboSwashCaps') format('svg'); /* Legacy iOS */
+  }
+
 .header {
-    background-color: rgb(236, 240, 189);
-    height: 100px;
+    background-color: rgb(153, 102, 204);
+    min-height: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -9,7 +22,7 @@
     
     &__date{
         font-size: 20px;
-        color: rgb(207, 177, 177) ;
+        color: white ;
     }
     
     &__name{
@@ -17,7 +30,13 @@
      font-size: 50px;
      text-decoration: none;
      /* margin: auto ; */
-     color: rgb(207, 177, 177) ;    
+     color: white ;   
+        
+       
+    font-family: 'Bilbo Swash Caps' , cursive; 
+    font-size: 100px;
+    
+    
     }
     &__name:hover {
         color: darkgrey;

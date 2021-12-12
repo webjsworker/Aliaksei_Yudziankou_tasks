@@ -1,19 +1,43 @@
 .home{
     margin-top: 20px;
 background-color: rgb(236, 240, 189);  
-font-size: 25px; 
+font-size: 20px; 
 padding: 20px;
+background-image: url(../../assets/background_home.jpg) ;
+background-size: 100%;
+color: black;
+/* text-shadow: 3px 3px 3px white; */
+
+&__title{
+    padding: 10px;
+    background-color: rgba(201, 192, 180, 0.705);
+    /* width: 280px; */
+    border: 2px solid rgba(201, 192, 180, 0.705);
+    border-radius: 2%;
+    opacity: 0.8;
+}
+
+&__example_item{
+        color: brown;
+        padding: 10px;
+        background-color: rgba(201, 192, 180, 0.705);
+        border: 2px solid rgba(201, 192, 180, 0.705);
+        border-radius: 2%; 
+        width: 280px;
+    }
 
 &__example{
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-direction: column;
 
-    div {
+    
+
+    /* div {
         margin-top: 10px;
         padding: 20px;
         color: brown;
-    }
+    } */
 }
 
 ul{

@@ -19,6 +19,8 @@
         <div class="creat__type">
             <label>type: </label>
             <input class="creat__input"
+            [class.invalid]='inputFormType.touched && inputFormType.invalid'  
+            #inputFormType="ngModel"
              name="type" 
              [(ngModel)]="type"
               placeholder="Type of activity: education" 
@@ -29,6 +31,8 @@
         <div class="creat__participants">
             <label>participants: </label>
             <input class="creat__input"
+            [class.invalid]='inputFormParticipants.touched && inputFormParticipants.invalid'  
+            #inputFormParticipants="ngModel"
              name="participants"
               [(ngModel)]="participants" 
               placeholder="Participants: 2"
@@ -39,6 +43,8 @@
         <div class="creat__price">
             <label>price: </label>
             <input class="creat__input" 
+            [class.invalid]='inputFormPrice.touched && inputFormPrice.invalid'  
+            #inputFormPrice="ngModel"
             name="price"
              [(ngModel)]="price" 
              placeholder="price: 0.1 "
@@ -59,6 +65,8 @@
         <div class="creat__key">
             <label>key: </label>
             <input class="creat__input" 
+            [class.invalid]='inputFormKey.touched && inputFormKey.invalid'  
+            #inputFormKey="ngModel"
             name="key" 
             [(ngModel)]="key"
             placeholder="key: 12345"
@@ -69,10 +77,8 @@
         <div class="creat__accessibility">
             <label>accessibility: </label>
             <input class="creat__input" 
-
             [class.invalid]='inputFormAccessibility.touched && inputFormAccessibility.invalid'  
             #inputFormAccessibility="ngModel"
-
             name="accessibility" 
             [(ngModel)]="accessibility" 
             placeholder="accessibility: 0.5"
@@ -85,8 +91,12 @@
             
             [disabled]="inputForm.touched && inputForm.invalid ||
             inputFormAccessibility.touched && inputFormAccessibility.invalid || 
+            inputFormType.touched && inputFormType.invalid ||
+            inputFormParticipants.touched && inputFormParticipants.invalid ||
+            inputFormPrice.touched && inputFormPrice.invalid ||
+            inputFormKey.touched && inputFormKey.invalid ||
             !activity.length || !type.length || !participants.length ||
-            !price.length || !link.length || !key.length || !accessibility.length
+            !price.length ||  !key.length || !accessibility.length
             " 
 
             (click)="creatAdvice()">Preview</button>
@@ -96,8 +106,8 @@
     </form>
 
     <div class="created__element">
-        <h3>Element : </h3>
-        <div *ngIf="!advices.length">Your card will be displayed here.</div>
+        <h3>Element : 
+        <div *ngIf="!advices.length">Your card will be displayed here.</div></h3>
         <div class="creat__card" *ngIf="advices.length">
             <ul>
                 <h4>Advice Card</h4>

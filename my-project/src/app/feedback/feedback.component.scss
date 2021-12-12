@@ -5,8 +5,11 @@
     font-size: 25px;
     margin-top: 20px;
     background-color: rgb(236, 240, 189);
+    background-image: url(../../assets/background_feedback.jpg) ;
+    background-size: 100%;
     padding: 20px;
     font-size: 25px;
+    min-height: 700px;
 
     &__form_contaner{
         display: flex;
@@ -18,14 +21,9 @@
 
 &__name, &__feedback, &__rating, &__button{
     input{
-        width: 390px;
+        max-width: 390px;
     }
-    /* margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 400px; */
-    
+      
     font-weight: 700;
     display: flex;
     flex-wrap: wrap;
@@ -35,7 +33,7 @@
 }
 
 &__feedback{
-    width: 400px;
+    max-width: 400px;
 }
 
 
