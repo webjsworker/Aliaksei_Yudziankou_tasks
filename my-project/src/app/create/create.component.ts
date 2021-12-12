@@ -7,7 +7,7 @@ export class Advice {
     public participants: number,
     public price: number,
     public link: string,
-    public key: string,
+    public key: number,
     public accessibility: number) { }
 }
 
@@ -24,7 +24,7 @@ export class CreateComponent implements OnInit {
   participants: any = "";
   price: any = "";
   link: string = '';
-  key: string = '';
+  key: any = '';
   accessibility: any = "";
 
   advices: Advice[] = [];

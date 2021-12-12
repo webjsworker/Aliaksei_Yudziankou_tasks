@@ -19,7 +19,7 @@ export class FindComponent implements OnInit {
   public participants: number = 0  ; 
   public price: number = 0 ; 
   public link: string =  '';
-  public key: string =  '';
+  public key: any =  '';
   public accessibility: number = 0 ;
   
   constructor(private findedAdvice: ViewingService,

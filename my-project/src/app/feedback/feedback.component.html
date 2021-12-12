@@ -1,23 +1,23 @@
-<div class="feetback">
-    <div class="feetback__form_contaner">
-        <div class="feetback__name">
+<div class="feedback">
+    <div class="feedback__form_contaner">
+        <div class="feedback__name">
             <label>Autor name: </label>
-            <input class="feetback__input" name="Author" [(ngModel)]="name" placeholder="Autor Name" />
+            <input class="feedback__input" name="Author" [(ngModel)]="name" placeholder="Autor Name" />
         </div>
-        <div class="feetback__feetback">
-            <label>Feetback: </label>
-            <textarea class="feetback__input textArea" name="Feetback" [(ngModel)]="message"
+        <div class="feedback__feedback">
+            <label>Feedback: </label>
+            <textarea class="feedback__input textArea" name="Feedback" [(ngModel)]="message"
                 placeholder="message"></textarea>
         </div>
-        <div class="feetback__rating">
+        <div class="feedback__rating">
             <label>Rating</label>
-            <select class="feetback__select" name="Rating" [(ngModel)]="rating">
+            <select class="feedback__select" name="Rating" [(ngModel)]="rating">
                 <option *ngFor="let value of values" [value]="value">
                     {{value}}
                 </option>
             </select>
         </div>
-        <div class="feetback__button">
+        <div class="feedback__button">
             <button class="btn btn-default" (click)="addMessage()">Send message</button>
         </div>
 
@@ -25,8 +25,8 @@
     </div>
 
 
-    <div class="feetback__comments">
-        <h3>Feetback : </h3>
+    <div class="feedback__comments">
+        <h3>Feedback : </h3>
         <ul *ngFor="let message of messages">
             <li> <span>{{Date | date :'mediumDate' }}</span>
                 <span [ngStyle]="{'font-weight':'bold'}"> {{ message.name}}: </span>

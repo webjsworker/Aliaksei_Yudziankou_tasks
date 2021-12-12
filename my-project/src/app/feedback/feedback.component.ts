@@ -8,11 +8,11 @@ export class Message{
 }
 
 @Component({
-  selector: 'app-feetback',
-  templateUrl: './feetback.component.html',
-  styleUrls: ['./feetback.component.scss'],
+  selector: 'app-feedback',
+  templateUrl: './feedback.component.html',
+  styleUrls: ['./feedback.component.scss'],
   })
-export class FeetbackComponent implements OnInit {
+export class FeedbackComponent implements OnInit {
   name: string = "";
   message: string = "";
   rating: string = "";

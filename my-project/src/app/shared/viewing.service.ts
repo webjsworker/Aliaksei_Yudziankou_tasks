@@ -7,7 +7,7 @@ export interface Elem {
   participants: number ;
   price: number ;
   link: string ;
-  key: string ;
+  key: number ;
   accessibility: number ;
 }
 

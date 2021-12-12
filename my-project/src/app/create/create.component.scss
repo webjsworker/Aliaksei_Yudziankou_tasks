@@ -59,4 +59,8 @@
           button{
               margin-left: 80px;
           }
-      
+             .creat__input, .creat__input{
+              &.ng-invalid.ng-touched{
+                  border-color: red;
+              }
+          }

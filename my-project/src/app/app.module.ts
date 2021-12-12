@@ -15,7 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { FindComponent } from './find/find.component';
 import { ViewComponent } from './view/view.component';
 import { CreateComponent } from './create/create.component';
-import { FeetbackComponent } from './feetback/feetback.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,7 @@ import { FeetbackComponent } from './feetback/feetback.component';
     FindComponent,
     ViewComponent,
     CreateComponent,
-    FeetbackComponent
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,

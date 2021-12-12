@@ -1,4 +1,4 @@
-.feetback{
+.feedback{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -16,7 +16,7 @@
        }
 
 
-&__name, &__feetback, &__rating, &__button{
+&__name, &__feedback, &__rating, &__button{
     input{
         width: 390px;
     }
@@ -34,7 +34,7 @@
     width: 200px;
 }
 
-&__feetback{
+&__feedback{
     width: 400px;
 }
 

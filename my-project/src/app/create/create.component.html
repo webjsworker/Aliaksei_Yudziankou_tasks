@@ -1,48 +1,99 @@
 <div class="creat">
 
-    <div class="creat__contaner" >
+    <form class="creat__contaner"  >
         <h3>Create your element</h3>
         <div class="creat__activity">
             <label>activity: </label>
-            <input class="creat__input" name="activity" [(ngModel)]="activity" placeholder="Enter activity" />
+            <input class="creat__input" 
+            
+            [class.invalid]='inputForm.touched && inputForm.invalid'  
+            #inputForm="ngModel" 
+
+            name="activity" 
+            [(ngModel)]="activity" 
+            placeholder="Enter activity: listen to ..."
+            pattern="^[а-яА-ЯёЁa-zA-Z]*$"
+            required />
         </div>
 
         <div class="creat__type">
             <label>type: </label>
-            <input class="creat__input" name="type" [(ngModel)]="type" placeholder="Type of activity" />
+            <input class="creat__input"
+             name="type" 
+             [(ngModel)]="type"
+              placeholder="Type of activity: education" 
+              pattern="^[а-яА-ЯёЁa-zA-Z]*$"
+            required/>
         </div>
 
         <div class="creat__participants">
             <label>participants: </label>
-            <input class="creat__input" name="participants" [(ngModel)]="participants" placeholder="Participants" />
+            <input class="creat__input"
+             name="participants"
+              [(ngModel)]="participants" 
+              placeholder="Participants: 2"
+              pattern="^[0-9]*$"
+              required/>
         </div>
 
         <div class="creat__price">
             <label>price: </label>
-            <input class="creat__input" name="price" [(ngModel)]="price" placeholder="price $" />
+            <input class="creat__input" 
+            name="price"
+             [(ngModel)]="price" 
+             placeholder="price: 0.1 "
+             pattern="\-?\d+(\.\d{0,})?"
+              required />
         </div>
 
         <div class="creat__link">
             <label>link: </label>
-            <input class="creat__input" name="link" [(ngModel)]="link" placeholder="link" />
+            <input class="creat__input"
+             name="link" 
+             [(ngModel)]="link" 
+             placeholder="link: https://www.google.com/" 
+             pattern="^((ftp|http|https):\/\/)?(www\.)?([A-Za-zА-Яа-я0-9]{1}[A-Za-zА-Яа-я0-9\-]*\.?)*\.{1}[A-Za-zА-Яа-я0-9-]{2,8}(\/([\w#!:.?+=&%@!\-\/])*)?"
+              required />
         </div>
 
         <div class="creat__key">
             <label>key: </label>
-            <input class="creat__input" name="key" [(ngModel)]="key" placeholder="key" />
+            <input class="creat__input" 
+            name="key" 
+            [(ngModel)]="key"
+            placeholder="key: 12345"
+            pattern="^[0-9]*$"
+            required />
         </div>
 
         <div class="creat__accessibility">
             <label>accessibility: </label>
-            <input class="creat__input" name="accessibility" [(ngModel)]="accessibility" placeholder="accessibility" />
+            <input class="creat__input" 
+
+            [class.invalid]='inputFormAccessibility.touched && inputFormAccessibility.invalid'  
+            #inputFormAccessibility="ngModel"
+
+            name="accessibility" 
+            [(ngModel)]="accessibility" 
+            placeholder="accessibility: 0.5"
+            pattern="\-?\d+(\.\d{0,})?"
+              required  />
         </div>
 
-        <div class="creat__button">
-            <button class="creat__button_default" (click)="creatAdvice()">Preview</button>
+            <div class="creat__button">
+            <button class="creat__button_default"  
+            
+            [disabled]="inputForm.touched && inputForm.invalid ||
+            inputFormAccessibility.touched && inputFormAccessibility.invalid || 
+            !activity.length || !type.length || !participants.length ||
+            !price.length || !link.length || !key.length || !accessibility.length
+            " 
+
+            (click)="creatAdvice()">Preview</button>
             <button class="creat__button_default" (click)="Reset()">Reset</button>
         </div>
 
-    </div>
+    </form>
 
     <div class="created__element">
         <h3>Element : </h3>
