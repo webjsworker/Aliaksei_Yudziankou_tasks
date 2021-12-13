@@ -1,6 +1,6 @@
 .home{
-    margin-top: 20px;
-background-color: rgb(236, 240, 189);  
+margin-top: 20px;
+background-color: rgb(204,153,255);  
 font-size: 20px; 
 padding: 20px;
 background-image: url(../../assets/background_home.jpg) ;
@@ -10,19 +10,19 @@ color: black;
 
 &__title{
     padding: 10px;
-    background-color: rgba(201, 192, 180, 0.705);
+    background-color: rgba(201, 192, 180, 0.9);
     /* width: 280px; */
-    border: 2px solid rgba(201, 192, 180, 0.705);
-    border-radius: 2%;
-    opacity: 0.8;
+    border: 2px solid #7922CC;
+    border-radius: 20px;
+    /* opacity: 1; */
 }
 
 &__example_item{
         color: brown;
         padding: 10px;
-        background-color: rgba(201, 192, 180, 0.705);
+        background-color: rgba(201, 192, 180, 0.8);
         border: 2px solid rgba(201, 192, 180, 0.705);
-        border-radius: 2%; 
+        border-radius: 20px; 
         width: 280px;
     }
 
@@ -42,10 +42,10 @@ color: black;
 
 ul{
     padding: 10px;
-    background-color: rgba(201, 192, 180, 0.705);
+    background-color: rgba(201, 192, 180, 0.9);
     width: 280px;
-    border: 2px solid;
-    border-radius: 5%;
+    border: 2px solid #7922CC;
+    border-radius: 20px;
 }
 li{
     list-style-type: none; 

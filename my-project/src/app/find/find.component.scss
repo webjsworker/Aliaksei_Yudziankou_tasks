@@ -1,6 +1,6 @@
 .advice{
     font-size: 25px;
-    background-color: rgb(236, 240, 189);
+    background-color: rgb(204,153,255);
     background-image: url(../../assets/background_find_hidden.jpg) ;
     background-size: 100%;
     width:auto;
@@ -10,6 +10,19 @@
 li{
    
     list-style-type: none;
+}
+
+button{
+    font-size: 20px;
+    color: white;
+    padding: 15px 40px;
+    background-color: rgb(153, 102, 204, 0.8 );
+    border: 2px solid #7922CC;
+    border-radius: 10px ;
+}
+button:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transform: scale(1.2);
 }
 
 }
@@ -34,6 +47,19 @@ button, li {
 margin: 20px;
 
 }
+button{
+    font-size: 20px;
+    color: white;
+    padding: 15px 40px;
+    background-color: rgb(153, 102, 204, 0.8 );
+    border: 2px solid #7922CC;
+    border-radius: 10px ;
+}
+button:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transform: scale(1.2);
+}
+
 
        
 }
@@ -51,9 +77,9 @@ margin: 20px;
         }
           ul{
             padding: 10px;
-            background-color: rgba(201, 192, 180, 0.705);
+            background-color: rgba(201, 192, 180, 0.8);
             width: 280px;
-            border: 2px solid;
+            border: 2px solid #7922CC;
             border-radius: 5%;
         }
         li{
@@ -62,4 +88,10 @@ margin: 20px;
         span{
             font-weight: 700;
         }
+   }
+   .advice__hidden_title{
+       padding: 15px;
+    background-color: rgb(192, 201, 182);
+    border: 1px solid #7922CC;
+    border-radius: 10px;
    }

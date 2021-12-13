@@ -4,18 +4,29 @@
     justify-content: flex-start;
     font-size: 25px;
     margin-top: 20px;
-    background-color: rgb(236, 240, 189);
+    background-color: rgb(204,153,255);
     background-image: url(../../assets/background_feedback.jpg) ;
     background-size: 100%;
     padding: 20px;
     font-size: 25px;
     min-height: 700px;
 
+   
+
     &__form_contaner{
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+        /* width: auto; */
         /*  background-color: blanchedalmond; */
+
+
+        .feedback__form{
+           
+            background-color: rgb(192, 201, 182);
+            border: 1px solid #7922CC;
+            border-radius: 10px;   
+        }
        }
 
 
@@ -46,12 +57,23 @@
         
         margin-left: 80px;
         li{
-        list-style-type: none;
-        width: 808px;
+          list-style-type: none;  
+        }
+        span{
+        
+         display: inline-block;
+        /* width: 808px; */
         padding: 10px;
-        /* border: 2px solid black;
-        border-radius: 10%; */
         background-color: rgb(192, 201, 182);
+        border: 1px solid #7922CC;
+        border-radius: 10px;
+        }
+        
+        .feedback__comments_title{
+           /*  padding: 10px; */
+        background-color: rgb(192, 201, 182);
+        border: 1px solid #7922CC;
+        border-radius: 10px;
         }
     }
 }

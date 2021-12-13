@@ -20,10 +20,13 @@
     padding: 10px 80px;
     
     
+    
+    
+    
     &__date{
         font-size: 20px;
         color: white ;
-    }
+            }
     
     &__name{
      /* padding-left: 50px;     */
@@ -35,7 +38,7 @@
        
     font-family: 'Bilbo Swash Caps' , cursive; 
     font-size: 100px;
-    
+    text-shadow: 5px 4px 2px black;
     
     }
     &__name:hover {

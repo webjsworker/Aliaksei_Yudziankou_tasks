@@ -2,6 +2,12 @@
 background-color: rgb(153, 102, 204);
 min-height: 80px;
 font-weight: 300;
+
+display: flex;
+flex-wrap: wrap;
+
+
+
     ul{
     width: 80%;
     display: inline-flex;
@@ -18,16 +24,26 @@ font-weight: 300;
 
     .active{
         border: 2px solid white;
-        border-radius: 20%;
+        border-radius: 20px;
+        color: rgb(243, 93, 93);
+        
+        
+   }
+   .nav__home{
+      margin-top:  20px;
+      display: inline-block;
    }
 } 
     a:hover{
-    color: white;
+    color: rgb(216, 164, 164);
 } 
     a{
     color: white;   
     padding: 10px 20px;
     text-decoration: none;
+    border-radius: 20px;
+    text-shadow: 1px 1px 2px black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 

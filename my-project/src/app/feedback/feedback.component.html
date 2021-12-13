@@ -1,7 +1,13 @@
 <div class="feedback">
     <div class="feedback__form_contaner">
         <div class="feedback__name">
-            <label>Autor name: </label>
+            <label >
+                <span class="feedback__form">
+                    <b> Author name:</b>
+                </span>
+                
+                
+                </label>
             <input class="feedback__input" name="Author" [(ngModel)]="name" placeholder="Autor Name" />
         </div>
         <div class="feedback__feedback">
@@ -26,11 +32,20 @@
 
 
     <div class="feedback__comments">
-        <h3>Feedback : </h3>
+        <span class="feedback__comments_title">
+        <b>  Feedback : </b>
+         
+        </span>
+       
         <ul *ngFor="let message of messages">
-            <li> <span>{{Date | date :'mediumDate' }}</span>
-                <span [ngStyle]="{'font-weight':'bold'}"> {{ message.name}}: </span>
-                {{message.message}} - ({{message.rating}})
+            <li>
+                
+            <span><small>{{Date | date :'mediumDate' }}</small>
+                <b [ngStyle]="{'font-weight':'bold'}"> {{ message.name}}: </b>
+                {{message.message}} - <small>&#10084; {{message.rating}}</small> 
+            </span>    
+                
+                
             </li>
         </ul>
     </div>

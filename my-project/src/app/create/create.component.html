@@ -1,6 +1,7 @@
 <div class="creat">
 
     <form class="creat__contaner"  >
+        
         <h3>Create your element</h3>
         <div class="creat__activity">
             <label>activity: </label>
@@ -87,8 +88,10 @@
         </div>
 
             <div class="creat__button">
-            <button class="creat__button_default"  
-            
+            <button class="creat__button_preview"  
+
+           
+
             [disabled]="inputForm.touched && inputForm.invalid ||
             inputFormAccessibility.touched && inputFormAccessibility.invalid || 
             inputFormType.touched && inputFormType.invalid ||
@@ -100,14 +103,29 @@
             " 
 
             (click)="creatAdvice()">Preview</button>
-            <button class="creat__button_default" (click)="Reset()">Reset</button>
+            <button class="creat__button_reset " (click)="Reset()">Reset</button>
         </div>
 
     </form>
 
     <div class="created__element">
-        <h3>Element : 
-        <div *ngIf="!advices.length">Your card will be displayed here.</div></h3>
+
+        
+        <h3>   
+            <span class="created__element_title">
+                <b>Element : </b>
+            </span>
+
+
+        <div *ngIf="!advices.length">
+            
+            <span class="created__element_title">
+                <b>Your card will be displayed here.</b>
+            </span>
+            
+            
+        
+        </div></h3>
         <div class="creat__card" *ngIf="advices.length">
             <ul>
                 <h4>Advice Card</h4>

@@ -2,7 +2,7 @@
     margin-top: 20px;
     
     padding: 20px;
-    background-color: rgb(236, 240, 189);
+    background-color: rgb(204,153,255);
     background-image: url(../../assets/background_create.jpg) ;
     background-size: 100%;
     font-size: 25px;
@@ -16,8 +16,11 @@
         flex-wrap: wrap;
         flex-direction: column;
         padding-top: 40px;
+        margin-left: 30px;
+
         /*  background-color: blanchedalmond; */
-       }
+       
+    }
     &__activity, &__type, &__participants,
     &__price, &__link, &__key,
     &__accessibility {
@@ -27,9 +30,23 @@
         flex-wrap: wrap;
         justify-content: space-between;
         max-width: 400px;
+
+        
         }
+
+        .creat__activity{
+          /* background-color: rgb(95, 86, 86); */  
+        }
+        /* .creat__activity{
+            
+            background-color: transparent;
+        } */
+
     input{
-        /* margin-left: 150px; */
+        color: black;
+        background-color: rgb(213, 200, 219, 0.8);
+        border-color: rgb(213, 200, 219, 0.8);
+        /* border: none; */
     }
 } 
 
@@ -39,6 +56,14 @@
             display: flex;
             flex-wrap: wrap;
             
+        }
+
+        .created__element_title{
+            display: inline-block;
+            padding: 10px;
+            background-color: rgb(192, 201, 182);
+        border: 1px solid #7922CC;
+        border-radius: 10px;
         }
 
         .creat__card{
@@ -55,7 +80,7 @@
            }
              ul{
                padding: 10px;
-               background-color: rgba(201, 192, 180, 0.705);
+               background-color: rgba(201, 192, 180, 0.8);
                width: 280px;
                border: 2px solid;
                border-radius: 5%;
@@ -72,7 +97,41 @@
           button{
               margin-left: 80px;
           }
-             .creat__input, .creat__input{
+
+
+          button{
+            font-size: 20px;
+            color: white;
+            padding: 15px 40px;
+            background-color: rgb(153, 102, 204, 0.8 );
+            border: 2px solid #7922CC;
+            border-radius: 10px ;
+        }
+        button:hover{
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            transform: scale(1.2);
+        }
+        .creat__button_reset:hover{
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            transform: scale(1.2);
+        }
+        
+        .creat__button_preview[disabled] {
+            pointer-events: none; 
+             background-color: rgb(200, 198, 198);
+        }
+
+        .creat__button_preview:not([disabled]) {
+            /* styles when the element is disabled */
+            
+            background-color: rgb(153, 102, 204, 0.8 );
+        }
+
+        .creat__button_preview:not([disabled]):hover {
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            transform: scale(1.2);
+        }
+                     .creat__input, .creat__input{
               &.ng-invalid.ng-touched{
                   border-color: red;
               }
