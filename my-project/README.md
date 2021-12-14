@@ -1,10 +1,31 @@
-# MyProject
+# Avice market
+
+[View a demo : Heroku]
+:https://intense-reef-73479.herokuapp.com/
+
+[Github link]
+:https://github.com/webjsworker/Aliaksei_Yudziankou_tasks/tree/Advice_market/my-project
+
+<img align="right"  src="main.jpg">
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
 
-## Development server
+## Installation
+```
+git clone [Github link]
+```
+```
+npm install 
+```
+
+## Usage
+You can use this script for start application. 
+```
+npm start  
+```
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
 
 ## Code scaffolding
 
