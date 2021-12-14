@@ -8,15 +8,33 @@
                 
                 
                 </label>
-            <input class="feedback__input" name="Author" [(ngModel)]="name" placeholder="Autor Name" />
+            <input class="feedback__input" 
+            name="Author" 
+            [(ngModel)]="name"
+             placeholder="Autor Name" 
+
+            [class.invalid]='inputFormName.touched && inputFormName.invalid'  
+            #inputFormName="ngModel"
+
+            pattern="^[а-яА-ЯёЁa-zA-Z0-9]{1,20}$"
+            required/>
         </div>
         <div class="feedback__feedback">
-            <label>Feedback: </label>
-            <textarea class="feedback__input textArea" name="Feedback" [(ngModel)]="message"
-                placeholder="message"></textarea>
+            <label class="feedback__form">Feedback: </label>
+            <textarea class="feedback__input textArea" 
+            name="Feedback" 
+            [(ngModel)]="message"
+            placeholder="message"
+
+            [class.invalid]='inputFormMessage.touched && inputFormMessage.invalid'  
+            #inputFormMessage="ngModel"
+
+            pattern="^[а-яА-ЯёЁa-zA-Z0-9]{1,250}$"
+            required
+            ></textarea>
         </div>
         <div class="feedback__rating">
-            <label>Rating</label>
+            <label class="feedback__form">Rating</label>
             <select class="feedback__select" name="Rating" [(ngModel)]="rating">
                 <option *ngFor="let value of values" [value]="value">
                     {{value}}
@@ -24,7 +42,18 @@
             </select>
         </div>
         <div class="feedback__button">
-            <button class="btn btn-default" (click)="addMessage()">Send message</button>
+            <button 
+            class="feedback__button_default" 
+            (click)="addMessage()"
+            
+            [disabled]="inputFormName.touched && inputFormName.invalid
+             || !name.length 
+             || !message.length 
+             || !rating.length
+            " 
+            
+            
+            >Send message</button>
         </div>
 
 
