@@ -1,21 +1,18 @@
-# Avice market
+# About Avice market
+This application will be interesting from student to old people.
+Get link and enjoyed it!
 
-[View a demo : Heroku]
-:https://intense-reef-73479.herokuapp.com/
+Link to Heroku :   [Advice market][1] 
 
-
-[Github link]
-:https://github.com/webjsworker/Aliaksei_Yudziankou_tasks/tree/Advice_market/my-project
+[1]: https://intense-reef-73479.herokuapp.com/ "Advice market"
 
 <p>
 <img src="main.JPG">
 </p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
-
 ## Installation
 ```
-git clone [Github link]
+git clone https://github.com/webjsworker/Aliaksei_Yudziankou_tasks/tree/Advice_market/my-project
 ```
 ```
 npm install 
@@ -31,6 +28,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 
 ## Code scaffolding
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
