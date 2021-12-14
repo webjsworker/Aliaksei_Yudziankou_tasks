@@ -8,7 +8,7 @@
 :https://github.com/webjsworker/Aliaksei_Yudziankou_tasks/tree/Advice_market/my-project
 
 <p>
-<img align="center"  src="main.jpg">
+<img align="center"  src="main.JPG">
 </p>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
