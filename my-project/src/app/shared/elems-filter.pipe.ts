@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform } from "@angular/core";
+/* import { Pipe, PipeTransform } from "@angular/core";
 import { Elem } from "./elem.service";
 
 @Pipe({
@@ -14,4 +14,4 @@ transform(elems: Elem[], search: string = ''): Elem[] {
         return elem.title.toLowerCase().indexOf(search.toLowerCase()) !== -1
     })
 }
-}
+} */

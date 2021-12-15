@@ -20,10 +20,9 @@ export class ViewingService {
     constructor(/* public http: HttpClient */){}
 
     fetchElems()/* : Observable<Elem[]> */ {
-        console.log("fetch elements = " + this.elems)
+      
 
-       return this.elems /* this.http.get<Elem[]>('https://jsonplaceholder.typicode.com/todos?_limit=10')
-       .pipe(tap(elems => this.elems = elems)) */
+       return this.elems 
     }
    
     addE(element:Elem) {

@@ -21,13 +21,11 @@ export class ViewService {
     public elements: any = [];
        
     getElement(): any {
-        console.log("get elements = " + this.elements)
+        
         return this.elements;
     }
 
     addElement(element: any){
-        /* this.elements.push(element) ; */
-        console.log("add element = " + element)
-        console.log("add elements = " + this.elements)
+        
     }
 }

@@ -1,11 +1,6 @@
 
-
 export class FindService {
-
-
-    
-
-    public card = {
+     public card = {
         activity: "init",
         type: "init",
         participants: "init",
@@ -14,8 +9,6 @@ export class FindService {
         key: "init",
         accessibility: "init"
     }
-
-
 
     async FindAdvice() {
         const URL = `https://www.boredapi.com/api/activity?participants=1`

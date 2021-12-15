@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+/* import { Injectable } from "@angular/core";
 import {HttpClient} from '@angular/common/http'
 import { Observable, tap } from "rxjs";
 export interface Elem {
@@ -33,4 +33,4 @@ addText(elem: Elem) {
 this.elems.push(elem)
 }
 
-}
+} */
